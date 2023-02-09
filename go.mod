@@ -56,4 +56,4 @@ require (
 	gotest.tools/gotestsum v1.7.0
 )
 
-replace github.com/pingcap/kvprotov2 => ../tikv-client-default/submodule/kvproto-6.2
+replace github.com/pingcap/kvprotov2 => /tmp/submodule/kvproto-6.2
