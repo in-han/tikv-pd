@@ -28,11 +28,11 @@ import (
 	"github.com/pingcap/kvprotov2/pkg/pdpb"
 	"github.com/pingcap/log"
 	"github.com/tikv/pdv2/pkg/btree"
-	"github.com/tikv/pdv2/2/pkg/codec"
-	"github.com/tikv/pdv2/2/pkg/errs"
-	"github.com/tikv/pdv2/2/pkg/logutil"
-	"github.com/tikv/pdv2/2/pkg/syncutil"
-	"github.com/tikv/pdv2/2/server/core"
+	"github.com/tikv/pdv2/pkg/codec"
+	"github.com/tikv/pdv2/pkg/errs"
+	"github.com/tikv/pdv2/pkg/logutil"
+	"github.com/tikv/pdv2/pkg/syncutil"
+	"github.com/tikv/pdv2/server/core"
 	"go.uber.org/zap"
 )
 

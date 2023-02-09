@@ -18,7 +18,7 @@ import (
 	"strings"
 
 	"github.com/tikv/pdv2/pkg/slice"
-	"github.com/tikv/pdv2/2/server/core"
+	"github.com/tikv/pdv2/server/core"
 )
 
 // LabelConstraintOp defines how a LabelConstraint matches a store. It can be one of

@@ -24,11 +24,11 @@ import (
 	"github.com/pingcap/log"
 	"github.com/syndtr/goleveldb/leveldb"
 	"github.com/tikv/pdv2/pkg/encryption"
-	"github.com/tikv/pdv2/2/pkg/errs"
-	"github.com/tikv/pdv2/2/pkg/syncutil"
-	"github.com/tikv/pdv2/2/server/encryptionkm"
-	"github.com/tikv/pdv2/2/server/storage/endpoint"
-	"github.com/tikv/pdv2/2/server/storage/kv"
+	"github.com/tikv/pdv2/pkg/errs"
+	"github.com/tikv/pdv2/pkg/syncutil"
+	"github.com/tikv/pdv2/server/encryptionkm"
+	"github.com/tikv/pdv2/server/storage/endpoint"
+	"github.com/tikv/pdv2/server/storage/kv"
 )
 
 const (

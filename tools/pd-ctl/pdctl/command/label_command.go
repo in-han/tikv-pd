@@ -21,9 +21,9 @@ import (
 
 	"github.com/spf13/cobra"
 	"github.com/tikv/pdv2/server/api"
-	"github.com/tikv/pdv2/2/server/config"
-	"github.com/tikv/pdv2/2/server/core"
-	"github.com/tikv/pdv2/2/server/statistics"
+	"github.com/tikv/pdv2/server/config"
+	"github.com/tikv/pdv2/server/core"
+	"github.com/tikv/pdv2/server/statistics"
 )
 
 var (

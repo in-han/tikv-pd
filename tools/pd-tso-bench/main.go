@@ -31,7 +31,7 @@ import (
 	"github.com/pingcap/errors"
 	"github.com/pingcap/log"
 	"github.com/prometheus/client_golang/prometheus/promhttp"
-	pd "github.com/tikv/pd/client"
+	pd "github.com/tikv/pdv2/client"
 	"go.uber.org/zap"
 )
 

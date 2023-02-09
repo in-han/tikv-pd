@@ -17,7 +17,7 @@ package schedule
 import (
 	"time"
 
-	"github.com/tikv/pd/server/schedule/operator"
+	"github.com/tikv/pdv2/server/schedule/operator"
 )
 
 type operatorWithTime struct {

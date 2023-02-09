@@ -20,7 +20,7 @@ import (
 
 	"github.com/pingcap/kvprotov2/pkg/metapb"
 	"github.com/tikv/pdv2/pkg/movingaverage"
-	"github.com/tikv/pdv2/2/pkg/slice"
+	"github.com/tikv/pdv2/pkg/slice"
 	"go.uber.org/zap"
 )
 

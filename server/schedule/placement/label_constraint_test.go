@@ -18,7 +18,7 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/require"
-	"github.com/tikv/pd/server/core"
+	"github.com/tikv/pdv2/server/core"
 )
 
 func TestLabelConstraint(t *testing.T) {

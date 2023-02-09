@@ -25,14 +25,14 @@ import (
 	"github.com/pingcap/failpoint"
 	"github.com/stretchr/testify/require"
 	"github.com/tikv/pdv2/pkg/assertutil"
-	"github.com/tikv/pdv2/2/pkg/testutil"
-	"github.com/tikv/pdv2/2/server"
-	"github.com/tikv/pdv2/2/server/config"
+	"github.com/tikv/pdv2/pkg/testutil"
+	"github.com/tikv/pdv2/server"
+	"github.com/tikv/pdv2/server/config"
 )
 
 func TestGetVersion(t *testing.T) {
 	// TODO: enable it.
-	t.Skip("Temporary disable. See issue: https://github.com/tikv/pdv2/2/issues/1893")
+	t.Skip("Temporary disable. See issue: https://github.com/tikv/pdv2/issues/1893")
 	re := require.New(t)
 
 	fname := filepath.Join(os.TempDir(), "stdout")
@@ -58,7 +58,7 @@ func TestGetVersion(t *testing.T) {
 	go func(cfg *config.Config) {
 		s, err := server.CreateServer(ctx, cfg, NewHandler)
 		re.NoError(err)
-		re.NoError(failpoint.Enable("github.com/tikv/pdv2/2/server/memberNil", `return(true)`))
+		re.NoError(failpoint.Enable("github.com/tikv/pdv2/server/memberNil", `return(true)`))
 		reqCh <- struct{}{}
 		err = s.Run()
 		re.NoError(err)
@@ -79,5 +79,5 @@ func TestGetVersion(t *testing.T) {
 		cancel()
 		testutil.CleanServer(cfg.DataDir)
 	}()
-	re.NoError(failpoint.Disable("github.com/tikv/pdv2/2/server/memberNil"))
+	re.NoError(failpoint.Disable("github.com/tikv/pdv2/server/memberNil"))
 }

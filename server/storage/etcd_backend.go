@@ -16,7 +16,7 @@ package storage
 
 import (
 	"github.com/tikv/pdv2/server/storage/endpoint"
-	"github.com/tikv/pdv2/2/server/storage/kv"
+	"github.com/tikv/pdv2/server/storage/kv"
 	"go.etcd.io/etcd/clientv3"
 )
 

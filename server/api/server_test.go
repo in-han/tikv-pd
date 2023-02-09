@@ -27,10 +27,10 @@ import (
 	"github.com/stretchr/testify/require"
 	"github.com/stretchr/testify/suite"
 	"github.com/tikv/pdv2/pkg/apiutil"
-	"github.com/tikv/pdv2/2/pkg/assertutil"
-	"github.com/tikv/pdv2/2/pkg/testutil"
-	"github.com/tikv/pdv2/2/server"
-	"github.com/tikv/pdv2/2/server/config"
+	"github.com/tikv/pdv2/pkg/assertutil"
+	"github.com/tikv/pdv2/pkg/testutil"
+	"github.com/tikv/pdv2/server"
+	"github.com/tikv/pdv2/server/config"
 	"go.uber.org/goleak"
 )
 

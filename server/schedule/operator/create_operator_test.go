@@ -23,10 +23,10 @@ import (
 	"github.com/pingcap/kvprotov2/pkg/pdpb"
 	"github.com/stretchr/testify/suite"
 	"github.com/tikv/pdv2/pkg/mock/mockcluster"
-	"github.com/tikv/pdv2/2/server/config"
-	"github.com/tikv/pdv2/2/server/core"
-	"github.com/tikv/pdv2/2/server/schedule/placement"
-	"github.com/tikv/pdv2/2/server/versioninfo"
+	"github.com/tikv/pdv2/server/config"
+	"github.com/tikv/pdv2/server/core"
+	"github.com/tikv/pdv2/server/schedule/placement"
+	"github.com/tikv/pdv2/server/versioninfo"
 )
 
 type createOperatorTestSuite struct {

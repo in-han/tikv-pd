@@ -23,11 +23,11 @@ import (
 	"github.com/pingcap/kvprotov2/pkg/pdpb"
 	"github.com/stretchr/testify/require"
 	"github.com/tikv/pdv2/server/config"
-	"github.com/tikv/pdv2/2/server/core"
-	"github.com/tikv/pdv2/2/server/statistics"
-	"github.com/tikv/pdv2/2/server/storage"
-	"github.com/tikv/pdv2/2/tests"
-	"github.com/tikv/pdv2/2/tests/pdctl"
+	"github.com/tikv/pdv2/server/core"
+	"github.com/tikv/pdv2/server/statistics"
+	"github.com/tikv/pdv2/server/storage"
+	"github.com/tikv/pdv2/tests"
+	"github.com/tikv/pdv2/tests/pdctl"
 )
 
 func TestHotRegionStorage(t *testing.T) {

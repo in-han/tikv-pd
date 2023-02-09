@@ -25,7 +25,7 @@ import (
 
 	"github.com/pingcap/errors"
 	"github.com/spf13/cobra"
-	"github.com/tikv/pd/pkg/apiutil"
+	"github.com/tikv/pdv2/pkg/apiutil"
 	"go.etcd.io/etcd/pkg/transport"
 )
 

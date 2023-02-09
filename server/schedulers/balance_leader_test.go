@@ -21,8 +21,8 @@ import (
 
 	"github.com/stretchr/testify/require"
 	"github.com/tikv/pdv2/pkg/mock/mockcluster"
-	"github.com/tikv/pdv2/2/server/config"
-	"github.com/tikv/pdv2/2/server/core"
+	"github.com/tikv/pdv2/server/config"
+	"github.com/tikv/pdv2/server/core"
 )
 
 func TestBalanceLeaderSchedulerConfigClone(t *testing.T) {

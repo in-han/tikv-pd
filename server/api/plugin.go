@@ -20,8 +20,8 @@ import (
 	"os"
 
 	"github.com/tikv/pdv2/pkg/apiutil"
-	"github.com/tikv/pdv2/2/server"
-	"github.com/tikv/pdv2/2/server/cluster"
+	"github.com/tikv/pdv2/server"
+	"github.com/tikv/pdv2/server/cluster"
 	"github.com/unrolled/render"
 )
 

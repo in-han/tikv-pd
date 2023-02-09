@@ -30,12 +30,12 @@ import (
 	"github.com/pingcap/kvprotov2/pkg/metapb"
 	"github.com/pingcap/log"
 	"github.com/tikv/pdv2/pkg/cache"
-	"github.com/tikv/pdv2/2/pkg/etcdutil"
-	"github.com/tikv/pdv2/2/pkg/slice"
-	"github.com/tikv/pdv2/2/pkg/typeutil"
-	"github.com/tikv/pdv2/2/server/core"
-	"github.com/tikv/pdv2/2/server/core/storelimit"
-	"github.com/tikv/pdv2/2/server/storage/endpoint"
+	"github.com/tikv/pdv2/pkg/etcdutil"
+	"github.com/tikv/pdv2/pkg/slice"
+	"github.com/tikv/pdv2/pkg/typeutil"
+	"github.com/tikv/pdv2/server/core"
+	"github.com/tikv/pdv2/server/core/storelimit"
+	"github.com/tikv/pdv2/server/storage/endpoint"
 	"go.etcd.io/etcd/clientv3"
 )
 

@@ -31,11 +31,11 @@ import (
 	"github.com/syndtr/goleveldb/leveldb/iterator"
 	"github.com/syndtr/goleveldb/leveldb/util"
 	"github.com/tikv/pdv2/pkg/encryption"
-	"github.com/tikv/pdv2/2/pkg/errs"
-	"github.com/tikv/pdv2/2/pkg/syncutil"
-	"github.com/tikv/pdv2/2/server/core"
-	"github.com/tikv/pdv2/2/server/encryptionkm"
-	"github.com/tikv/pdv2/2/server/storage/kv"
+	"github.com/tikv/pdv2/pkg/errs"
+	"github.com/tikv/pdv2/pkg/syncutil"
+	"github.com/tikv/pdv2/server/core"
+	"github.com/tikv/pdv2/server/encryptionkm"
+	"github.com/tikv/pdv2/server/storage/kv"
 	"go.uber.org/zap"
 )
 

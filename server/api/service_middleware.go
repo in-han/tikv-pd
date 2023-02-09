@@ -24,11 +24,11 @@ import (
 
 	"github.com/pingcap/errors"
 	"github.com/tikv/pdv2/pkg/apiutil"
-	"github.com/tikv/pdv2/2/pkg/jsonutil"
-	"github.com/tikv/pdv2/2/pkg/ratelimit"
-	"github.com/tikv/pdv2/2/pkg/reflectutil"
-	"github.com/tikv/pdv2/2/server"
-	"github.com/tikv/pdv2/2/server/config"
+	"github.com/tikv/pdv2/pkg/jsonutil"
+	"github.com/tikv/pdv2/pkg/ratelimit"
+	"github.com/tikv/pdv2/pkg/reflectutil"
+	"github.com/tikv/pdv2/server"
+	"github.com/tikv/pdv2/server/config"
 
 	"github.com/unrolled/render"
 )

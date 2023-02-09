@@ -18,8 +18,8 @@ import (
 	"net/http"
 
 	"github.com/tikv/pdv2/pkg/apiutil"
-	"github.com/tikv/pdv2/2/pkg/typeutil"
-	"github.com/tikv/pdv2/2/server"
+	"github.com/tikv/pdv2/pkg/typeutil"
+	"github.com/tikv/pdv2/server"
 	"github.com/unrolled/render"
 )
 

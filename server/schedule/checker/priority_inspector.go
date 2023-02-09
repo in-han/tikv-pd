@@ -18,10 +18,10 @@ import (
 	"time"
 
 	"github.com/tikv/pdv2/pkg/cache"
-	"github.com/tikv/pdv2/2/server/config"
-	"github.com/tikv/pdv2/2/server/core"
-	"github.com/tikv/pdv2/2/server/schedule"
-	"github.com/tikv/pdv2/2/server/schedule/placement"
+	"github.com/tikv/pdv2/server/config"
+	"github.com/tikv/pdv2/server/core"
+	"github.com/tikv/pdv2/server/schedule"
+	"github.com/tikv/pdv2/server/schedule/placement"
 )
 
 // the default value of priority queue size

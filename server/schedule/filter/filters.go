@@ -22,11 +22,11 @@ import (
 	"github.com/pingcap/kvprotov2/pkg/metapb"
 	"github.com/pingcap/log"
 	"github.com/tikv/pdv2/pkg/slice"
-	"github.com/tikv/pdv2/2/server/config"
-	"github.com/tikv/pdv2/2/server/core"
-	"github.com/tikv/pdv2/2/server/core/storelimit"
-	"github.com/tikv/pdv2/2/server/schedule/placement"
-	"github.com/tikv/pdv2/2/server/schedule/plan"
+	"github.com/tikv/pdv2/server/config"
+	"github.com/tikv/pdv2/server/core"
+	"github.com/tikv/pdv2/server/core/storelimit"
+	"github.com/tikv/pdv2/server/schedule/placement"
+	"github.com/tikv/pdv2/server/schedule/plan"
 	"go.uber.org/zap"
 )
 

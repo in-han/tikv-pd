@@ -19,7 +19,7 @@ import (
 
 	"github.com/pingcap/kvprotov2/pkg/pdpb"
 	"github.com/tikv/pdv2/pkg/movingaverage"
-	"github.com/tikv/pdv2/2/pkg/syncutil"
+	"github.com/tikv/pdv2/pkg/syncutil"
 )
 
 type storeStats struct {

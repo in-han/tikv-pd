@@ -25,7 +25,7 @@ import (
 	"github.com/spf13/cobra"
 	"github.com/spf13/pflag"
 	"github.com/tikv/pdv2/server"
-	"github.com/tikv/pdv2/2/tools/pd-ctl/pdctl/command"
+	"github.com/tikv/pdv2/tools/pd-ctl/pdctl/command"
 )
 
 func init() {

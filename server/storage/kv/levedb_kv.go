@@ -20,7 +20,7 @@ import (
 	"github.com/pingcap/kvprotov2/pkg/metapb"
 	"github.com/syndtr/goleveldb/leveldb"
 	"github.com/syndtr/goleveldb/leveldb/util"
-	"github.com/tikv/pd/pkg/errs"
+	"github.com/tikv/pdv2/pkg/errs"
 )
 
 // LevelDBKV is a kv store using LevelDB.

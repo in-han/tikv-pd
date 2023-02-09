@@ -22,10 +22,10 @@ import (
 
 	"github.com/stretchr/testify/suite"
 	tu "github.com/tikv/pdv2/pkg/testutil"
-	"github.com/tikv/pdv2/2/pkg/typeutil"
-	"github.com/tikv/pdv2/2/server"
-	"github.com/tikv/pdv2/2/server/config"
-	"github.com/tikv/pdv2/2/server/versioninfo"
+	"github.com/tikv/pdv2/pkg/typeutil"
+	"github.com/tikv/pdv2/server"
+	"github.com/tikv/pdv2/server/config"
+	"github.com/tikv/pdv2/server/versioninfo"
 )
 
 type configTestSuite struct {

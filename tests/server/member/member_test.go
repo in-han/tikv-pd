@@ -30,11 +30,11 @@ import (
 	"github.com/pingcap/kvprotov2/pkg/pdpb"
 	"github.com/stretchr/testify/require"
 	"github.com/tikv/pdv2/pkg/assertutil"
-	"github.com/tikv/pdv2/2/pkg/etcdutil"
-	"github.com/tikv/pdv2/2/pkg/testutil"
-	"github.com/tikv/pdv2/2/server"
-	"github.com/tikv/pdv2/2/server/config"
-	"github.com/tikv/pdv2/2/tests"
+	"github.com/tikv/pdv2/pkg/etcdutil"
+	"github.com/tikv/pdv2/pkg/testutil"
+	"github.com/tikv/pdv2/server"
+	"github.com/tikv/pdv2/server/config"
+	"github.com/tikv/pdv2/tests"
 	"go.uber.org/goleak"
 )
 
@@ -240,12 +240,12 @@ func TestLeaderResignWithBlock(t *testing.T) {
 	leader1 := cluster.WaitLeader()
 	addr1 := cluster.GetServer(leader1).GetConfig().ClientUrls
 
-	re.NoError(failpoint.Enable("github.com/tikv/pdv2/2/server/raftclusterIsBusy", `pause`))
+	re.NoError(failpoint.Enable("github.com/tikv/pdv2/server/raftclusterIsBusy", `pause`))
 	post(t, re, addr1+"/pd/api/v1/leader/resign", "")
 	leader2 := waitLeaderChange(re, cluster, leader1)
 	t.Log("leader2:", leader2)
 	re.NotEqual(leader1, leader2)
-	re.NoError(failpoint.Disable("github.com/tikv/pdv2/2/server/raftclusterIsBusy"))
+	re.NoError(failpoint.Disable("github.com/tikv/pdv2/server/raftclusterIsBusy"))
 }
 
 func waitLeaderChange(re *require.Assertions, cluster *tests.TestCluster, old string) string {

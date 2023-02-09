@@ -27,11 +27,11 @@ import (
 	"github.com/pingcap/kvprotov2/pkg/pdpb"
 	"github.com/stretchr/testify/require"
 	"github.com/tikv/pdv2/pkg/etcdutil"
-	"github.com/tikv/pdv2/2/pkg/slice"
-	"github.com/tikv/pdv2/2/pkg/testutil"
-	"github.com/tikv/pdv2/2/server/config"
-	"github.com/tikv/pdv2/2/server/tso"
-	"github.com/tikv/pdv2/2/tests"
+	"github.com/tikv/pdv2/pkg/slice"
+	"github.com/tikv/pdv2/pkg/testutil"
+	"github.com/tikv/pdv2/server/config"
+	"github.com/tikv/pdv2/server/tso"
+	"github.com/tikv/pdv2/tests"
 )
 
 func TestAllocatorLeader(t *testing.T) {

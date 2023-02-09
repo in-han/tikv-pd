@@ -22,9 +22,9 @@ import (
 	"github.com/pingcap/kvprotov2/pkg/metapb"
 	"github.com/stretchr/testify/suite"
 	"github.com/tikv/pdv2/pkg/apiutil"
-	"github.com/tikv/pdv2/2/server"
-	"github.com/tikv/pdv2/2/server/core"
-	"github.com/tikv/pdv2/2/server/statistics"
+	"github.com/tikv/pdv2/server"
+	"github.com/tikv/pdv2/server/core"
+	"github.com/tikv/pdv2/server/statistics"
 )
 
 type statsTestSuite struct {

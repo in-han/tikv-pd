@@ -19,7 +19,7 @@ import (
 	"path"
 
 	"github.com/gogo/protobuf/proto"
-	"github.com/tikv/pd/pkg/errs"
+	"github.com/tikv/pdv2/pkg/errs"
 )
 
 func (se *StorageEndpoint) loadProto(key string, msg proto.Message) (bool, error) {

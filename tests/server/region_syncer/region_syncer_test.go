@@ -24,10 +24,10 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"github.com/tikv/pdv2/pkg/mock/mockid"
-	"github.com/tikv/pdv2/2/pkg/testutil"
-	"github.com/tikv/pdv2/2/server/config"
-	"github.com/tikv/pdv2/2/server/core"
-	"github.com/tikv/pdv2/2/tests"
+	"github.com/tikv/pdv2/pkg/testutil"
+	"github.com/tikv/pdv2/server/config"
+	"github.com/tikv/pdv2/server/core"
+	"github.com/tikv/pdv2/tests"
 	"go.uber.org/goleak"
 )
 
@@ -48,8 +48,8 @@ func TestRegionSyncer(t *testing.T) {
 	re := require.New(t)
 	ctx, cancel := context.WithCancel(context.Background())
 	defer cancel()
-	re.NoError(failpoint.Enable("github.com/tikv/pdv2/2/server/storage/regionStorageFastFlush", `return(true)`))
-	re.NoError(failpoint.Enable("github.com/tikv/pdv2/2/server/syncer/noFastExitSync", `return(true)`))
+	re.NoError(failpoint.Enable("github.com/tikv/pdv2/server/storage/regionStorageFastFlush", `return(true)`))
+	re.NoError(failpoint.Enable("github.com/tikv/pdv2/server/syncer/noFastExitSync", `return(true)`))
 
 	cluster, err := tests.NewTestCluster(ctx, 3, func(conf *config.Config, serverName string) { conf.PDServerCfg.UseRegionStorage = true })
 	defer cluster.Destroy()
@@ -147,8 +147,8 @@ func TestRegionSyncer(t *testing.T) {
 		re.Equal(region.GetLeader(), r.GetLeader())
 		re.Equal(region.GetBuckets(), r.GetBuckets())
 	}
-	re.NoError(failpoint.Disable("github.com/tikv/pdv2/2/server/syncer/noFastExitSync"))
-	re.NoError(failpoint.Disable("github.com/tikv/pdv2/2/server/storage/regionStorageFastFlush"))
+	re.NoError(failpoint.Disable("github.com/tikv/pdv2/server/syncer/noFastExitSync"))
+	re.NoError(failpoint.Disable("github.com/tikv/pdv2/server/storage/regionStorageFastFlush"))
 }
 
 func TestFullSyncWithAddMember(t *testing.T) {
@@ -198,7 +198,7 @@ func TestPrepareChecker(t *testing.T) {
 	re := require.New(t)
 	ctx, cancel := context.WithCancel(context.Background())
 	defer cancel()
-	re.NoError(failpoint.Enable("github.com/tikv/pdv2/2/server/cluster/changeCoordinatorTicker", `return(true)`))
+	re.NoError(failpoint.Enable("github.com/tikv/pdv2/server/cluster/changeCoordinatorTicker", `return(true)`))
 	cluster, err := tests.NewTestCluster(ctx, 1, func(conf *config.Config, serverName string) { conf.PDServerCfg.UseRegionStorage = true })
 	defer cluster.Destroy()
 	re.NoError(err)
@@ -239,7 +239,7 @@ func TestPrepareChecker(t *testing.T) {
 	}
 	time.Sleep(time.Second)
 	re.True(rc.IsPrepared())
-	re.NoError(failpoint.Disable("github.com/tikv/pdv2/2/server/cluster/changeCoordinatorTicker"))
+	re.NoError(failpoint.Disable("github.com/tikv/pdv2/server/cluster/changeCoordinatorTicker"))
 }
 
 func initRegions(regionLen int) []*core.RegionInfo {

@@ -17,7 +17,7 @@ package endpoint
 import (
 	"strconv"
 
-	"github.com/tikv/pd/pkg/errs"
+	"github.com/tikv/pdv2/pkg/errs"
 )
 
 // MinResolvedTSPoint is the min resolved ts for a store

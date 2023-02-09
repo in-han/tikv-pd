@@ -18,7 +18,7 @@ import (
 	"fmt"
 	"math"
 
-	"github.com/tikv/pd/pkg/syncutil"
+	"github.com/tikv/pdv2/pkg/syncutil"
 )
 
 type taskStatistics struct {

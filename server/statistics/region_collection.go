@@ -20,8 +20,8 @@ import (
 
 	"github.com/pingcap/log"
 	"github.com/tikv/pdv2/server/config"
-	"github.com/tikv/pdv2/2/server/core"
-	"github.com/tikv/pdv2/2/server/schedule/placement"
+	"github.com/tikv/pdv2/server/core"
+	"github.com/tikv/pdv2/server/schedule/placement"
 )
 
 // RegionStatisticType represents the type of the region's status.

@@ -25,10 +25,10 @@ import (
 	"github.com/pingcap/kvprotov2/pkg/raft_serverpb"
 	"github.com/stretchr/testify/require"
 	"github.com/tikv/pdv2/pkg/codec"
-	"github.com/tikv/pdv2/2/pkg/mock/mockid"
-	"github.com/tikv/pdv2/2/server/core"
-	"github.com/tikv/pdv2/2/server/schedule/hbstream"
-	"github.com/tikv/pdv2/2/server/storage"
+	"github.com/tikv/pdv2/pkg/mock/mockid"
+	"github.com/tikv/pdv2/server/core"
+	"github.com/tikv/pdv2/server/schedule/hbstream"
+	"github.com/tikv/pdv2/server/storage"
 )
 
 func newStoreHeartbeat(storeID uint64, report *pdpb.StoreReport) *pdpb.StoreHeartbeatRequest {

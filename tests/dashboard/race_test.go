@@ -21,10 +21,10 @@ import (
 
 	"github.com/stretchr/testify/require"
 	"github.com/tikv/pdv2/pkg/dashboard"
-	"github.com/tikv/pdv2/2/tests"
+	"github.com/tikv/pdv2/tests"
 
 	// Register schedulers.
-	_ "github.com/tikv/pdv2/2/server/schedulers"
+	_ "github.com/tikv/pdv2/server/schedulers"
 )
 
 func TestCancelDuringStarting(t *testing.T) {

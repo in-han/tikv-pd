@@ -25,10 +25,10 @@ import (
 	"github.com/pingcap/kvprotov2/pkg/metapb"
 	"github.com/stretchr/testify/suite"
 	"github.com/tikv/pdv2/pkg/apiutil"
-	tu "github.com/tikv/pdv2/2/pkg/testutil"
-	"github.com/tikv/pdv2/2/server"
-	"github.com/tikv/pdv2/2/server/config"
-	_ "github.com/tikv/pdv2/2/server/schedulers"
+	tu "github.com/tikv/pdv2/pkg/testutil"
+	"github.com/tikv/pdv2/server"
+	"github.com/tikv/pdv2/server/config"
+	_ "github.com/tikv/pdv2/server/schedulers"
 )
 
 type scheduleTestSuite struct {
@@ -79,13 +79,13 @@ func (suite *scheduleTestSuite) TestOriginAPI() {
 	input1["store_id"] = 2
 	body, err = json.Marshal(input1)
 	suite.NoError(err)
-	suite.NoError(failpoint.Enable("github.com/tikv/pdv2/2/server/schedulers/persistFail", "return(true)"))
+	suite.NoError(failpoint.Enable("github.com/tikv/pdv2/server/schedulers/persistFail", "return(true)"))
 	suite.NoError(tu.CheckPostJSON(testDialClient, addURL, body, tu.StatusNotOK(re)))
 	suite.Len(rc.GetSchedulers(), 1)
 	resp = make(map[string]interface{})
 	suite.NoError(tu.ReadGetJSON(re, testDialClient, listURL, &resp))
 	suite.Len(resp["store-id-ranges"], 1)
-	suite.NoError(failpoint.Disable("github.com/tikv/pdv2/2/server/schedulers/persistFail"))
+	suite.NoError(failpoint.Disable("github.com/tikv/pdv2/server/schedulers/persistFail"))
 	suite.NoError(tu.CheckPostJSON(testDialClient, addURL, body, tu.StatusOK(re)))
 	suite.Len(rc.GetSchedulers(), 1)
 	resp = make(map[string]interface{})
@@ -99,12 +99,12 @@ func (suite *scheduleTestSuite) TestOriginAPI() {
 	suite.NoError(tu.ReadGetJSON(re, testDialClient, listURL, &resp1))
 	suite.Len(resp1["store-id-ranges"], 1)
 	deleteURL = fmt.Sprintf("%s/%s", suite.urlPrefix, "evict-leader-scheduler-2")
-	suite.NoError(failpoint.Enable("github.com/tikv/pdv2/2/server/config/persistFail", "return(true)"))
+	suite.NoError(failpoint.Enable("github.com/tikv/pdv2/server/config/persistFail", "return(true)"))
 	statusCode, err := apiutil.DoDelete(testDialClient, deleteURL)
 	suite.NoError(err)
 	suite.Equal(500, statusCode)
 	suite.Len(rc.GetSchedulers(), 1)
-	suite.NoError(failpoint.Disable("github.com/tikv/pdv2/2/server/config/persistFail"))
+	suite.NoError(failpoint.Disable("github.com/tikv/pdv2/server/config/persistFail"))
 	statusCode, err = apiutil.DoDelete(testDialClient, deleteURL)
 	suite.NoError(err)
 	suite.Equal(200, statusCode)

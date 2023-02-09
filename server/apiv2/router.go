@@ -22,7 +22,7 @@ import (
 	"github.com/gin-gonic/gin"
 	"github.com/joho/godotenv"
 	"github.com/tikv/pdv2/server"
-	"github.com/tikv/pdv2/2/server/apiv2/middlewares"
+	"github.com/tikv/pdv2/server/apiv2/middlewares"
 )
 
 var once sync.Once

@@ -23,9 +23,9 @@ import (
 	"github.com/pingcap/failpoint"
 	"github.com/stretchr/testify/suite"
 	"github.com/tikv/pdv2/pkg/ratelimit"
-	tu "github.com/tikv/pdv2/2/pkg/testutil"
-	"github.com/tikv/pdv2/2/server"
-	"github.com/tikv/pdv2/2/server/config"
+	tu "github.com/tikv/pdv2/pkg/testutil"
+	"github.com/tikv/pdv2/server"
+	"github.com/tikv/pdv2/server/config"
 )
 
 type auditMiddlewareTestSuite struct {
@@ -95,14 +95,14 @@ func (suite *auditMiddlewareTestSuite) TestConfigAuditSwitch() {
 	postData, err = json.Marshal(ms)
 	suite.NoError(err)
 	suite.NoError(tu.CheckPostJSON(testDialClient, addr, postData, tu.Status(re, http.StatusBadRequest), tu.StringEqual(re, "config item audit not found")))
-	suite.NoError(failpoint.Enable("github.com/tikv/pdv2/2/server/config/persistServiceMiddlewareFail", "return(true)"))
+	suite.NoError(failpoint.Enable("github.com/tikv/pdv2/server/config/persistServiceMiddlewareFail", "return(true)"))
 	ms = map[string]interface{}{
 		"audit.enable-audit": "true",
 	}
 	postData, err = json.Marshal(ms)
 	suite.NoError(err)
 	suite.NoError(tu.CheckPostJSON(testDialClient, addr, postData, tu.Status(re, http.StatusBadRequest)))
-	suite.NoError(failpoint.Disable("github.com/tikv/pdv2/2/server/config/persistServiceMiddlewareFail"))
+	suite.NoError(failpoint.Disable("github.com/tikv/pdv2/server/config/persistServiceMiddlewareFail"))
 	ms = map[string]interface{}{
 		"audit.audit": "false",
 	}
@@ -325,14 +325,14 @@ func (suite *rateLimitConfigTestSuite) TestConfigRateLimitSwitch() {
 	postData, err = json.Marshal(ms)
 	suite.NoError(err)
 	suite.NoError(tu.CheckPostJSON(testDialClient, addr, postData, tu.Status(re, http.StatusBadRequest), tu.StringEqual(re, "config item rate-limit not found")))
-	suite.NoError(failpoint.Enable("github.com/tikv/pdv2/2/server/config/persistServiceMiddlewareFail", "return(true)"))
+	suite.NoError(failpoint.Enable("github.com/tikv/pdv2/server/config/persistServiceMiddlewareFail", "return(true)"))
 	ms = map[string]interface{}{
 		"rate-limit.enable-rate-limit": "true",
 	}
 	postData, err = json.Marshal(ms)
 	suite.NoError(err)
 	suite.NoError(tu.CheckPostJSON(testDialClient, addr, postData, tu.Status(re, http.StatusBadRequest)))
-	suite.NoError(failpoint.Disable("github.com/tikv/pdv2/2/server/config/persistServiceMiddlewareFail"))
+	suite.NoError(failpoint.Disable("github.com/tikv/pdv2/server/config/persistServiceMiddlewareFail"))
 	ms = map[string]interface{}{
 		"rate-limit.rate-limit": "false",
 	}

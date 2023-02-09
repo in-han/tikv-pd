@@ -19,10 +19,10 @@ import (
 
 	"github.com/pingcap/log"
 	"github.com/tikv/pdv2/pkg/errs"
-	"github.com/tikv/pdv2/2/pkg/etcdutil"
-	"github.com/tikv/pdv2/2/pkg/syncutil"
-	"github.com/tikv/pdv2/2/pkg/typeutil"
-	"github.com/tikv/pdv2/2/server/storage/kv"
+	"github.com/tikv/pdv2/pkg/etcdutil"
+	"github.com/tikv/pdv2/pkg/syncutil"
+	"github.com/tikv/pdv2/pkg/typeutil"
+	"github.com/tikv/pdv2/server/storage/kv"
 	"go.etcd.io/etcd/clientv3"
 	"go.uber.org/zap"
 )

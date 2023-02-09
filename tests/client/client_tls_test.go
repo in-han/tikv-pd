@@ -27,10 +27,10 @@ import (
 
 	"github.com/stretchr/testify/require"
 	pd "github.com/tikv/pdv2/client"
-	"github.com/tikv/pdv2/2/pkg/grpcutil"
-	"github.com/tikv/pdv2/2/pkg/netutil"
-	"github.com/tikv/pdv2/2/server/config"
-	"github.com/tikv/pdv2/2/tests"
+	"github.com/tikv/pdv2/pkg/grpcutil"
+	"github.com/tikv/pdv2/pkg/netutil"
+	"github.com/tikv/pdv2/server/config"
+	"github.com/tikv/pdv2/tests"
 	"go.etcd.io/etcd/pkg/transport"
 	"google.golang.org/grpc"
 )

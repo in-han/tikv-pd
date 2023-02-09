@@ -21,9 +21,9 @@ import (
 	"github.com/pingcap/kvprotov2/pkg/pdpb"
 	"github.com/stretchr/testify/require"
 	"github.com/tikv/pdv2/server/config"
-	"github.com/tikv/pdv2/2/server/core"
-	"github.com/tikv/pdv2/2/server/schedule/placement"
-	"github.com/tikv/pdv2/2/server/storage"
+	"github.com/tikv/pdv2/server/core"
+	"github.com/tikv/pdv2/server/schedule/placement"
+	"github.com/tikv/pdv2/server/storage"
 )
 
 func TestRegionStatistics(t *testing.T) {

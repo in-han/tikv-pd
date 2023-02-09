@@ -19,7 +19,7 @@ import (
 
 	"github.com/gorilla/mux"
 	"github.com/tikv/pdv2/pkg/apiutil"
-	"github.com/tikv/pdv2/2/server"
+	"github.com/tikv/pdv2/server"
 	"github.com/unrolled/render"
 )
 

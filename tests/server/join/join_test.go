@@ -23,9 +23,9 @@ import (
 
 	"github.com/stretchr/testify/require"
 	"github.com/tikv/pdv2/pkg/etcdutil"
-	"github.com/tikv/pdv2/2/server"
-	"github.com/tikv/pdv2/2/server/join"
-	"github.com/tikv/pdv2/2/tests"
+	"github.com/tikv/pdv2/server"
+	"github.com/tikv/pdv2/server/join"
+	"github.com/tikv/pdv2/tests"
 )
 
 // TODO: enable it when we fix TestFailedAndDeletedPDJoinsPreviousCluster

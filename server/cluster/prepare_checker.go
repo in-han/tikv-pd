@@ -18,7 +18,7 @@ import (
 	"time"
 
 	"github.com/tikv/pdv2/pkg/syncutil"
-	"github.com/tikv/pdv2/2/server/core"
+	"github.com/tikv/pdv2/server/core"
 )
 
 type prepareChecker struct {

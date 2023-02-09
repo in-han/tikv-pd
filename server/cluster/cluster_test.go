@@ -29,19 +29,19 @@ import (
 	"github.com/pingcap/kvprotov2/pkg/pdpb"
 	"github.com/stretchr/testify/require"
 	"github.com/tikv/pdv2/pkg/errs"
-	"github.com/tikv/pdv2/2/pkg/mock/mockid"
-	"github.com/tikv/pdv2/2/pkg/progress"
-	"github.com/tikv/pdv2/2/server/config"
-	"github.com/tikv/pdv2/2/server/core"
-	"github.com/tikv/pdv2/2/server/id"
-	"github.com/tikv/pdv2/2/server/schedule"
-	"github.com/tikv/pdv2/2/server/schedule/filter"
-	"github.com/tikv/pdv2/2/server/schedule/labeler"
-	"github.com/tikv/pdv2/2/server/schedule/placement"
-	"github.com/tikv/pdv2/2/server/schedulers"
-	"github.com/tikv/pdv2/2/server/statistics"
-	"github.com/tikv/pdv2/2/server/storage"
-	"github.com/tikv/pdv2/2/server/versioninfo"
+	"github.com/tikv/pdv2/pkg/mock/mockid"
+	"github.com/tikv/pdv2/pkg/progress"
+	"github.com/tikv/pdv2/server/config"
+	"github.com/tikv/pdv2/server/core"
+	"github.com/tikv/pdv2/server/id"
+	"github.com/tikv/pdv2/server/schedule"
+	"github.com/tikv/pdv2/server/schedule/filter"
+	"github.com/tikv/pdv2/server/schedule/labeler"
+	"github.com/tikv/pdv2/server/schedule/placement"
+	"github.com/tikv/pdv2/server/schedulers"
+	"github.com/tikv/pdv2/server/statistics"
+	"github.com/tikv/pdv2/server/storage"
+	"github.com/tikv/pdv2/server/versioninfo"
 )
 
 func TestStoreHeartbeat(t *testing.T) {
@@ -983,13 +983,13 @@ func TestConcurrentReportBucket(t *testing.T) {
 	bucket2 := &metapb.Buckets{RegionId: 0, Version: 2}
 	var wg sync.WaitGroup
 	wg.Add(1)
-	re.NoError(failpoint.Enable("github.com/tikv/pdv2/2/server/cluster/concurrentBucketHeartbeat", "return(true)"))
+	re.NoError(failpoint.Enable("github.com/tikv/pdv2/server/cluster/concurrentBucketHeartbeat", "return(true)"))
 	go func() {
 		defer wg.Done()
 		cluster.processReportBuckets(bucket1)
 	}()
 	time.Sleep(100 * time.Millisecond)
-	re.NoError(failpoint.Disable("github.com/tikv/pdv2/2/server/cluster/concurrentBucketHeartbeat"))
+	re.NoError(failpoint.Disable("github.com/tikv/pdv2/server/cluster/concurrentBucketHeartbeat"))
 	re.NoError(cluster.processReportBuckets(bucket2))
 	wg.Wait()
 	re.Equal(bucket1, cluster.GetRegion(0).GetBuckets())
@@ -1021,13 +1021,13 @@ func TestConcurrentRegionHeartbeat(t *testing.T) {
 
 	var wg sync.WaitGroup
 	wg.Add(1)
-	re.NoError(failpoint.Enable("github.com/tikv/pdv2/2/server/cluster/concurrentRegionHeartbeat", "return(true)"))
+	re.NoError(failpoint.Enable("github.com/tikv/pdv2/server/cluster/concurrentRegionHeartbeat", "return(true)"))
 	go func() {
 		defer wg.Done()
 		cluster.processRegionHeartbeat(source)
 	}()
 	time.Sleep(100 * time.Millisecond)
-	re.NoError(failpoint.Disable("github.com/tikv/pdv2/2/server/cluster/concurrentRegionHeartbeat"))
+	re.NoError(failpoint.Disable("github.com/tikv/pdv2/server/cluster/concurrentRegionHeartbeat"))
 	re.NoError(cluster.processRegionHeartbeat(target))
 	wg.Wait()
 	checkRegion(re, cluster.GetRegionByKey([]byte{}), target)

@@ -20,10 +20,10 @@ import (
 
 	"github.com/docker/go-units"
 	"github.com/tikv/pdv2/pkg/btree"
-	"github.com/tikv/pdv2/2/pkg/keyutil"
-	"github.com/tikv/pdv2/2/pkg/slice"
-	"github.com/tikv/pdv2/2/server/core"
-	"github.com/tikv/pdv2/2/server/statistics"
+	"github.com/tikv/pdv2/pkg/keyutil"
+	"github.com/tikv/pdv2/pkg/slice"
+	"github.com/tikv/pdv2/server/core"
+	"github.com/tikv/pdv2/server/statistics"
 )
 
 var minHotThresholds = [statistics.RegionStatCount]uint64{

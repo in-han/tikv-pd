@@ -26,8 +26,8 @@ import (
 
 	"github.com/pingcap/kvprotov2/pkg/metapb"
 	"github.com/tikv/pdv2/pkg/etcdutil"
-	"github.com/tikv/pdv2/2/pkg/typeutil"
-	"github.com/tikv/pdv2/2/server"
+	"github.com/tikv/pdv2/pkg/typeutil"
+	"github.com/tikv/pdv2/server"
 	"go.etcd.io/etcd/clientv3"
 	"go.etcd.io/etcd/pkg/transport"
 )

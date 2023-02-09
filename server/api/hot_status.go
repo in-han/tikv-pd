@@ -22,8 +22,8 @@ import (
 	"strconv"
 
 	"github.com/tikv/pdv2/server"
-	"github.com/tikv/pdv2/2/server/statistics"
-	"github.com/tikv/pdv2/2/server/storage"
+	"github.com/tikv/pdv2/server/statistics"
+	"github.com/tikv/pdv2/server/storage"
 	"github.com/unrolled/render"
 )
 

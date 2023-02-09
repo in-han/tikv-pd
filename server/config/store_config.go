@@ -24,9 +24,9 @@ import (
 
 	"github.com/pingcap/log"
 	"github.com/tikv/pdv2/pkg/errs"
-	"github.com/tikv/pdv2/2/pkg/netutil"
-	"github.com/tikv/pdv2/2/pkg/slice"
-	"github.com/tikv/pdv2/2/pkg/typeutil"
+	"github.com/tikv/pdv2/pkg/netutil"
+	"github.com/tikv/pdv2/pkg/slice"
+	"github.com/tikv/pdv2/pkg/typeutil"
 	"go.uber.org/zap"
 )
 

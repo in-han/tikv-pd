@@ -115,7 +115,7 @@ const (
 	// (heartbeat size <= 1MB).
 	EmptyRegionApproximateSize = 1
 	// ImpossibleFlowSize is an impossible flow size (such as written_bytes, read_keys, etc.)
-	// It may be caused by overflow, refer to https://github.com/tikv/pdv2/2/issues/3379.
+	// It may be caused by overflow, refer to https://github.com/tikv/pdv2/issues/3379.
 	// They need to be filtered so as not to affect downstream.
 	// (flow size >= 1024TB)
 	ImpossibleFlowSize = 1 << 50

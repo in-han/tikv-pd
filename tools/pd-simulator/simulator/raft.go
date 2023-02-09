@@ -20,9 +20,9 @@ import (
 	"github.com/pingcap/errors"
 	"github.com/pingcap/kvprotov2/pkg/metapb"
 	"github.com/tikv/pdv2/pkg/syncutil"
-	"github.com/tikv/pdv2/2/server/core"
-	"github.com/tikv/pdv2/2/tools/pd-simulator/simulator/cases"
-	"github.com/tikv/pdv2/2/tools/pd-simulator/simulator/simutil"
+	"github.com/tikv/pdv2/server/core"
+	"github.com/tikv/pdv2/tools/pd-simulator/simulator/cases"
+	"github.com/tikv/pdv2/tools/pd-simulator/simulator/simutil"
 	"go.uber.org/zap"
 )
 

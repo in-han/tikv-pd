@@ -31,9 +31,9 @@ import (
 	"github.com/stretchr/testify/require"
 	"github.com/stretchr/testify/suite"
 	tu "github.com/tikv/pdv2/pkg/testutil"
-	"github.com/tikv/pdv2/2/server"
-	"github.com/tikv/pdv2/2/server/config"
-	"github.com/tikv/pdv2/2/server/core"
+	"github.com/tikv/pdv2/server"
+	"github.com/tikv/pdv2/server/config"
+	"github.com/tikv/pdv2/server/core"
 )
 
 type storeTestSuite struct {

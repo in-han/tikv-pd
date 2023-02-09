@@ -57,4 +57,3 @@ require (
 )
 
 replace github.com/pingcap/kvprotov2 => /Users/yin.han/Documents/hanyin/shopee_kv/kvstore_env/kvstore-ap/submodule/kvproto-6.2
-

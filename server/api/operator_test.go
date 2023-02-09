@@ -30,14 +30,14 @@ import (
 	"github.com/stretchr/testify/require"
 	"github.com/stretchr/testify/suite"
 	"github.com/tikv/pdv2/pkg/apiutil"
-	"github.com/tikv/pdv2/2/pkg/mock/mockhbstream"
-	tu "github.com/tikv/pdv2/2/pkg/testutil"
-	"github.com/tikv/pdv2/2/server"
-	"github.com/tikv/pdv2/2/server/config"
-	"github.com/tikv/pdv2/2/server/core"
-	pdoperator "github.com/tikv/pdv2/2/server/schedule/operator"
-	"github.com/tikv/pdv2/2/server/schedule/placement"
-	"github.com/tikv/pdv2/2/server/versioninfo"
+	"github.com/tikv/pdv2/pkg/mock/mockhbstream"
+	tu "github.com/tikv/pdv2/pkg/testutil"
+	"github.com/tikv/pdv2/server"
+	"github.com/tikv/pdv2/server/config"
+	"github.com/tikv/pdv2/server/core"
+	pdoperator "github.com/tikv/pdv2/server/schedule/operator"
+	"github.com/tikv/pdv2/server/schedule/placement"
+	"github.com/tikv/pdv2/server/versioninfo"
 )
 
 type operatorTestSuite struct {
@@ -53,7 +53,7 @@ func TestOperatorTestSuite(t *testing.T) {
 
 func (suite *operatorTestSuite) SetupSuite() {
 	re := suite.Require()
-	suite.NoError(failpoint.Enable("github.com/tikv/pdv2/2/server/schedule/unexpectedOperator", "return(true)"))
+	suite.NoError(failpoint.Enable("github.com/tikv/pdv2/server/schedule/unexpectedOperator", "return(true)"))
 	suite.svr, suite.cleanup = mustNewServer(re, func(cfg *config.Config) { cfg.Replication.MaxReplicas = 1 })
 	server.MustWaitLeader(re, []*server.Server{suite.svr})
 
@@ -176,7 +176,7 @@ func TestTransferRegionOperatorTestSuite(t *testing.T) {
 
 func (suite *transferRegionOperatorTestSuite) SetupSuite() {
 	re := suite.Require()
-	suite.NoError(failpoint.Enable("github.com/tikv/pdv2/2/server/schedule/unexpectedOperator", "return(true)"))
+	suite.NoError(failpoint.Enable("github.com/tikv/pdv2/server/schedule/unexpectedOperator", "return(true)"))
 	suite.svr, suite.cleanup = mustNewServer(re, func(cfg *config.Config) { cfg.Replication.MaxReplicas = 3 })
 	server.MustWaitLeader(re, []*server.Server{suite.svr})
 

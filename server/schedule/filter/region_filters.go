@@ -16,8 +16,8 @@ package filter
 
 import (
 	"github.com/tikv/pdv2/pkg/slice"
-	"github.com/tikv/pdv2/2/server/core"
-	"github.com/tikv/pdv2/2/server/schedule/plan"
+	"github.com/tikv/pdv2/server/core"
+	"github.com/tikv/pdv2/server/schedule/plan"
 )
 
 // SelectRegions selects regions that be selected from the list.

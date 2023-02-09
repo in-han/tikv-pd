@@ -25,7 +25,7 @@ import (
 	"github.com/pingcap/kvprotov2/pkg/pdpb"
 	"github.com/stretchr/testify/require"
 	"github.com/tikv/pdv2/pkg/mock/mockid"
-	"github.com/tikv/pdv2/2/server/id"
+	"github.com/tikv/pdv2/server/id"
 )
 
 func TestNeedMerge(t *testing.T) {

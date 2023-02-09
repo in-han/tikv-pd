@@ -27,12 +27,12 @@ import (
 	"github.com/pingcap/errors"
 	"github.com/pingcap/kvprotov2/pkg/metapb"
 	"github.com/tikv/pdv2/pkg/apiutil"
-	"github.com/tikv/pdv2/2/pkg/errs"
-	"github.com/tikv/pdv2/2/pkg/typeutil"
-	"github.com/tikv/pdv2/2/server"
-	"github.com/tikv/pdv2/2/server/config"
-	"github.com/tikv/pdv2/2/server/core"
-	"github.com/tikv/pdv2/2/server/core/storelimit"
+	"github.com/tikv/pdv2/pkg/errs"
+	"github.com/tikv/pdv2/pkg/typeutil"
+	"github.com/tikv/pdv2/server"
+	"github.com/tikv/pdv2/server/config"
+	"github.com/tikv/pdv2/server/core"
+	"github.com/tikv/pdv2/server/core/storelimit"
 	"github.com/unrolled/render"
 )
 

@@ -25,20 +25,20 @@ import (
 	"github.com/pingcap/errors"
 	"github.com/pingcap/log"
 	"github.com/tikv/pdv2/pkg/autoscaling"
-	"github.com/tikv/pdv2/2/pkg/dashboard"
-	"github.com/tikv/pdv2/2/pkg/errs"
-	"github.com/tikv/pdv2/2/pkg/logutil"
-	"github.com/tikv/pdv2/2/pkg/metricutil"
-	"github.com/tikv/pdv2/2/pkg/swaggerserver"
-	"github.com/tikv/pdv2/2/server"
-	"github.com/tikv/pdv2/2/server/api"
-	"github.com/tikv/pdv2/2/server/apiv2"
-	"github.com/tikv/pdv2/2/server/config"
-	"github.com/tikv/pdv2/2/server/join"
+	"github.com/tikv/pdv2/pkg/dashboard"
+	"github.com/tikv/pdv2/pkg/errs"
+	"github.com/tikv/pdv2/pkg/logutil"
+	"github.com/tikv/pdv2/pkg/metricutil"
+	"github.com/tikv/pdv2/pkg/swaggerserver"
+	"github.com/tikv/pdv2/server"
+	"github.com/tikv/pdv2/server/api"
+	"github.com/tikv/pdv2/server/apiv2"
+	"github.com/tikv/pdv2/server/config"
+	"github.com/tikv/pdv2/server/join"
 	"go.uber.org/zap"
 
 	// Register schedulers.
-	_ "github.com/tikv/pdv2/2/server/schedulers"
+	_ "github.com/tikv/pdv2/server/schedulers"
 )
 
 func main() {

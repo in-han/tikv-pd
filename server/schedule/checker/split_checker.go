@@ -18,11 +18,11 @@ import (
 	"github.com/pingcap/kvprotov2/pkg/pdpb"
 	"github.com/pingcap/log"
 	"github.com/tikv/pdv2/pkg/errs"
-	"github.com/tikv/pdv2/2/server/core"
-	"github.com/tikv/pdv2/2/server/schedule"
-	"github.com/tikv/pdv2/2/server/schedule/labeler"
-	"github.com/tikv/pdv2/2/server/schedule/operator"
-	"github.com/tikv/pdv2/2/server/schedule/placement"
+	"github.com/tikv/pdv2/server/core"
+	"github.com/tikv/pdv2/server/schedule"
+	"github.com/tikv/pdv2/server/schedule/labeler"
+	"github.com/tikv/pdv2/server/schedule/operator"
+	"github.com/tikv/pdv2/server/schedule/placement"
 )
 
 // SplitChecker splits regions when the key range spans across rule/label boundary.

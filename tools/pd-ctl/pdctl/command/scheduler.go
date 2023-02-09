@@ -26,7 +26,7 @@ import (
 
 	"github.com/pingcap/errors"
 	"github.com/spf13/cobra"
-	"github.com/tikv/pd/server/schedulers"
+	"github.com/tikv/pdv2/server/schedulers"
 )
 
 var (

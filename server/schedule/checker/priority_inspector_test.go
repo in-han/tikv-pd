@@ -21,7 +21,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 	"github.com/tikv/pdv2/pkg/mock/mockcluster"
-	"github.com/tikv/pdv2/2/server/config"
+	"github.com/tikv/pdv2/server/config"
 )
 
 func TestCheckPriorityRegions(t *testing.T) {

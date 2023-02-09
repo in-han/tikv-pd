@@ -21,7 +21,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/tikv/pd/tools/pd-backup/pdbackup"
+	"github.com/tikv/pdv2/tools/pd-backup/pdbackup"
 	"go.etcd.io/etcd/clientv3"
 	"go.etcd.io/etcd/pkg/transport"
 )

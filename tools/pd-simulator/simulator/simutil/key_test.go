@@ -18,7 +18,7 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/require"
-	"github.com/tikv/pd/pkg/codec"
+	"github.com/tikv/pdv2/pkg/codec"
 )
 
 func TestGenerateTableKeys(t *testing.T) {

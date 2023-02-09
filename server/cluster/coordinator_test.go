@@ -29,18 +29,18 @@ import (
 	"github.com/pingcap/kvprotov2/pkg/pdpb"
 	"github.com/stretchr/testify/require"
 	"github.com/tikv/pdv2/pkg/mock/mockhbstream"
-	"github.com/tikv/pdv2/2/pkg/testutil"
-	"github.com/tikv/pdv2/2/pkg/typeutil"
-	"github.com/tikv/pdv2/2/server/config"
-	"github.com/tikv/pdv2/2/server/core"
-	"github.com/tikv/pdv2/2/server/core/storelimit"
-	"github.com/tikv/pdv2/2/server/schedule"
-	"github.com/tikv/pdv2/2/server/schedule/hbstream"
-	"github.com/tikv/pdv2/2/server/schedule/labeler"
-	"github.com/tikv/pdv2/2/server/schedule/operator"
-	"github.com/tikv/pdv2/2/server/schedulers"
-	"github.com/tikv/pdv2/2/server/statistics"
-	"github.com/tikv/pdv2/2/server/storage"
+	"github.com/tikv/pdv2/pkg/testutil"
+	"github.com/tikv/pdv2/pkg/typeutil"
+	"github.com/tikv/pdv2/server/config"
+	"github.com/tikv/pdv2/server/core"
+	"github.com/tikv/pdv2/server/core/storelimit"
+	"github.com/tikv/pdv2/server/schedule"
+	"github.com/tikv/pdv2/server/schedule/hbstream"
+	"github.com/tikv/pdv2/server/schedule/labeler"
+	"github.com/tikv/pdv2/server/schedule/operator"
+	"github.com/tikv/pdv2/server/schedulers"
+	"github.com/tikv/pdv2/server/statistics"
+	"github.com/tikv/pdv2/server/storage"
 )
 
 func newTestOperator(regionID uint64, regionEpoch *metapb.RegionEpoch, kind operator.OpKind, steps ...operator.OpStep) *operator.Operator {
@@ -498,7 +498,7 @@ func TestCheckCache(t *testing.T) {
 
 	// Add a peer with two replicas.
 	re.NoError(tc.addLeaderRegion(1, 2, 3))
-	re.NoError(failpoint.Enable("github.com/tikv/pdv2/2/server/cluster/break-patrol", `return`))
+	re.NoError(failpoint.Enable("github.com/tikv/pdv2/server/cluster/break-patrol", `return`))
 
 	// case 1: operator cannot be created due to replica-schedule-limit restriction
 	co.wg.Add(1)
@@ -532,7 +532,7 @@ func TestCheckCache(t *testing.T) {
 	re.Empty(co.checkers.GetWaitingRegions())
 
 	co.wg.Wait()
-	re.NoError(failpoint.Disable("github.com/tikv/pdv2/2/server/cluster/break-patrol"))
+	re.NoError(failpoint.Disable("github.com/tikv/pdv2/server/cluster/break-patrol"))
 }
 
 func TestPeerState(t *testing.T) {

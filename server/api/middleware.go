@@ -21,10 +21,10 @@ import (
 
 	"github.com/pingcap/failpoint"
 	"github.com/tikv/pdv2/pkg/audit"
-	"github.com/tikv/pdv2/2/pkg/errs"
-	"github.com/tikv/pdv2/2/pkg/requestutil"
-	"github.com/tikv/pdv2/2/server"
-	"github.com/tikv/pdv2/2/server/cluster"
+	"github.com/tikv/pdv2/pkg/errs"
+	"github.com/tikv/pdv2/pkg/requestutil"
+	"github.com/tikv/pdv2/server"
+	"github.com/tikv/pdv2/server/cluster"
 	"github.com/unrolled/render"
 	"github.com/urfave/negroni"
 )

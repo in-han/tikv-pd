@@ -21,9 +21,9 @@ import (
 	"github.com/pingcap/kvprotov2/pkg/metapb"
 	"github.com/pingcap/log"
 	"github.com/tikv/pdv2/pkg/btree"
-	"github.com/tikv/pdv2/2/pkg/errs"
-	"github.com/tikv/pdv2/2/pkg/logutil"
-	"github.com/tikv/pdv2/2/pkg/rangetree"
+	"github.com/tikv/pdv2/pkg/errs"
+	"github.com/tikv/pdv2/pkg/logutil"
+	"github.com/tikv/pdv2/pkg/rangetree"
 	"go.uber.org/zap"
 )
 

@@ -21,7 +21,7 @@ import (
 
 	"github.com/pingcap/errors"
 	"github.com/pingcap/kvprotov2/pkg/metapb"
-	"github.com/tikv/pd/server"
+	"github.com/tikv/pdv2/server"
 	"github.com/unrolled/render"
 )
 

@@ -18,7 +18,7 @@ import (
 	"net/http"
 
 	"github.com/tikv/pdv2/server"
-	"github.com/tikv/pdv2/2/server/versioninfo"
+	"github.com/tikv/pdv2/server/versioninfo"
 	"github.com/unrolled/render"
 )
 

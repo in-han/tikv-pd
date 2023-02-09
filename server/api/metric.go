@@ -21,7 +21,7 @@ import (
 	"strings"
 
 	"github.com/tikv/pdv2/pkg/apiutil/serverapi"
-	"github.com/tikv/pdv2/2/server"
+	"github.com/tikv/pdv2/server"
 )
 
 type queryMetric struct {

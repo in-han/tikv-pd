@@ -23,8 +23,8 @@ import (
 
 	"github.com/stretchr/testify/require"
 	"github.com/tikv/pdv2/pkg/ratelimit"
-	"github.com/tikv/pdv2/2/server"
-	"github.com/tikv/pdv2/2/tests"
+	"github.com/tikv/pdv2/server"
+	"github.com/tikv/pdv2/tests"
 )
 
 // dialClient used to dial http request.

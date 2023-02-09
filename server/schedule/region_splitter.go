@@ -25,10 +25,10 @@ import (
 	"github.com/pingcap/kvprotov2/pkg/pdpb"
 	"github.com/pingcap/log"
 	"github.com/tikv/pdv2/pkg/logutil"
-	"github.com/tikv/pdv2/2/pkg/typeutil"
-	"github.com/tikv/pdv2/2/server/core"
-	"github.com/tikv/pdv2/2/server/schedule/filter"
-	"github.com/tikv/pdv2/2/server/schedule/operator"
+	"github.com/tikv/pdv2/pkg/typeutil"
+	"github.com/tikv/pdv2/server/core"
+	"github.com/tikv/pdv2/server/schedule/filter"
+	"github.com/tikv/pdv2/server/schedule/operator"
 	"go.uber.org/zap"
 )
 

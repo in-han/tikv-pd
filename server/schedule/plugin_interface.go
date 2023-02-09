@@ -20,7 +20,7 @@ import (
 
 	"github.com/pingcap/log"
 	"github.com/tikv/pdv2/pkg/errs"
-	"github.com/tikv/pdv2/2/pkg/syncutil"
+	"github.com/tikv/pdv2/pkg/syncutil"
 	"go.uber.org/zap"
 )
 

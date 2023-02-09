@@ -24,8 +24,8 @@ import (
 	"github.com/pingcap/failpoint"
 	"github.com/pingcap/kvprotov2/pkg/metapb"
 	"github.com/tikv/pdv2/pkg/encryption"
-	"github.com/tikv/pdv2/2/pkg/errs"
-	"github.com/tikv/pdv2/2/server/core"
+	"github.com/tikv/pdv2/pkg/errs"
+	"github.com/tikv/pdv2/server/core"
 )
 
 // MetaStorage defines the storage operations on the PD cluster meta info.

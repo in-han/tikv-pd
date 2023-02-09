@@ -23,7 +23,7 @@ import (
 	"github.com/pingcap/kvprotov2/pkg/metapb"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
-	"github.com/tikv/pd/server/core"
+	"github.com/tikv/pdv2/server/core"
 )
 
 func makeStores() StoreSet {

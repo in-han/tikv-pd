@@ -22,7 +22,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 	"github.com/tikv/pdv2/server"
-	"github.com/tikv/pdv2/2/server/config"
+	"github.com/tikv/pdv2/server/config"
 )
 
 func checkSliceResponse(re *require.Assertions, body []byte, cfgs []*config.Config, unhealthy string) {

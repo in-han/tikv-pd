@@ -22,10 +22,10 @@ import (
 
 	"github.com/pingcap/log"
 	"github.com/tikv/pdv2/pkg/errs"
-	"github.com/tikv/pdv2/2/pkg/syncutil"
-	"github.com/tikv/pdv2/2/server/core"
-	"github.com/tikv/pdv2/2/server/schedule/rangelist"
-	"github.com/tikv/pdv2/2/server/storage/endpoint"
+	"github.com/tikv/pdv2/pkg/syncutil"
+	"github.com/tikv/pdv2/server/core"
+	"github.com/tikv/pdv2/server/schedule/rangelist"
+	"github.com/tikv/pdv2/server/storage/endpoint"
 	"go.uber.org/zap"
 )
 

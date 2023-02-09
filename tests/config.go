@@ -20,7 +20,7 @@ import (
 	"strings"
 
 	"github.com/tikv/pdv2/pkg/tempurl"
-	"github.com/tikv/pdv2/2/server/config"
+	"github.com/tikv/pdv2/server/config"
 )
 
 type serverConfig struct {

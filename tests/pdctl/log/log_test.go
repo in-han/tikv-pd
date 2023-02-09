@@ -22,9 +22,9 @@ import (
 	"github.com/pingcap/kvprotov2/pkg/metapb"
 	"github.com/stretchr/testify/suite"
 	"github.com/tikv/pdv2/server"
-	"github.com/tikv/pdv2/2/tests"
-	"github.com/tikv/pdv2/2/tests/pdctl"
-	pdctlCmd "github.com/tikv/pdv2/2/tools/pd-ctl/pdctl"
+	"github.com/tikv/pdv2/tests"
+	"github.com/tikv/pdv2/tests/pdctl"
+	pdctlCmd "github.com/tikv/pdv2/tools/pd-ctl/pdctl"
 )
 
 type logTestSuite struct {

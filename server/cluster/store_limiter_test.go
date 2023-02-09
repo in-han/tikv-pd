@@ -20,7 +20,7 @@ import (
 	"github.com/pingcap/kvprotov2/pkg/pdpb"
 	"github.com/stretchr/testify/require"
 	"github.com/tikv/pdv2/server/config"
-	"github.com/tikv/pdv2/2/server/core/storelimit"
+	"github.com/tikv/pdv2/server/core/storelimit"
 )
 
 func TestCollect(t *testing.T) {

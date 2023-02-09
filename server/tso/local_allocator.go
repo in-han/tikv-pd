@@ -23,9 +23,9 @@ import (
 	"github.com/pingcap/kvprotov2/pkg/pdpb"
 	"github.com/pingcap/log"
 	"github.com/tikv/pdv2/pkg/errs"
-	"github.com/tikv/pdv2/2/pkg/tsoutil"
-	"github.com/tikv/pdv2/2/pkg/typeutil"
-	"github.com/tikv/pdv2/2/server/election"
+	"github.com/tikv/pdv2/pkg/tsoutil"
+	"github.com/tikv/pdv2/pkg/typeutil"
+	"github.com/tikv/pdv2/server/election"
 	"go.etcd.io/etcd/clientv3"
 	"go.uber.org/zap"
 )

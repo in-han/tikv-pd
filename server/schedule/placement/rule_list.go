@@ -21,7 +21,7 @@ import (
 
 	"github.com/pingcap/errors"
 	"github.com/tikv/pdv2/pkg/errs"
-	"github.com/tikv/pdv2/2/server/schedule/rangelist"
+	"github.com/tikv/pdv2/server/schedule/rangelist"
 )
 
 func checkApplyRules(rules []*Rule) error {
