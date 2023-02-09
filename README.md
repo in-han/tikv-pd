@@ -1,10 +1,10 @@
 # PD
 
-[![Check Status](https://github.com/tikv/pd/actions/workflows/check.yaml/badge.svg)](https://github.com/tikv/pd/actions/workflows/check.yaml)
-[![Build & Test Status](https://github.com/tikv/pd/actions/workflows/pd-tests.yaml/badge.svg?branch=master)](https://github.com/tikv/pd/actions/workflows/pd-tests.yaml)
-[![TSO Consistency Test Status](https://github.com/tikv/pd/actions/workflows/tso-consistency-test.yaml/badge.svg)](https://github.com/tikv/pd/actions/workflows/tso-consistency-test.yaml)
-[![GitHub release](https://img.shields.io/github/release/tikv/pd.svg)](https://github.com/tikv/pd/releases)
-[![Go Report Card](https://goreportcard.com/badge/github.com/tikv/pd)](https://goreportcard.com/report/github.com/tikv/pd)
+[![Check Status](https://github.com/tikv/pdv9/actions/workflows/check.yaml/badge.svg)](https://github.com/tikv/pdv9/actions/workflows/check.yaml)
+[![Build & Test Status](https://github.com/tikv/pdv9/actions/workflows/pd-tests.yaml/badge.svg?branch=master)](https://github.com/tikv/pdv9/actions/workflows/pd-tests.yaml)
+[![TSO Consistency Test Status](https://github.com/tikv/pdv9/actions/workflows/tso-consistency-test.yaml/badge.svg)](https://github.com/tikv/pdv9/actions/workflows/tso-consistency-test.yaml)
+[![GitHub release](https://img.shields.io/github/release/tikv/pd.svg)](https://github.com/tikv/pdv9/releases)
+[![Go Report Card](https://goreportcard.com/badge/github.com/tikv/pdv9)](https://goreportcard.com/report/github.com/tikv/pdv9)
 [![codecov](https://codecov.io/gh/tikv/pd/branch/master/graph/badge.svg)](https://codecov.io/gh/tikv/pd)
 
 PD is the abbreviation for Placement Driver. It is used to manage and schedule the [TiKV](https://github.com/tikv/tikv) cluster.

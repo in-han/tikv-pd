@@ -17,9 +17,9 @@ package cluster
 import (
 	"github.com/pingcap/kvprotov2/pkg/pdpb"
 	"github.com/pingcap/log"
-	"github.com/tikv/pd/pkg/syncutil"
-	"github.com/tikv/pd/server/config"
-	"github.com/tikv/pd/server/core/storelimit"
+	"github.com/tikv/pdv9/pkg/syncutil"
+	"github.com/tikv/pdv9/server/config"
+	"github.com/tikv/pdv9/server/core/storelimit"
 	"go.uber.org/zap"
 )
 

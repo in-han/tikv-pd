@@ -19,7 +19,7 @@ import (
 
 	"github.com/pingcap/kvprotov2/pkg/metapb"
 	"github.com/pingcap/kvprotov2/pkg/pdpb"
-	"github.com/tikv/pd/server/core/storelimit"
+	"github.com/tikv/pdv9/server/core/storelimit"
 )
 
 // StoreCreateOption is used to create store.

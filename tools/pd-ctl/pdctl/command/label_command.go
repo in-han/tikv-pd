@@ -20,10 +20,10 @@ import (
 	"net/http"
 
 	"github.com/spf13/cobra"
-	"github.com/tikv/pd/server/api"
-	"github.com/tikv/pd/server/config"
-	"github.com/tikv/pd/server/core"
-	"github.com/tikv/pd/server/statistics"
+	"github.com/tikv/pdv9/server/api"
+	"github.com/tikv/pdv9/server/config"
+	"github.com/tikv/pdv9/server/core"
+	"github.com/tikv/pdv9/server/statistics"
 )
 
 var (

@@ -27,12 +27,12 @@ import (
 	"github.com/pingcap/kvprotov2/pkg/metapb"
 	"github.com/pingcap/kvprotov2/pkg/pdpb"
 	"github.com/pingcap/log"
-	"github.com/tikv/pd/pkg/btree"
-	"github.com/tikv/pd/pkg/codec"
-	"github.com/tikv/pd/pkg/errs"
-	"github.com/tikv/pd/pkg/logutil"
-	"github.com/tikv/pd/pkg/syncutil"
-	"github.com/tikv/pd/server/core"
+	"github.com/tikv/pdv9/pkg/btree"
+	"github.com/tikv/pdv9/pkg/codec"
+	"github.com/tikv/pdv9/pkg/errs"
+	"github.com/tikv/pdv9/pkg/logutil"
+	"github.com/tikv/pdv9/pkg/syncutil"
+	"github.com/tikv/pdv9/server/core"
 	"go.uber.org/zap"
 )
 

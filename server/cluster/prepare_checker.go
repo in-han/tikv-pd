@@ -17,8 +17,8 @@ package cluster
 import (
 	"time"
 
-	"github.com/tikv/pd/pkg/syncutil"
-	"github.com/tikv/pd/server/core"
+	"github.com/tikv/pdv9/pkg/syncutil"
+	"github.com/tikv/pdv9/server/core"
 )
 
 type prepareChecker struct {

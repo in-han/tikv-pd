@@ -23,9 +23,9 @@ import (
 	"github.com/pingcap/kvprotov2/pkg/metapb"
 	"github.com/pingcap/kvprotov2/pkg/pdpb"
 	"github.com/stretchr/testify/require"
-	"github.com/tikv/pd/pkg/testutil"
-	"github.com/tikv/pd/server/core"
-	"github.com/tikv/pd/tests"
+	"github.com/tikv/pdv9/pkg/testutil"
+	"github.com/tikv/pdv9/server/core"
+	"github.com/tikv/pdv9/tests"
 )
 
 func TestValidRequestRegion(t *testing.T) {

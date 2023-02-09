@@ -19,7 +19,7 @@ import (
 	"encoding/hex"
 	"testing"
 
-	"github.com/pingcap/kvprotov2/pkg/encryptionpb"
+	"github.com/pingcap/kvprotov9/pkg/encryptionpb"
 	"github.com/stretchr/testify/require"
 )
 

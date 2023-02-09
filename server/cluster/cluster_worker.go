@@ -22,12 +22,12 @@ import (
 	"github.com/pingcap/kvprotov2/pkg/metapb"
 	"github.com/pingcap/kvprotov2/pkg/pdpb"
 	"github.com/pingcap/log"
-	"github.com/tikv/pd/pkg/errs"
-	"github.com/tikv/pd/pkg/logutil"
-	"github.com/tikv/pd/server/core"
-	"github.com/tikv/pd/server/schedule"
-	"github.com/tikv/pd/server/statistics/buckets"
-	"github.com/tikv/pd/server/versioninfo"
+	"github.com/tikv/pdv9/pkg/errs"
+	"github.com/tikv/pdv9/pkg/logutil"
+	"github.com/tikv/pdv9/server/core"
+	"github.com/tikv/pdv9/server/schedule"
+	"github.com/tikv/pdv9/server/statistics/buckets"
+	"github.com/tikv/pdv9/server/versioninfo"
 	"go.uber.org/zap"
 )
 

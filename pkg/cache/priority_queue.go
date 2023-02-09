@@ -15,7 +15,7 @@
 package cache
 
 import (
-	"github.com/tikv/pd/pkg/btree"
+	"github.com/tikv/pdv9/pkg/btree"
 )
 
 // defaultDegree default btree degree, the depth is h<log(degree)(capacity+1)/2

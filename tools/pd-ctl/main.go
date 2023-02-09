@@ -20,7 +20,7 @@ import (
 	"os/signal"
 	"syscall"
 
-	"github.com/tikv/pd/tools/pd-ctl/pdctl"
+	"github.com/tikv/pdv9/tools/pd-ctl/pdctl"
 )
 
 func main() {

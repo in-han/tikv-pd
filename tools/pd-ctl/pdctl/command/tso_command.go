@@ -18,7 +18,7 @@ import (
 	"strconv"
 
 	"github.com/spf13/cobra"
-	"github.com/tikv/pd/pkg/tsoutil"
+	"github.com/tikv/pdv9/pkg/tsoutil"
 )
 
 // NewTSOCommand return a ping subcommand of rootCmd

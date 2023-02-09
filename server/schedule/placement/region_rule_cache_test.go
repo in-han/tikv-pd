@@ -21,7 +21,7 @@ import (
 	"github.com/pingcap/kvprotov2/pkg/metapb"
 	"github.com/pingcap/kvprotov2/pkg/pdpb"
 	"github.com/stretchr/testify/require"
-	"github.com/tikv/pd/server/core"
+	"github.com/tikv/pdv9/server/core"
 )
 
 func TestRegionRuleFitCache(t *testing.T) {

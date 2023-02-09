@@ -19,14 +19,14 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/require"
-	"github.com/tikv/pd/pkg/tempurl"
-	"github.com/tikv/pd/pkg/testutil"
-	"github.com/tikv/pd/server/config"
-	"github.com/tikv/pd/tests"
+	"github.com/tikv/pdv9/pkg/tempurl"
+	"github.com/tikv/pdv9/pkg/testutil"
+	"github.com/tikv/pdv9/server/config"
+	"github.com/tikv/pdv9/tests"
 	"go.uber.org/goleak"
 
 	// Register schedulers.
-	_ "github.com/tikv/pd/server/schedulers"
+	_ "github.com/tikv/pdv9/server/schedulers"
 )
 
 func TestMain(m *testing.M) {

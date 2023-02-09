@@ -19,8 +19,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/pingcap/kvprotov2/pkg/metapb"
-	"github.com/tikv/pd/server/core"
+	"github.com/pingcap/kvprotov9/pkg/metapb"
+	"github.com/tikv/pdv9/server/core"
 )
 
 type mockStoresSet struct {

@@ -23,10 +23,10 @@ import (
 	"github.com/pingcap/kvprotov2/pkg/metapb"
 	"github.com/pingcap/kvprotov2/pkg/pdpb"
 	"github.com/stretchr/testify/require"
-	"github.com/tikv/pd/pkg/mock/mockcluster"
-	"github.com/tikv/pd/pkg/testutil"
-	"github.com/tikv/pd/server/config"
-	"github.com/tikv/pd/server/schedule/hbstream"
+	"github.com/tikv/pdv9/pkg/mock/mockcluster"
+	"github.com/tikv/pdv9/pkg/testutil"
+	"github.com/tikv/pdv9/server/config"
+	"github.com/tikv/pdv9/server/schedule/hbstream"
 )
 
 func TestActivity(t *testing.T) {

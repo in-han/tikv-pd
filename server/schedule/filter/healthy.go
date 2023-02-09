@@ -15,9 +15,9 @@
 package filter
 
 import (
-	"github.com/tikv/pd/server/config"
-	"github.com/tikv/pd/server/core"
-	"github.com/tikv/pd/server/schedule/placement"
+	"github.com/tikv/pdv9/server/config"
+	"github.com/tikv/pdv9/server/core"
+	"github.com/tikv/pdv9/server/schedule/placement"
 )
 
 // IsRegionHealthy checks if a region is healthy for scheduling. It requires the

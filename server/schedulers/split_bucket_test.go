@@ -21,12 +21,12 @@ import (
 
 	"github.com/pingcap/kvprotov2/pkg/metapb"
 	"github.com/stretchr/testify/require"
-	"github.com/tikv/pd/pkg/mock/mockcluster"
-	"github.com/tikv/pd/server/config"
-	"github.com/tikv/pd/server/core"
-	"github.com/tikv/pd/server/schedule"
-	"github.com/tikv/pd/server/schedule/operator"
-	"github.com/tikv/pd/server/statistics/buckets"
+	"github.com/tikv/pdv9/pkg/mock/mockcluster"
+	"github.com/tikv/pdv9/server/config"
+	"github.com/tikv/pdv9/server/core"
+	"github.com/tikv/pdv9/server/schedule"
+	"github.com/tikv/pdv9/server/schedule/operator"
+	"github.com/tikv/pdv9/server/statistics/buckets"
 )
 
 func TestSplitBucket(t *testing.T) {

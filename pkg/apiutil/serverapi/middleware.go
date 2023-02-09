@@ -20,9 +20,9 @@ import (
 	"net/url"
 
 	"github.com/pingcap/log"
-	"github.com/tikv/pd/pkg/errs"
-	"github.com/tikv/pd/pkg/slice"
-	"github.com/tikv/pd/server"
+	"github.com/tikv/pdv9/pkg/errs"
+	"github.com/tikv/pdv9/pkg/slice"
+	"github.com/tikv/pdv9/server"
 	"github.com/urfave/negroni"
 	"go.uber.org/zap"
 )

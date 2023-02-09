@@ -25,8 +25,8 @@ import (
 
 	"github.com/pingcap/failpoint"
 	"github.com/stretchr/testify/require"
-	"github.com/tikv/pd/server/core"
-	"github.com/tikv/pd/server/storage"
+	"github.com/tikv/pdv9/server/core"
+	"github.com/tikv/pdv9/server/storage"
 )
 
 func TestAdjustRule(t *testing.T) {
@@ -303,13 +303,13 @@ func TestLabelerRuleTTL(t *testing.T) {
 	}
 	// get rule with "rule2".
 	re.NotNil(labeler.GetLabelRule("rule2"))
-	re.NoError(failpoint.Enable("github.com/tikv/pd/server/schedule/labeler/regionLabelExpireSub1Minute", "return(true)"))
+	re.NoError(failpoint.Enable("github.com/tikv/pdv9/server/schedule/labeler/regionLabelExpireSub1Minute", "return(true)"))
 
 	// rule2 should expire and only 2 labels left.
 	labels := labeler.GetRegionLabels(region)
 	re.Len(labels, 2)
 
-	re.NoError(failpoint.Disable("github.com/tikv/pd/server/schedule/labeler/regionLabelExpireSub1Minute"))
+	re.NoError(failpoint.Disable("github.com/tikv/pdv9/server/schedule/labeler/regionLabelExpireSub1Minute"))
 	// rule2 should be exist since `GetRegionLabels` won't clear it physically.
 	checkRuleInMemoryAndStoage(re, labeler, "rule2", true)
 	re.Nil(labeler.GetLabelRule("rule2"))

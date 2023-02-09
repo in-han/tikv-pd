@@ -21,8 +21,8 @@ import (
 	"time"
 
 	"github.com/stretchr/testify/require"
-	"github.com/tikv/pd/server/storage/endpoint"
-	"github.com/tikv/pd/server/storage/kv"
+	"github.com/tikv/pdv9/server/storage/endpoint"
+	"github.com/tikv/pdv9/server/storage/kv"
 )
 
 func newGCStorage() endpoint.GCSafePointStorage {

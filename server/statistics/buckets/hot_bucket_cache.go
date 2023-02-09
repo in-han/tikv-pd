@@ -19,11 +19,11 @@ import (
 	"context"
 	"time"
 
-	"github.com/pingcap/kvprotov2/pkg/metapb"
+	"github.com/pingcap/kvprotov9/pkg/metapb"
 	"github.com/pingcap/log"
-	"github.com/tikv/pd/pkg/keyutil"
-	"github.com/tikv/pd/pkg/logutil"
-	"github.com/tikv/pd/pkg/rangetree"
+	"github.com/tikv/pdv9/pkg/keyutil"
+	"github.com/tikv/pdv9kg/logutil"
+	"github.com/tikv/pdv9kg/rangetree"
 	"go.uber.org/zap"
 )
 

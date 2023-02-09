@@ -23,14 +23,14 @@ import (
 	"github.com/pingcap/kvprotov2/pkg/metapb"
 	"github.com/pingcap/kvprotov2/pkg/pdpb"
 	"github.com/stretchr/testify/require"
-	"github.com/tikv/pd/pkg/grpcutil"
-	"github.com/tikv/pd/server/core"
-	"github.com/tikv/pd/server/storage"
+	"github.com/tikv/pdv9/pkg/grpcutil"
+	"github.com/tikv/pdv9/server/core"
+	"github.com/tikv/pdv9/server/storage"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 )
 
-// For issue https://github.com/tikv/pd/issues/3936
+// For issue https://github.com/tikv/pdv9/issues/3936
 func TestLoadRegion(t *testing.T) {
 	re := require.New(t)
 	tempDir := t.TempDir()
@@ -45,9 +45,9 @@ func TestLoadRegion(t *testing.T) {
 	for i := 0; i < 30; i++ {
 		rs.SaveRegion(&metapb.Region{Id: uint64(i) + 1})
 	}
-	re.NoError(failpoint.Enable("github.com/tikv/pd/server/storage/base_backend/slowLoadRegion", "return(true)"))
+	re.NoError(failpoint.Enable("github.com/tikv/pdv9/server/storage/base_backend/slowLoadRegion", "return(true)"))
 	defer func() {
-		re.NoError(failpoint.Disable("github.com/tikv/pd/server/storage/base_backend/slowLoadRegion"))
+		re.NoError(failpoint.Disable("github.com/tikv/pdv9/server/storage/base_backend/slowLoadRegion"))
 	}()
 
 	rc := NewRegionSyncer(server)

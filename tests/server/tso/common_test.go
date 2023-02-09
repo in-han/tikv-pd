@@ -21,9 +21,9 @@ import (
 	"context"
 	"testing"
 
-	"github.com/pingcap/kvprotov2/pkg/pdpb"
+	"github.com/pingcap/kvprotov9/pkg/pdpb"
 	"github.com/stretchr/testify/require"
-	"github.com/tikv/pd/pkg/testutil"
+	"github.com/tikv/pdv9/pkg/testutil"
 	"go.uber.org/goleak"
 )
 

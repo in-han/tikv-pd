@@ -23,7 +23,7 @@ import (
 	"unsafe"
 
 	"github.com/pingcap/kvprotov2/pkg/encryptionpb"
-	"github.com/tikv/pd/pkg/errs"
+	"github.com/tikv/pdv9/pkg/errs"
 )
 
 const (

@@ -19,7 +19,7 @@ import (
 	"time"
 
 	"github.com/stretchr/testify/require"
-	"github.com/tikv/pd/pkg/typeutil"
+	"github.com/tikv/pdv9/pkg/typeutil"
 )
 
 func TestCamelCaseToSnakeCase(t *testing.T) {

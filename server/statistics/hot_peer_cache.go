@@ -19,10 +19,10 @@ import (
 	"time"
 
 	"github.com/docker/go-units"
-	"github.com/pingcap/kvprotov2/pkg/metapb"
+	"github.com/pingcap/kvprotov9/pkg/metapb"
 	"github.com/pingcap/log"
-	"github.com/tikv/pd/pkg/slice"
-	"github.com/tikv/pd/server/core"
+	"github.com/tikv/pdv9/pkg/slice"
+	"github.com/tikv/pdv9erver/core"
 )
 
 const (

@@ -15,7 +15,7 @@
 package core
 
 import (
-	"github.com/pingcap/kvprotov2/pkg/metapb"
+	"github.com/pingcap/kvprotov9/pkg/metapb"
 )
 
 // IsLearner judges whether the Peer's Role is Learner.

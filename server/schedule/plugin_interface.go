@@ -19,8 +19,8 @@ import (
 	"plugin"
 
 	"github.com/pingcap/log"
-	"github.com/tikv/pd/pkg/errs"
-	"github.com/tikv/pd/pkg/syncutil"
+	"github.com/tikv/pdv9/pkg/errs"
+	"github.com/tikv/pdv9/pkg/syncutil"
 	"go.uber.org/zap"
 )
 

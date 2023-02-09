@@ -18,9 +18,9 @@ import (
 	"fmt"
 	"strconv"
 
-	"github.com/pingcap/kvprotov2/pkg/metapb"
-	"github.com/tikv/pd/server/config"
-	"github.com/tikv/pd/server/core"
+	"github.com/pingcap/kvprotov9/pkg/metapb"
+	"github.com/tikv/pdv9/server/config"
+	"github.com/tikv/pdv9erver/core"
 )
 
 const (

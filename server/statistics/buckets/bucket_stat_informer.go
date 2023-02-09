@@ -19,11 +19,11 @@ import (
 	"fmt"
 
 	"github.com/docker/go-units"
-	"github.com/tikv/pd/pkg/btree"
-	"github.com/tikv/pd/pkg/keyutil"
-	"github.com/tikv/pd/pkg/slice"
-	"github.com/tikv/pd/server/core"
-	"github.com/tikv/pd/server/statistics"
+	"github.com/tikv/pdv9/pkg/btree"
+	"github.com/tikv/pdv9/pkg/keyutil"
+	"github.com/tikv/pdv9/pkg/slice"
+	"github.com/tikv/pdv9/server/core"
+	"github.com/tikv/pdv9/server/statistics"
 )
 
 var minHotThresholds = [statistics.RegionStatCount]uint64{

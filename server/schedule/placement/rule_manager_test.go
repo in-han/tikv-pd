@@ -18,12 +18,12 @@ import (
 	"encoding/hex"
 	"testing"
 
-	"github.com/pingcap/kvprotov2/pkg/metapb"
+	"github.com/pingcap/kvprotov9/pkg/metapb"
 	"github.com/stretchr/testify/require"
-	"github.com/tikv/pd/pkg/codec"
-	"github.com/tikv/pd/server/core"
-	"github.com/tikv/pd/server/storage"
-	"github.com/tikv/pd/server/storage/endpoint"
+	"github.com/tikv/pdv9/pkg/codec"
+	"github.com/tikv/pdv9erver/core"
+	"github.com/tikv/pdv9erver/storage"
+	"github.com/tikv/pdv9erver/storage/endpoint"
 )
 
 func newTestManager(t *testing.T) (endpoint.RuleStorage, *RuleManager) {

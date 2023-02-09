@@ -17,7 +17,7 @@ package versioninfo
 import (
 	"github.com/coreos/go-semver/semver"
 	"github.com/pingcap/log"
-	"github.com/tikv/pd/pkg/errs"
+	"github.com/tikv/pdv9/pkg/errs"
 )
 
 const (

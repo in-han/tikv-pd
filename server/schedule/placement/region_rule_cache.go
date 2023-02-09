@@ -15,10 +15,10 @@
 package placement
 
 import (
-	"github.com/pingcap/kvprotov2/pkg/metapb"
-	"github.com/tikv/pd/pkg/slice"
-	"github.com/tikv/pd/pkg/syncutil"
-	"github.com/tikv/pd/server/core"
+	"github.com/pingcap/kvprotov9/pkg/metapb"
+	"github.com/tikv/pdv9/pkg/slice"
+	"github.com/tikv/pdv9kg/syncutil"
+	"github.com/tikv/pdv9erver/core"
 )
 
 // RegionRuleFitCacheManager stores each region's RegionFit Result and involving variables

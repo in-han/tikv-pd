@@ -31,10 +31,10 @@ import (
 	"github.com/pingcap/kvprotov2/pkg/pdpb"
 	"github.com/stretchr/testify/require"
 	"github.com/stretchr/testify/suite"
-	tu "github.com/tikv/pd/pkg/testutil"
-	"github.com/tikv/pd/server"
-	"github.com/tikv/pd/server/core"
-	"github.com/tikv/pd/server/schedule/placement"
+	tu "github.com/tikv/pdv9/pkg/testutil"
+	"github.com/tikv/pdv9/server"
+	"github.com/tikv/pdv9/server/core"
+	"github.com/tikv/pdv9/server/schedule/placement"
 )
 
 func TestPeer(t *testing.T) {
@@ -387,9 +387,9 @@ func (suite *regionTestSuite) TestSplitRegions() {
 		suite.Equal(100, s.ProcessedPercentage)
 		suite.Equal([]uint64{newRegionID}, s.NewRegionsID)
 	}
-	suite.NoError(failpoint.Enable("github.com/tikv/pd/server/api/splitResponses", fmt.Sprintf("return(%v)", newRegionID)))
+	suite.NoError(failpoint.Enable("github.com/tikv/pdv9/server/api/splitResponses", fmt.Sprintf("return(%v)", newRegionID)))
 	err := tu.CheckPostJSON(testDialClient, fmt.Sprintf("%s/regions/split", suite.urlPrefix), []byte(body), checkOpt)
-	suite.NoError(failpoint.Disable("github.com/tikv/pd/server/api/splitResponses"))
+	suite.NoError(failpoint.Disable("github.com/tikv/pdv9/server/api/splitResponses"))
 	suite.NoError(err)
 }
 
@@ -656,11 +656,11 @@ func (suite *regionsReplicatedTestSuite) TestCheckRegionsReplicated() {
 	suite.NoError(err)
 	suite.Equal("REPLICATED", status)
 
-	suite.NoError(failpoint.Enable("github.com/tikv/pd/server/api/mockPending", "return(true)"))
+	suite.NoError(failpoint.Enable("github.com/tikv/pdv9/server/api/mockPending", "return(true)"))
 	err = tu.ReadGetJSON(re, testDialClient, url, &status)
 	suite.NoError(err)
 	suite.Equal("PENDING", status)
-	suite.NoError(failpoint.Disable("github.com/tikv/pd/server/api/mockPending"))
+	suite.NoError(failpoint.Disable("github.com/tikv/pdv9/server/api/mockPending"))
 	// test multiple rules
 	r1 = newTestRegionInfo(2, 1, []byte("a"), []byte("b"))
 	r1.GetMeta().Peers = append(r1.GetMeta().Peers, &metapb.Peer{Id: 5, StoreId: 1})

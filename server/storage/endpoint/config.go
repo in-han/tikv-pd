@@ -18,7 +18,7 @@ import (
 	"encoding/json"
 	"strings"
 
-	"github.com/tikv/pd/pkg/errs"
+	"github.com/tikv/pdv9/pkg/errs"
 	"go.etcd.io/etcd/clientv3"
 )
 

@@ -20,14 +20,14 @@ import (
 
 	"github.com/gorilla/mux"
 	"github.com/pingcap/errors"
-	"github.com/tikv/pd/pkg/apiutil"
-	"github.com/tikv/pd/pkg/errs"
-	"github.com/tikv/pd/pkg/syncutil"
-	"github.com/tikv/pd/server/core"
-	"github.com/tikv/pd/server/schedule"
-	"github.com/tikv/pd/server/schedule/operator"
-	"github.com/tikv/pd/server/schedule/plan"
-	"github.com/tikv/pd/server/storage/endpoint"
+	"github.com/tikv/pdv9/pkg/apiutil"
+	"github.com/tikv/pdv9/pkg/errs"
+	"github.com/tikv/pdv9/pkg/syncutil"
+	"github.com/tikv/pdv9/server/core"
+	"github.com/tikv/pdv9/server/schedule"
+	"github.com/tikv/pdv9/server/schedule/operator"
+	"github.com/tikv/pdv9/server/schedule/plan"
+	"github.com/tikv/pdv9/server/storage/endpoint"
 	"github.com/unrolled/render"
 )
 

@@ -19,9 +19,9 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/tikv/pd/pkg/typeutil"
-	"github.com/tikv/pd/server"
-	"github.com/tikv/pd/server/statistics"
+	"github.com/tikv/pdv9/pkg/typeutil"
+	"github.com/tikv/pdv9/server"
+	"github.com/tikv/pdv9/server/statistics"
 	"github.com/unrolled/render"
 )
 

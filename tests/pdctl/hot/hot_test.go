@@ -26,14 +26,14 @@ import (
 	"github.com/pingcap/kvprotov2/pkg/metapb"
 	"github.com/pingcap/kvprotov2/pkg/pdpb"
 	"github.com/stretchr/testify/require"
-	"github.com/tikv/pd/server/api"
-	"github.com/tikv/pd/server/config"
-	"github.com/tikv/pd/server/core"
-	"github.com/tikv/pd/server/statistics"
-	"github.com/tikv/pd/server/storage"
-	"github.com/tikv/pd/tests"
-	"github.com/tikv/pd/tests/pdctl"
-	pdctlCmd "github.com/tikv/pd/tools/pd-ctl/pdctl"
+	"github.com/tikv/pdv9/server/api"
+	"github.com/tikv/pdv9/server/config"
+	"github.com/tikv/pdv9/server/core"
+	"github.com/tikv/pdv9/server/statistics"
+	"github.com/tikv/pdv9/server/storage"
+	"github.com/tikv/pdv9/tests"
+	"github.com/tikv/pdv9/tests/pdctl"
+	pdctlCmd "github.com/tikv/pdv9/tools/pd-ctl/pdctl"
 )
 
 func TestHot(t *testing.T) {

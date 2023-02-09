@@ -17,11 +17,11 @@ package statistics
 import (
 	"time"
 
-	"github.com/pingcap/kvprotov2/pkg/pdpb"
+	"github.com/pingcap/kvprotov9/pkg/pdpb"
 	"github.com/pingcap/log"
-	"github.com/tikv/pd/pkg/movingaverage"
-	"github.com/tikv/pd/pkg/syncutil"
-	"github.com/tikv/pd/server/core"
+	"github.com/tikv/pdv9/pkg/movingaverage"
+	"github.com/tikv/pdv9kg/syncutil"
+	"github.com/tikv/pdv9erver/core"
 	"go.uber.org/zap"
 )
 

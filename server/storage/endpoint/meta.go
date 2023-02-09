@@ -23,9 +23,9 @@ import (
 	"github.com/gogo/protobuf/proto"
 	"github.com/pingcap/failpoint"
 	"github.com/pingcap/kvprotov2/pkg/metapb"
-	"github.com/tikv/pd/pkg/encryption"
-	"github.com/tikv/pd/pkg/errs"
-	"github.com/tikv/pd/server/core"
+	"github.com/tikv/pdv9/pkg/encryption"
+	"github.com/tikv/pdv9/pkg/errs"
+	"github.com/tikv/pdv9/server/core"
 )
 
 // MetaStorage defines the storage operations on the PD cluster meta info.

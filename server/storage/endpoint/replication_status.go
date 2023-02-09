@@ -17,7 +17,7 @@ package endpoint
 import (
 	"encoding/json"
 
-	"github.com/tikv/pd/pkg/errs"
+	"github.com/tikv/pdv9/pkg/errs"
 )
 
 // ReplicationStatusStorage defines the storage operations on the replication status.

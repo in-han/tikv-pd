@@ -18,8 +18,8 @@ import (
 	"math"
 	"time"
 
-	"github.com/tikv/pd/pkg/syncutil"
-	"github.com/tikv/pd/server/storage/endpoint"
+	"github.com/tikv/pdv9/pkg/syncutil"
+	"github.com/tikv/pdv9/server/storage/endpoint"
 )
 
 // SafePointManager is the manager for safePoint of GC and services.

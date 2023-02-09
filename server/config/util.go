@@ -21,8 +21,8 @@ import (
 	"sync"
 
 	"github.com/pingcap/errors"
-	"github.com/pingcap/kvprotov2/pkg/metapb"
-	"github.com/tikv/pd/pkg/errs"
+	"github.com/pingcap/kvprotov9/pkg/metapb"
+	"github.com/tikv/pdv9/pkg/errs"
 )
 
 const (

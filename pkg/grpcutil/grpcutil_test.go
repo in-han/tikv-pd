@@ -6,7 +6,7 @@ import (
 
 	"github.com/pingcap/errors"
 	"github.com/stretchr/testify/require"
-	"github.com/tikv/pd/pkg/errs"
+	"github.com/tikv/pdv9/pkg/errs"
 )
 
 func loadTLSContent(re *require.Assertions, caPath, certPath, keyPath string) (caData, certData, keyData []byte) {

@@ -27,12 +27,12 @@ import (
 	"github.com/pingcap/errcode"
 	"github.com/pingcap/errors"
 	"github.com/pingcap/log"
-	"github.com/tikv/pd/pkg/apiutil"
-	"github.com/tikv/pd/pkg/jsonutil"
-	"github.com/tikv/pd/pkg/logutil"
-	"github.com/tikv/pd/pkg/reflectutil"
-	"github.com/tikv/pd/server"
-	"github.com/tikv/pd/server/config"
+	"github.com/tikv/pdv9/pkg/apiutil"
+	"github.com/tikv/pdv9/pkg/jsonutil"
+	"github.com/tikv/pdv9/pkg/logutil"
+	"github.com/tikv/pdv9/pkg/reflectutil"
+	"github.com/tikv/pdv9/server"
+	"github.com/tikv/pdv9/server/config"
 	"github.com/unrolled/render"
 )
 

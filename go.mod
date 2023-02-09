@@ -1,4 +1,4 @@
-module github.com/tikv/pd
+module github.com/tikv/pdv9
 
 go 1.16
 

@@ -25,7 +25,7 @@ import (
 
 	"github.com/pingcap/tidb-dashboard/pkg/config"
 
-	"github.com/tikv/pd/server"
+	"github.com/tikv/pdv9/server"
 )
 
 var (

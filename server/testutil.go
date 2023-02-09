@@ -24,15 +24,15 @@ import (
 
 	"github.com/pingcap/log"
 	"github.com/stretchr/testify/require"
-	"github.com/tikv/pd/pkg/assertutil"
-	"github.com/tikv/pd/pkg/tempurl"
-	"github.com/tikv/pd/pkg/testutil"
-	"github.com/tikv/pd/pkg/typeutil"
-	"github.com/tikv/pd/server/config"
+	"github.com/tikv/pdv9/pkg/assertutil"
+	"github.com/tikv/pdv9/pkg/tempurl"
+	"github.com/tikv/pdv9/pkg/testutil"
+	"github.com/tikv/pdv9/pkg/typeutil"
+	"github.com/tikv/pdv9/server/config"
 	"go.etcd.io/etcd/embed"
 
 	// Register schedulers
-	_ "github.com/tikv/pd/server/schedulers"
+	_ "github.com/tikv/pdv9/server/schedulers"
 )
 
 // CleanupFunc closes test pd server(s) and deletes any files left behind.

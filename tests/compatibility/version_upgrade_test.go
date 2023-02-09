@@ -22,8 +22,8 @@ import (
 	"github.com/pingcap/kvprotov2/pkg/metapb"
 	"github.com/pingcap/kvprotov2/pkg/pdpb"
 	"github.com/stretchr/testify/require"
-	"github.com/tikv/pd/server"
-	"github.com/tikv/pd/tests"
+	"github.com/tikv/pdv9/server"
+	"github.com/tikv/pdv9/tests"
 )
 
 func TestStoreRegister(t *testing.T) {

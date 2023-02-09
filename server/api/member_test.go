@@ -28,8 +28,8 @@ import (
 	"github.com/pingcap/kvprotov2/pkg/pdpb"
 	"github.com/stretchr/testify/require"
 	"github.com/stretchr/testify/suite"
-	"github.com/tikv/pd/server"
-	"github.com/tikv/pd/server/config"
+	"github.com/tikv/pdv9/server"
+	"github.com/tikv/pdv9/server/config"
 )
 
 type memberTestSuite struct {

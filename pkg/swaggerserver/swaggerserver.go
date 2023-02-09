@@ -18,7 +18,7 @@ import (
 	"context"
 	"net/http"
 
-	"github.com/tikv/pd/server"
+	"github.com/tikv/pdv9/server"
 )
 
 const swaggerPrefix = "/swagger/"

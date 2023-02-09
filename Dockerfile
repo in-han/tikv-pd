@@ -13,8 +13,8 @@ RUN cd / && \
     wget https://github.com/stedolan/jq/releases/download/jq-1.6/jq-linux64 -O jq && \
     chmod +x jq
 
-RUN mkdir -p /go/src/github.com/tikv/pd
-WORKDIR /go/src/github.com/tikv/pd
+RUN mkdir -p /go/src/github.com/tikv/pdv9
+WORKDIR /go/src/github.com/tikv/pdv9
 
 # Cache dependencies
 COPY go.mod .
@@ -28,9 +28,9 @@ RUN make
 
 FROM alpine:3.5
 
-COPY --from=builder /go/src/github.com/tikv/pd/bin/pd-server /pd-server
-COPY --from=builder /go/src/github.com/tikv/pd/bin/pd-ctl /pd-ctl
-COPY --from=builder /go/src/github.com/tikv/pd/bin/pd-recover /pd-recover
+COPY --from=builder /go/src/github.com/tikv/pdv9/bin/pd-server /pd-server
+COPY --from=builder /go/src/github.com/tikv/pdv9/bin/pd-ctl /pd-ctl
+COPY --from=builder /go/src/github.com/tikv/pdv9/bin/pd-recover /pd-recover
 COPY --from=builder /jq /usr/local/bin/jq
 
 EXPOSE 2379 2380

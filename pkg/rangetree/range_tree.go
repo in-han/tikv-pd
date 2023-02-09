@@ -17,7 +17,7 @@ package rangetree
 import (
 	"bytes"
 
-	"github.com/tikv/pd/pkg/btree"
+	"github.com/tikv/pdv9/pkg/btree"
 )
 
 // RangeItem is one key range tree item.

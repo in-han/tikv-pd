@@ -23,10 +23,10 @@ import (
 
 	"github.com/gorilla/mux"
 	"github.com/pingcap/failpoint"
-	"github.com/tikv/pd/pkg/apiutil"
-	"github.com/tikv/pd/pkg/audit"
-	"github.com/tikv/pd/pkg/ratelimit"
-	"github.com/tikv/pd/server"
+	"github.com/tikv/pdv9/pkg/apiutil"
+	"github.com/tikv/pdv9/pkg/audit"
+	"github.com/tikv/pdv9/pkg/ratelimit"
+	"github.com/tikv/pdv9/server"
 	"github.com/unrolled/render"
 )
 
@@ -77,7 +77,7 @@ func getFunctionName(f interface{}) string {
 // @version        1.0
 // @description    This is placement driver.
 // @contact.name   Placement Driver Support
-// @contact.url    https://github.com/tikv/pd/issues
+// @contact.url    https://github.com/tikv/pdv9/issues
 // @contact.email  info@pingcap.com
 // @license.name   Apache 2.0
 // @license.url    http://www.apache.org/licenses/LICENSE-2.0.html

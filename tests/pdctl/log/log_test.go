@@ -19,12 +19,12 @@ import (
 	"testing"
 	"time"
 
-	"github.com/pingcap/kvprotov2/pkg/metapb"
+	"github.com/pingcap/kvprotov9/pkg/metapb"
 	"github.com/stretchr/testify/suite"
-	"github.com/tikv/pd/server"
-	"github.com/tikv/pd/tests"
-	"github.com/tikv/pd/tests/pdctl"
-	pdctlCmd "github.com/tikv/pd/tools/pd-ctl/pdctl"
+	"github.com/tikv/pdv9/server"
+	"github.com/tikv/pdv9ests"
+	"github.com/tikv/pdv9ests/pdctl"
+	pdctlCmd "github.com/tikv/pdv9ools/pd-ctl/pdctl"
 )
 
 type logTestSuite struct {

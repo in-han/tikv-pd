@@ -21,12 +21,12 @@ import (
 	"testing"
 	"time"
 
-	"github.com/pingcap/kvprotov2/pkg/metapb"
+	"github.com/pingcap/kvprotov9/pkg/metapb"
 	"github.com/stretchr/testify/require"
-	clusterpkg "github.com/tikv/pd/server/cluster"
-	"github.com/tikv/pd/tests"
-	"github.com/tikv/pd/tests/pdctl"
-	pdctlCmd "github.com/tikv/pd/tools/pd-ctl/pdctl"
+	clusterpkg "github.com/tikv/pdv9/server/cluster"
+	"github.com/tikv/pdv9ests"
+	"github.com/tikv/pdv9ests/pdctl"
+	pdctlCmd "github.com/tikv/pdv9ools/pd-ctl/pdctl"
 )
 
 func TestClusterAndPing(t *testing.T) {

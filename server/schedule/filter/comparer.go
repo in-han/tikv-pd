@@ -15,8 +15,8 @@
 package filter
 
 import (
-	"github.com/tikv/pd/server/config"
-	"github.com/tikv/pd/server/core"
+	"github.com/tikv/pdv9/server/config"
+	"github.com/tikv/pdv9/server/core"
 )
 
 // StoreComparer compares 2 stores. Often used for StoreCandidates to

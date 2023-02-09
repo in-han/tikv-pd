@@ -20,8 +20,8 @@ import (
 	"math"
 	"time"
 
-	"github.com/tikv/pd/pkg/errs"
-	"github.com/tikv/pd/pkg/syncutil"
+	"github.com/tikv/pdv9/pkg/errs"
+	"github.com/tikv/pdv9/pkg/syncutil"
 )
 
 // speedStatisticalWindow is the speed calculation window

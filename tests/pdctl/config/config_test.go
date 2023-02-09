@@ -23,14 +23,14 @@ import (
 	"time"
 
 	"github.com/coreos/go-semver/semver"
-	"github.com/pingcap/kvprotov2/pkg/metapb"
+	"github.com/pingcap/kvprotov9/pkg/metapb"
 	"github.com/stretchr/testify/require"
-	"github.com/tikv/pd/pkg/typeutil"
-	"github.com/tikv/pd/server/config"
-	"github.com/tikv/pd/server/schedule/placement"
-	"github.com/tikv/pd/tests"
-	"github.com/tikv/pd/tests/pdctl"
-	pdctlCmd "github.com/tikv/pd/tools/pd-ctl/pdctl"
+	"github.com/tikv/pdv9/pkg/typeutil"
+	"github.com/tikv/pdv9erver/config"
+	"github.com/tikv/pdv9erver/schedule/placement"
+	"github.com/tikv/pdv9ests"
+	"github.com/tikv/pdv9ests/pdctl"
+	pdctlCmd "github.com/tikv/pdv9ools/pd-ctl/pdctl"
 )
 
 type testCase struct {

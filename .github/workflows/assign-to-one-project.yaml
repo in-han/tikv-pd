@@ -17,5 +17,5 @@ jobs:
           contains(github.event.issue.labels.*.name, 'type/question') ||
           contains(github.event.issue.labels.*.name, 'type/bug')
         with:
-          project: "https://github.com/tikv/pd/projects/6"
+          project: "https://github.com/tikv/pdv9/projects/6"
           column_name: "Need Triage"

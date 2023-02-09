@@ -21,11 +21,11 @@ import (
 	"time"
 
 	"github.com/stretchr/testify/suite"
-	tu "github.com/tikv/pd/pkg/testutil"
-	"github.com/tikv/pd/pkg/typeutil"
-	"github.com/tikv/pd/server"
-	"github.com/tikv/pd/server/config"
-	"github.com/tikv/pd/server/versioninfo"
+	tu "github.com/tikv/pdv9/pkg/testutil"
+	"github.com/tikv/pdv9/pkg/typeutil"
+	"github.com/tikv/pdv9/server"
+	"github.com/tikv/pdv9/server/config"
+	"github.com/tikv/pdv9/server/versioninfo"
 )
 
 type configTestSuite struct {

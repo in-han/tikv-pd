@@ -26,9 +26,9 @@ import (
 	"time"
 
 	"github.com/pingcap/errors"
-	"github.com/pingcap/kvprotov2/pkg/metapb"
-	"github.com/tikv/pd/pkg/etcdutil"
-	"github.com/tikv/pd/server/core"
+	"github.com/pingcap/kvprotov9/pkg/metapb"
+	"github.com/tikv/pdv9/pkg/etcdutil"
+	"github.com/tikv/pdv9erver/core"
 	"go.etcd.io/etcd/clientv3"
 	"go.etcd.io/etcd/pkg/transport"
 )

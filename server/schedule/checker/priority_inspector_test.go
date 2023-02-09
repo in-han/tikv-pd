@@ -20,8 +20,8 @@ import (
 	"time"
 
 	"github.com/stretchr/testify/require"
-	"github.com/tikv/pd/pkg/mock/mockcluster"
-	"github.com/tikv/pd/server/config"
+	"github.com/tikv/pdv9/pkg/mock/mockcluster"
+	"github.com/tikv/pdv9/server/config"
 )
 
 func TestCheckPriorityRegions(t *testing.T) {

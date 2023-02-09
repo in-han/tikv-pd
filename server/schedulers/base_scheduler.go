@@ -20,9 +20,9 @@ import (
 	"time"
 
 	"github.com/pingcap/log"
-	"github.com/tikv/pd/pkg/errs"
-	"github.com/tikv/pd/pkg/typeutil"
-	"github.com/tikv/pd/server/schedule"
+	"github.com/tikv/pdv9/pkg/errs"
+	"github.com/tikv/pdv9/pkg/typeutil"
+	"github.com/tikv/pdv9/server/schedule"
 )
 
 // options for interval of schedulers

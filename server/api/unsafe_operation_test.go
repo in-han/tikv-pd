@@ -21,9 +21,9 @@ import (
 
 	"github.com/pingcap/kvprotov2/pkg/metapb"
 	"github.com/stretchr/testify/suite"
-	tu "github.com/tikv/pd/pkg/testutil"
-	"github.com/tikv/pd/server"
-	"github.com/tikv/pd/server/cluster"
+	tu "github.com/tikv/pdv9/pkg/testutil"
+	"github.com/tikv/pdv9/server"
+	"github.com/tikv/pdv9/server/cluster"
 )
 
 type unsafeOperationTestSuite struct {

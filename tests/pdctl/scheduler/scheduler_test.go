@@ -20,13 +20,13 @@ import (
 	"testing"
 	"time"
 
-	"github.com/pingcap/kvprotov2/pkg/metapb"
+	"github.com/pingcap/kvprotov9/pkg/metapb"
 	"github.com/stretchr/testify/require"
-	"github.com/tikv/pd/server/config"
-	"github.com/tikv/pd/server/versioninfo"
-	"github.com/tikv/pd/tests"
-	"github.com/tikv/pd/tests/pdctl"
-	pdctlCmd "github.com/tikv/pd/tools/pd-ctl/pdctl"
+	"github.com/tikv/pdv9/server/config"
+	"github.com/tikv/pdv9erver/versioninfo"
+	"github.com/tikv/pdv9ests"
+	"github.com/tikv/pdv9ests/pdctl"
+	pdctlCmd "github.com/tikv/pdv9ools/pd-ctl/pdctl"
 )
 
 func TestScheduler(t *testing.T) {

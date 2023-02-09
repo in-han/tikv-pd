@@ -24,10 +24,10 @@ import (
 	"github.com/go-echarts/go-echarts/charts"
 	"github.com/pingcap/kvprotov2/pkg/metapb"
 	"github.com/pingcap/log"
-	"github.com/tikv/pd/pkg/codec"
-	"github.com/tikv/pd/server/core"
-	"github.com/tikv/pd/tools/pd-simulator/simulator/info"
-	"github.com/tikv/pd/tools/pd-simulator/simulator/simutil"
+	"github.com/tikv/pdv9/pkg/codec"
+	"github.com/tikv/pdv9/server/core"
+	"github.com/tikv/pdv9/tools/pd-simulator/simulator/info"
+	"github.com/tikv/pdv9/tools/pd-simulator/simulator/simutil"
 	"go.uber.org/zap"
 )
 

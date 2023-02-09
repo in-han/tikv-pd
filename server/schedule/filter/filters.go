@@ -19,14 +19,14 @@ import (
 	"strconv"
 
 	"github.com/golang/protobuf/proto"
-	"github.com/pingcap/kvprotov2/pkg/metapb"
+	"github.com/pingcap/kvprotov9/pkg/metapb"
 	"github.com/pingcap/log"
-	"github.com/tikv/pd/pkg/slice"
-	"github.com/tikv/pd/server/config"
-	"github.com/tikv/pd/server/core"
-	"github.com/tikv/pd/server/core/storelimit"
-	"github.com/tikv/pd/server/schedule/placement"
-	"github.com/tikv/pd/server/schedule/plan"
+	"github.com/tikv/pdv9/pkg/slice"
+	"github.com/tikv/pdv9erver/config"
+	"github.com/tikv/pdv9erver/core"
+	"github.com/tikv/pdv9erver/core/storelimit"
+	"github.com/tikv/pdv9erver/schedule/placement"
+	"github.com/tikv/pdv9erver/schedule/plan"
 	"go.uber.org/zap"
 )
 

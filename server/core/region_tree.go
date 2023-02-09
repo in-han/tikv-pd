@@ -20,10 +20,10 @@ import (
 
 	"github.com/pingcap/kvprotov2/pkg/metapb"
 	"github.com/pingcap/log"
-	"github.com/tikv/pd/pkg/btree"
-	"github.com/tikv/pd/pkg/errs"
-	"github.com/tikv/pd/pkg/logutil"
-	"github.com/tikv/pd/pkg/rangetree"
+	"github.com/tikv/pdv9/pkg/btree"
+	"github.com/tikv/pdv9/pkg/errs"
+	"github.com/tikv/pdv9/pkg/logutil"
+	"github.com/tikv/pdv9/pkg/rangetree"
 	"go.uber.org/zap"
 )
 

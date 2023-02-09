@@ -25,9 +25,9 @@ import (
 	"github.com/pingcap/kvprotov2/pkg/metapb"
 	"github.com/pingcap/kvprotov2/pkg/pdpb"
 	"github.com/pingcap/log"
-	"github.com/tikv/pd/pkg/typeutil"
-	"github.com/tikv/pd/server/core"
-	"github.com/tikv/pd/server/core/storelimit"
+	"github.com/tikv/pdv9/pkg/typeutil"
+	"github.com/tikv/pdv9/server/core"
+	"github.com/tikv/pdv9/server/core/storelimit"
 	"go.uber.org/zap"
 )
 

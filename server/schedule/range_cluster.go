@@ -16,7 +16,7 @@ package schedule
 
 import (
 	"github.com/docker/go-units"
-	"github.com/tikv/pd/server/core"
+	"github.com/tikv/pdv9/server/core"
 )
 
 // RangeCluster isolates the cluster by range.

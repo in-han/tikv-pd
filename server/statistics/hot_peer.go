@@ -18,9 +18,9 @@ import (
 	"math"
 	"time"
 
-	"github.com/pingcap/kvprotov2/pkg/metapb"
-	"github.com/tikv/pd/pkg/movingaverage"
-	"github.com/tikv/pd/pkg/slice"
+	"github.com/pingcap/kvprotov9/pkg/metapb"
+	"github.com/tikv/pdv9/pkg/movingaverage"
+	"github.com/tikv/pdv9kg/slice"
 	"go.uber.org/zap"
 )
 

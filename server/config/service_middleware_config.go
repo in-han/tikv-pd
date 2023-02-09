@@ -14,7 +14,7 @@
 
 package config
 
-import "github.com/tikv/pd/pkg/ratelimit"
+import "github.com/tikv/pdv9/pkg/ratelimit"
 
 const (
 	defaultEnableAuditMiddleware     = false

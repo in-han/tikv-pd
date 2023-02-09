@@ -24,7 +24,7 @@ import (
 
 	"github.com/pingcap/kvprotov2/pkg/metapb"
 	"github.com/spf13/cobra"
-	"github.com/tikv/pd/server/api"
+	"github.com/tikv/pdv9/server/api"
 	"golang.org/x/text/cases"
 	"golang.org/x/text/language"
 )

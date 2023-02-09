@@ -21,9 +21,9 @@ import (
 
 	"github.com/pingcap/failpoint"
 	"github.com/stretchr/testify/require"
-	"github.com/tikv/pd/pkg/testutil"
-	"github.com/tikv/pd/server/config"
-	"github.com/tikv/pd/tests"
+	"github.com/tikv/pdv9/pkg/testutil"
+	"github.com/tikv/pdv9/server/config"
+	"github.com/tikv/pdv9/tests"
 	"go.uber.org/goleak"
 )
 
@@ -54,7 +54,7 @@ func TestWatcher(t *testing.T) {
 	time.Sleep(5 * time.Second)
 	pd3, err := cluster.Join(ctx)
 	re.NoError(err)
-	re.NoError(failpoint.Enable("github.com/tikv/pd/server/delayWatcher", `pause`))
+	re.NoError(failpoint.Enable("github.com/tikv/pdv9/server/delayWatcher", `pause`))
 	err = pd3.Run()
 	re.NoError(err)
 	time.Sleep(200 * time.Millisecond)
@@ -63,7 +63,7 @@ func TestWatcher(t *testing.T) {
 	re.NoError(err)
 	cluster.WaitLeader()
 	re.Equal(pd2.GetConfig().Name, pd2.GetLeader().GetName())
-	re.NoError(failpoint.Disable("github.com/tikv/pd/server/delayWatcher"))
+	re.NoError(failpoint.Disable("github.com/tikv/pdv9/server/delayWatcher"))
 	testutil.Eventually(re, func() bool {
 		return pd3.GetLeader().GetName() == pd2.GetConfig().Name
 	})

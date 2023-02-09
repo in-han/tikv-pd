@@ -25,9 +25,9 @@ import (
 	"time"
 
 	"github.com/pingcap/kvprotov2/pkg/metapb"
-	"github.com/tikv/pd/pkg/etcdutil"
-	"github.com/tikv/pd/pkg/typeutil"
-	"github.com/tikv/pd/server"
+	"github.com/tikv/pdv9/pkg/etcdutil"
+	"github.com/tikv/pdv9/pkg/typeutil"
+	"github.com/tikv/pdv9/server"
 	"go.etcd.io/etcd/clientv3"
 	"go.etcd.io/etcd/pkg/transport"
 )

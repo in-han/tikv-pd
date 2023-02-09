@@ -25,13 +25,13 @@ import (
 
 	"github.com/pingcap/errors"
 	"github.com/pingcap/log"
-	"github.com/tikv/pd/pkg/codec"
-	"github.com/tikv/pd/pkg/errs"
-	"github.com/tikv/pd/pkg/slice"
-	"github.com/tikv/pd/pkg/syncutil"
-	"github.com/tikv/pd/server/config"
-	"github.com/tikv/pd/server/core"
-	"github.com/tikv/pd/server/storage/endpoint"
+	"github.com/tikv/pdv9/pkg/codec"
+	"github.com/tikv/pdv9/pkg/errs"
+	"github.com/tikv/pdv9/pkg/slice"
+	"github.com/tikv/pdv9/pkg/syncutil"
+	"github.com/tikv/pdv9/server/config"
+	"github.com/tikv/pdv9/server/core"
+	"github.com/tikv/pdv9/server/storage/endpoint"
 	"go.uber.org/zap"
 )
 

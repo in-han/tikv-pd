@@ -27,8 +27,8 @@ import (
 	"time"
 
 	"github.com/pingcap/log"
-	"github.com/tikv/pd/server"
-	"github.com/tikv/pd/server/versioninfo"
+	"github.com/tikv/pdv9/server"
+	"github.com/tikv/pdv9/server/versioninfo"
 	"github.com/unrolled/render"
 	"go.uber.org/zap"
 )

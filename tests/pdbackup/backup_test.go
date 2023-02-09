@@ -23,8 +23,8 @@ import (
 	"time"
 
 	"github.com/stretchr/testify/require"
-	"github.com/tikv/pd/tests"
-	"github.com/tikv/pd/tools/pd-backup/pdbackup"
+	"github.com/tikv/pdv9/tests"
+	"github.com/tikv/pdv9/tools/pd-backup/pdbackup"
 	"go.etcd.io/etcd/clientv3"
 )
 

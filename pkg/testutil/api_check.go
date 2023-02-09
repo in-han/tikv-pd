@@ -20,7 +20,7 @@ import (
 	"net/http"
 
 	"github.com/stretchr/testify/require"
-	"github.com/tikv/pd/pkg/apiutil"
+	"github.com/tikv/pdv9/pkg/apiutil"
 )
 
 // Status is used to check whether http response code is equal given code

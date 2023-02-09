@@ -18,15 +18,15 @@ import (
 	"fmt"
 	"math/rand"
 
-	"github.com/tikv/pd/pkg/logutil"
+	"github.com/tikv/pdv9/pkg/logutil"
 
 	"github.com/pingcap/errors"
 	"github.com/pingcap/kvprotov2/pkg/metapb"
 	"github.com/pingcap/kvprotov2/pkg/pdpb"
 	"github.com/pingcap/log"
-	"github.com/tikv/pd/pkg/errs"
-	"github.com/tikv/pd/server/core"
-	"github.com/tikv/pd/server/schedule/placement"
+	"github.com/tikv/pdv9/pkg/errs"
+	"github.com/tikv/pdv9/server/core"
+	"github.com/tikv/pdv9/server/schedule/placement"
 	"go.uber.org/zap"
 )
 

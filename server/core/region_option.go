@@ -18,9 +18,9 @@ import (
 	"math"
 	"sort"
 
-	"github.com/pingcap/kvprotov2/pkg/metapb"
-	"github.com/pingcap/kvprotov2/pkg/pdpb"
-	"github.com/pingcap/kvprotov2/pkg/replication_modepb"
+	"github.com/pingcap/kvprotov9/pkg/metapb"
+	"github.com/pingcap/kvprotov9/pkg/pdpb"
+	"github.com/pingcap/kvprotov9/pkg/replication_modepb"
 )
 
 // RegionCreateOption used to create region.

@@ -18,10 +18,10 @@ import (
 	"strconv"
 
 	"github.com/pingcap/log"
-	"github.com/tikv/pd/pkg/errs"
-	"github.com/tikv/pd/pkg/syncutil"
-	"github.com/tikv/pd/server/core"
-	"github.com/tikv/pd/server/storage/kv"
+	"github.com/tikv/pdv9/pkg/errs"
+	"github.com/tikv/pdv9/pkg/syncutil"
+	"github.com/tikv/pdv9/server/core"
+	"github.com/tikv/pdv9/server/storage/kv"
 	"go.uber.org/zap"
 )
 

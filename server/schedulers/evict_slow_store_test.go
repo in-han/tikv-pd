@@ -22,13 +22,13 @@ import (
 
 	"github.com/pingcap/failpoint"
 	"github.com/stretchr/testify/suite"
-	"github.com/tikv/pd/pkg/mock/mockcluster"
-	"github.com/tikv/pd/pkg/testutil"
-	"github.com/tikv/pd/server/config"
-	"github.com/tikv/pd/server/core"
-	"github.com/tikv/pd/server/schedule"
-	"github.com/tikv/pd/server/schedule/operator"
-	"github.com/tikv/pd/server/storage"
+	"github.com/tikv/pdv9/pkg/mock/mockcluster"
+	"github.com/tikv/pdv9/pkg/testutil"
+	"github.com/tikv/pdv9/server/config"
+	"github.com/tikv/pdv9/server/core"
+	"github.com/tikv/pdv9/server/schedule"
+	"github.com/tikv/pdv9/server/schedule/operator"
+	"github.com/tikv/pdv9/server/storage"
 )
 
 type evictSlowStoreTestSuite struct {
@@ -135,7 +135,7 @@ func (suite *evictSlowStoreTestSuite) TestEvictSlowStorePrepare() {
 }
 
 func (suite *evictSlowStoreTestSuite) TestEvictSlowStorePersistFail() {
-	persisFail := "github.com/tikv/pd/server/schedulers/persistFail"
+	persisFail := "github.com/tikv/pdv9/server/schedulers/persistFail"
 	suite.NoError(failpoint.Enable(persisFail, "return(true)"))
 
 	storeInfo := suite.tc.GetStore(1)

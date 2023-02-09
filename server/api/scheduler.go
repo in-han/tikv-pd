@@ -22,10 +22,10 @@ import (
 
 	"github.com/gorilla/mux"
 	"github.com/pingcap/errors"
-	"github.com/tikv/pd/pkg/apiutil"
-	"github.com/tikv/pd/pkg/errs"
-	"github.com/tikv/pd/server"
-	"github.com/tikv/pd/server/schedulers"
+	"github.com/tikv/pdv9/pkg/apiutil"
+	"github.com/tikv/pdv9/pkg/errs"
+	"github.com/tikv/pdv9/server"
+	"github.com/tikv/pdv9/server/schedulers"
 	"github.com/unrolled/render"
 )
 

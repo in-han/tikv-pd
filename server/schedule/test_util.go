@@ -15,10 +15,10 @@
 package schedule
 
 import (
-	"github.com/pingcap/kvprotov2/pkg/metapb"
-	"github.com/tikv/pd/pkg/mock/mockcluster"
-	"github.com/tikv/pd/server/core"
-	"github.com/tikv/pd/server/schedule/operator"
+	"github.com/pingcap/kvprotov9/pkg/metapb"
+	"github.com/tikv/pdv9/pkg/mock/mockcluster"
+	"github.com/tikv/pdv9erver/core"
+	"github.com/tikv/pdv9erver/schedule/operator"
 )
 
 // ApplyOperatorStep applies operator step. Only for test purpose.

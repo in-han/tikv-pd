@@ -19,7 +19,7 @@ import (
 	"net/http"
 
 	"github.com/gorilla/mux"
-	"github.com/tikv/pd/server"
+	"github.com/tikv/pdv9/server"
 	"github.com/unrolled/render"
 )
 

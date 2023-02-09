@@ -18,8 +18,8 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/require"
-	"github.com/tikv/pd/tests/pdctl"
-	pdctlCmd "github.com/tikv/pd/tools/pd-ctl/pdctl"
+	"github.com/tikv/pdv9/tests/pdctl"
+	pdctlCmd "github.com/tikv/pdv9/tools/pd-ctl/pdctl"
 )
 
 func TestCompletion(t *testing.T) {

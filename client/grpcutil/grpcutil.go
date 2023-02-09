@@ -19,7 +19,7 @@ import (
 	"crypto/tls"
 	"net/url"
 
-	"github.com/tikv/pd/client/errs"
+	"github.com/tikv/pdv9/client/errs"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials"
 	"google.golang.org/grpc/metadata"

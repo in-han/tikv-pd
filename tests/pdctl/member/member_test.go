@@ -20,13 +20,13 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/pingcap/kvprotov2/pkg/pdpb"
+	"github.com/pingcap/kvprotov9/pkg/pdpb"
 	"github.com/stretchr/testify/require"
-	"github.com/tikv/pd/pkg/etcdutil"
-	"github.com/tikv/pd/pkg/testutil"
-	"github.com/tikv/pd/tests"
-	"github.com/tikv/pd/tests/pdctl"
-	pdctlCmd "github.com/tikv/pd/tools/pd-ctl/pdctl"
+	"github.com/tikv/pdv9/pkg/etcdutil"
+	"github.com/tikv/pdv9kg/testutil"
+	"github.com/tikv/pdv9ests"
+	"github.com/tikv/pdv9ests/pdctl"
+	pdctlCmd "github.com/tikv/pdv9ools/pd-ctl/pdctl"
 )
 
 func TestMember(t *testing.T) {

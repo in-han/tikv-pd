@@ -25,7 +25,7 @@ import (
 	"time"
 
 	"github.com/stretchr/testify/require"
-	"github.com/tikv/pd/server/core"
+	"github.com/tikv/pdv9/server/core"
 )
 
 type MockPackHotRegionInfo struct {

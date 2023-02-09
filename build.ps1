@@ -1,5 +1,5 @@
 # For `--version`
-$PD_PKG = "github.com/tikv/pd"
+$PD_PKG = "github.com/tikv/pdv9"
 $GO_LDFLAGS = "-X `"$PD_PKG/server.PDReleaseVersion=$(git describe --tags --dirty --always)`""
 $GO_LDFLAGS += " -X `"$PD_PKG/server.PDBuildTS=$(date -u '+%Y-%m-%d_%I:%M:%S')`""
 $GO_LDFLAGS += " -X `"$PD_PKG/server.PDGitHash=$(git rev-parse HEAD)`""

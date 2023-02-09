@@ -22,9 +22,9 @@ import (
 
 	"github.com/pingcap/kvprotov2/pkg/metapb"
 	"github.com/stretchr/testify/suite"
-	"github.com/tikv/pd/pkg/apiutil"
-	"github.com/tikv/pd/server"
-	"github.com/tikv/pd/server/storage/endpoint"
+	"github.com/tikv/pdv9/pkg/apiutil"
+	"github.com/tikv/pdv9/server"
+	"github.com/tikv/pdv9/server/storage/endpoint"
 )
 
 type serviceGCSafepointTestSuite struct {

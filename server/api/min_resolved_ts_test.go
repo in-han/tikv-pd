@@ -21,10 +21,10 @@ import (
 
 	"github.com/pingcap/kvprotov2/pkg/metapb"
 	"github.com/stretchr/testify/suite"
-	"github.com/tikv/pd/pkg/apiutil"
-	"github.com/tikv/pd/pkg/typeutil"
-	"github.com/tikv/pd/server"
-	"github.com/tikv/pd/server/cluster"
+	"github.com/tikv/pdv9/pkg/apiutil"
+	"github.com/tikv/pdv9/pkg/typeutil"
+	"github.com/tikv/pdv9/server"
+	"github.com/tikv/pdv9/server/cluster"
 )
 
 type minResolvedTSTestSuite struct {

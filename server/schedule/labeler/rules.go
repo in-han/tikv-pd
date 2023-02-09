@@ -23,7 +23,7 @@ import (
 
 	"github.com/pingcap/failpoint"
 	"github.com/pingcap/log"
-	"github.com/tikv/pd/pkg/errs"
+	"github.com/tikv/pdv9/pkg/errs"
 	"go.uber.org/zap"
 )
 
