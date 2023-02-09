@@ -20,7 +20,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/pingcap/kvproto/pkg/metapb"
+	"github.com/pingcap/kvprotov2/pkg/metapb"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"github.com/tikv/pd/server/core"

@@ -26,8 +26,8 @@ import (
 	"time"
 
 	"github.com/pingcap/errors"
-	"github.com/pingcap/kvproto/v2/pkg/metapb"
-	"github.com/pingcap/kvproto/v2/pkg/pdpb"
+	"github.com/pingcap/kvprotov2/pkg/metapb"
+	"github.com/pingcap/kvprotov2/pkg/pdpb"
 	"github.com/pingcap/log"
 	"github.com/tikv/pd/pkg/apiutil"
 	"github.com/tikv/pd/pkg/encryption"

@@ -22,7 +22,7 @@ import (
 	"time"
 
 	"github.com/pingcap/failpoint"
-	"github.com/pingcap/kvproto/pkg/metapb"
+	"github.com/pingcap/kvprotov2/pkg/metapb"
 	"github.com/stretchr/testify/suite"
 	"github.com/tikv/pd/pkg/apiutil"
 	tu "github.com/tikv/pd/pkg/testutil"

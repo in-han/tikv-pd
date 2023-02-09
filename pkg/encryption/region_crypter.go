@@ -21,8 +21,8 @@ import (
 
 	"github.com/gogo/protobuf/proto"
 	"github.com/pingcap/errors"
-	"github.com/pingcap/kvproto/v2/pkg/encryptionpb"
-	"github.com/pingcap/kvproto/v2/pkg/metapb"
+	"github.com/pingcap/kvprotov2/pkg/encryptionpb"
+	"github.com/pingcap/kvprotov2/pkg/metapb"
 	"github.com/tikv/pd/pkg/errs"
 )
 

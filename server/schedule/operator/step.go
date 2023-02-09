@@ -21,9 +21,9 @@ import (
 	"time"
 
 	"github.com/pingcap/errors"
-	"github.com/pingcap/kvproto/pkg/eraftpb"
-	"github.com/pingcap/kvproto/pkg/metapb"
-	"github.com/pingcap/kvproto/pkg/pdpb"
+	"github.com/pingcap/kvprotov2/pkg/eraftpb"
+	"github.com/pingcap/kvprotov2/pkg/metapb"
+	"github.com/pingcap/kvprotov2/pkg/pdpb"
 	"github.com/pingcap/log"
 	"github.com/tikv/pd/pkg/typeutil"
 	"github.com/tikv/pd/server/core"

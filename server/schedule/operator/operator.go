@@ -22,7 +22,7 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/pingcap/kvproto/pkg/metapb"
+	"github.com/pingcap/kvprotov2/pkg/metapb"
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/tikv/pd/server/core"
 )

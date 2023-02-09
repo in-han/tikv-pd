@@ -22,7 +22,7 @@ import (
 	"io"
 	"unsafe"
 
-	"github.com/pingcap/kvproto/v2/pkg/encryptionpb"
+	"github.com/pingcap/kvprotov2/pkg/encryptionpb"
 	"github.com/tikv/pd/pkg/errs"
 )
 

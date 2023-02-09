@@ -26,7 +26,7 @@ import (
 	"time"
 
 	"github.com/gogo/protobuf/proto"
-	"github.com/pingcap/kvproto/pkg/encryptionpb"
+	"github.com/pingcap/kvprotov2/pkg/encryptionpb"
 	"github.com/stretchr/testify/require"
 	"github.com/tikv/pd/pkg/encryption"
 	"github.com/tikv/pd/pkg/etcdutil"

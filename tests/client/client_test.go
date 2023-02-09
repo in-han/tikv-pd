@@ -29,8 +29,8 @@ import (
 
 	"github.com/gogo/protobuf/proto"
 	"github.com/pingcap/failpoint"
-	"github.com/pingcap/kvproto/pkg/metapb"
-	"github.com/pingcap/kvproto/pkg/pdpb"
+	"github.com/pingcap/kvprotov2/pkg/metapb"
+	"github.com/pingcap/kvprotov2/pkg/pdpb"
 	"github.com/stretchr/testify/require"
 	"github.com/stretchr/testify/suite"
 	pd "github.com/tikv/pd/client"

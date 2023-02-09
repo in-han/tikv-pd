@@ -19,7 +19,7 @@ import (
 	"strconv"
 
 	"github.com/golang/protobuf/proto"
-	"github.com/pingcap/kvproto/pkg/metapb"
+	"github.com/pingcap/kvprotov2/pkg/metapb"
 	"github.com/pingcap/log"
 	"github.com/tikv/pd/pkg/slice"
 	"github.com/tikv/pd/server/config"

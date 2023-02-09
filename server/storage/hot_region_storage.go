@@ -24,8 +24,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/pingcap/kvproto/pkg/encryptionpb"
-	"github.com/pingcap/kvproto/pkg/metapb"
+	"github.com/pingcap/kvprotov2/pkg/encryptionpb"
+	"github.com/pingcap/kvprotov2/pkg/metapb"
 	"github.com/pingcap/log"
 	"github.com/syndtr/goleveldb/leveldb"
 	"github.com/syndtr/goleveldb/leveldb/iterator"

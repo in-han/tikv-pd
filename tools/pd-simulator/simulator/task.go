@@ -18,9 +18,9 @@ import (
 	"bytes"
 	"fmt"
 
-	"github.com/pingcap/kvproto/pkg/eraftpb"
-	"github.com/pingcap/kvproto/pkg/metapb"
-	"github.com/pingcap/kvproto/pkg/pdpb"
+	"github.com/pingcap/kvprotov2/pkg/eraftpb"
+	"github.com/pingcap/kvprotov2/pkg/metapb"
+	"github.com/pingcap/kvprotov2/pkg/pdpb"
 	"github.com/tikv/pd/server/core"
 	"github.com/tikv/pd/tools/pd-analysis/analysis"
 )

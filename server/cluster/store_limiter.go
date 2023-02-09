@@ -15,7 +15,7 @@
 package cluster
 
 import (
-	"github.com/pingcap/kvproto/pkg/pdpb"
+	"github.com/pingcap/kvprotov2/pkg/pdpb"
 	"github.com/pingcap/log"
 	"github.com/tikv/pd/pkg/syncutil"
 	"github.com/tikv/pd/server/config"

@@ -17,7 +17,7 @@ package cluster
 import (
 	"testing"
 
-	"github.com/pingcap/kvproto/pkg/pdpb"
+	"github.com/pingcap/kvprotov2/pkg/pdpb"
 	"github.com/stretchr/testify/require"
 	"github.com/tikv/pd/server/config"
 	"github.com/tikv/pd/server/core/storelimit"

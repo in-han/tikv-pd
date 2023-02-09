@@ -14,7 +14,7 @@
 
 package info
 
-import "github.com/pingcap/kvproto/pkg/pdpb"
+import "github.com/pingcap/kvprotov2/pkg/pdpb"
 
 // StoreStats is to save store stats of node.
 type StoreStats struct {

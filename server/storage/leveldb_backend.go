@@ -20,7 +20,7 @@ import (
 
 	"github.com/gogo/protobuf/proto"
 	"github.com/pingcap/failpoint"
-	"github.com/pingcap/kvproto/pkg/metapb"
+	"github.com/pingcap/kvprotov2/pkg/metapb"
 	"github.com/pingcap/log"
 	"github.com/syndtr/goleveldb/leveldb"
 	"github.com/tikv/pd/pkg/encryption"

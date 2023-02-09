@@ -21,8 +21,8 @@ import (
 	"time"
 
 	"github.com/docker/go-units"
-	"github.com/pingcap/kvproto/v2/pkg/metapb"
-	"github.com/pingcap/kvproto/v2/pkg/pdpb"
+	"github.com/pingcap/kvprotov2/pkg/metapb"
+	"github.com/pingcap/kvprotov2/pkg/pdpb"
 	"github.com/stretchr/testify/require"
 )
 

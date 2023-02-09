@@ -20,7 +20,7 @@ import (
 	"time"
 
 	"github.com/gogo/protobuf/proto"
-	"github.com/pingcap/kvproto/pkg/encryptionpb"
+	"github.com/pingcap/kvprotov2/pkg/encryptionpb"
 	"github.com/pingcap/log"
 	"github.com/tikv/pd/pkg/encryption"
 	"github.com/tikv/pd/pkg/errs"

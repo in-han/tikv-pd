@@ -19,7 +19,7 @@ import (
 	"testing"
 
 	"github.com/docker/go-units"
-	"github.com/pingcap/kvproto/v2/pkg/metapb"
+	"github.com/pingcap/kvprotov2/pkg/metapb"
 	"github.com/stretchr/testify/require"
 	"github.com/tikv/pd/pkg/mock/mockcluster"
 	"github.com/tikv/pd/pkg/testutil"

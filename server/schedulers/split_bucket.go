@@ -22,7 +22,7 @@ import (
 	"strconv"
 
 	"github.com/gorilla/mux"
-	"github.com/pingcap/kvproto/v2/pkg/pdpb"
+	"github.com/pingcap/kvprotov2/pkg/pdpb"
 	"github.com/tikv/pd/pkg/syncutil"
 	"github.com/tikv/pd/server/core"
 	"github.com/tikv/pd/server/schedule"

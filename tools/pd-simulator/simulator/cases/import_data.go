@@ -22,7 +22,7 @@ import (
 
 	"github.com/docker/go-units"
 	"github.com/go-echarts/go-echarts/charts"
-	"github.com/pingcap/kvproto/pkg/metapb"
+	"github.com/pingcap/kvprotov2/pkg/metapb"
 	"github.com/pingcap/log"
 	"github.com/tikv/pd/pkg/codec"
 	"github.com/tikv/pd/server/core"

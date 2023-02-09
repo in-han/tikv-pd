@@ -19,8 +19,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/pingcap/kvproto/pkg/metapb"
-	"github.com/pingcap/kvproto/pkg/pdpb"
+	"github.com/pingcap/kvprotov2/pkg/metapb"
+	"github.com/pingcap/kvprotov2/pkg/pdpb"
 	"github.com/stretchr/testify/require"
 	"github.com/tikv/pd/server/config"
 	"github.com/tikv/pd/server/core"

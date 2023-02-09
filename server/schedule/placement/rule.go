@@ -19,7 +19,7 @@ import (
 	"encoding/json"
 	"sort"
 
-	"github.com/pingcap/kvproto/pkg/metapb"
+	"github.com/pingcap/kvprotov2/pkg/metapb"
 )
 
 // PeerRoleType is the expected peer type of the placement rule.

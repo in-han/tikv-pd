@@ -23,7 +23,7 @@ import (
 	"time"
 
 	"github.com/coreos/go-semver/semver"
-	"github.com/pingcap/kvproto/pkg/metapb"
+	"github.com/pingcap/kvprotov2/pkg/metapb"
 	"github.com/stretchr/testify/require"
 	"github.com/tikv/pd/pkg/typeutil"
 	"github.com/tikv/pd/server/config"

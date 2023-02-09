@@ -19,7 +19,7 @@ import (
 	"context"
 	"time"
 
-	"github.com/pingcap/kvproto/v2/pkg/metapb"
+	"github.com/pingcap/kvprotov2/pkg/metapb"
 	"github.com/pingcap/log"
 	"github.com/tikv/pd/pkg/keyutil"
 	"github.com/tikv/pd/pkg/logutil"

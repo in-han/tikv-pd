@@ -23,7 +23,7 @@ import (
 	"time"
 
 	"github.com/gorilla/mux"
-	"github.com/pingcap/kvproto/v2/pkg/metapb"
+	"github.com/pingcap/kvprotov2/pkg/metapb"
 	"github.com/pingcap/log"
 	"github.com/tikv/pd/pkg/apiutil"
 	"github.com/tikv/pd/pkg/errs"

@@ -20,8 +20,8 @@ import (
 	"time"
 
 	"github.com/docker/go-units"
-	"github.com/pingcap/kvproto/pkg/metapb"
-	"github.com/pingcap/kvproto/pkg/pdpb"
+	"github.com/pingcap/kvprotov2/pkg/metapb"
+	"github.com/pingcap/kvprotov2/pkg/pdpb"
 	"github.com/stretchr/testify/suite"
 	"github.com/tikv/pd/pkg/cache"
 	"github.com/tikv/pd/pkg/mock/mockcluster"

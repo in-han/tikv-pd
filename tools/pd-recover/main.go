@@ -24,7 +24,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/pingcap/kvproto/pkg/metapb"
+	"github.com/pingcap/kvprotov2/pkg/metapb"
 	"github.com/tikv/pd/pkg/etcdutil"
 	"github.com/tikv/pd/pkg/typeutil"
 	"github.com/tikv/pd/server"

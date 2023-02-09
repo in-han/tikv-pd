@@ -19,7 +19,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/pingcap/kvproto/pkg/metapb"
+	"github.com/pingcap/kvprotov2/pkg/metapb"
 	"github.com/tikv/pd/server/core"
 )
 

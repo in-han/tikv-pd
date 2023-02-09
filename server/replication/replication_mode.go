@@ -24,8 +24,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/pingcap/kvproto/pkg/pdpb"
-	pb "github.com/pingcap/kvproto/pkg/replication_modepb"
+	"github.com/pingcap/kvprotov2/pkg/pdpb"
+	pb "github.com/pingcap/kvprotov2/pkg/replication_modepb"
 	"github.com/pingcap/log"
 	"github.com/tikv/pd/pkg/errs"
 	"github.com/tikv/pd/pkg/logutil"

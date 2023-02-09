@@ -23,8 +23,8 @@ import (
 
 	"github.com/coreos/go-semver/semver"
 	"github.com/pingcap/errors"
-	"github.com/pingcap/kvproto/pkg/metapb"
-	"github.com/pingcap/kvproto/pkg/pdpb"
+	"github.com/pingcap/kvprotov2/pkg/metapb"
+	"github.com/pingcap/kvprotov2/pkg/pdpb"
 	"github.com/pingcap/log"
 	"github.com/stretchr/testify/require"
 	"github.com/tikv/pd/pkg/autoscaling"

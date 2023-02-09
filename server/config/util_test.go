@@ -17,7 +17,7 @@ package config
 import (
 	"testing"
 
-	"github.com/pingcap/kvproto/pkg/metapb"
+	"github.com/pingcap/kvprotov2/pkg/metapb"
 	"github.com/stretchr/testify/require"
 )
 

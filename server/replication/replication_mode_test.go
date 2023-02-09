@@ -21,8 +21,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/pingcap/kvproto/pkg/pdpb"
-	pb "github.com/pingcap/kvproto/pkg/replication_modepb"
+	"github.com/pingcap/kvprotov2/pkg/pdpb"
+	pb "github.com/pingcap/kvprotov2/pkg/replication_modepb"
 	"github.com/stretchr/testify/require"
 	"github.com/tikv/pd/pkg/mock/mockcluster"
 	"github.com/tikv/pd/pkg/typeutil"

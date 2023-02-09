@@ -22,7 +22,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/pingcap/kvproto/pkg/metapb"
+	"github.com/pingcap/kvprotov2/pkg/metapb"
 	"github.com/spf13/cobra"
 	"github.com/tikv/pd/server/api"
 	"golang.org/x/text/cases"

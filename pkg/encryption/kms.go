@@ -23,7 +23,7 @@ import (
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/kms"
 	"github.com/aws/aws-sdk-go/service/sts"
-	"github.com/pingcap/kvproto/v2/pkg/encryptionpb"
+	"github.com/pingcap/kvprotov2/pkg/encryptionpb"
 	"github.com/tikv/pd/pkg/errs"
 )
 

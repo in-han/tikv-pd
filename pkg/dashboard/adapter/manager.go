@@ -19,7 +19,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/pingcap/kvproto/v2/pkg/pdpb"
+	"github.com/pingcap/kvprotov2/pkg/pdpb"
 	"github.com/pingcap/tidb-dashboard/pkg/apiserver"
 
 	"github.com/pingcap/log"

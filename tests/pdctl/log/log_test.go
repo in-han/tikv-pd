@@ -19,7 +19,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/pingcap/kvproto/pkg/metapb"
+	"github.com/pingcap/kvprotov2/pkg/metapb"
 	"github.com/stretchr/testify/suite"
 	"github.com/tikv/pd/server"
 	"github.com/tikv/pd/tests"

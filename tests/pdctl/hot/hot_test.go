@@ -23,8 +23,8 @@ import (
 
 	"github.com/docker/go-units"
 	"github.com/gogo/protobuf/proto"
-	"github.com/pingcap/kvproto/pkg/metapb"
-	"github.com/pingcap/kvproto/pkg/pdpb"
+	"github.com/pingcap/kvprotov2/pkg/metapb"
+	"github.com/pingcap/kvprotov2/pkg/pdpb"
 	"github.com/stretchr/testify/require"
 	"github.com/tikv/pd/server/api"
 	"github.com/tikv/pd/server/config"

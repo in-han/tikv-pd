@@ -19,8 +19,8 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/pingcap/kvproto/pkg/metapb"
-	"github.com/pingcap/kvproto/pkg/pdpb"
+	"github.com/pingcap/kvprotov2/pkg/metapb"
+	"github.com/pingcap/kvprotov2/pkg/pdpb"
 	"github.com/stretchr/testify/suite"
 	tu "github.com/tikv/pd/pkg/testutil"
 	"github.com/tikv/pd/server"

@@ -22,8 +22,8 @@ import (
 
 	"github.com/docker/go-units"
 	"github.com/gogo/protobuf/proto"
-	"github.com/pingcap/kvproto/v2/pkg/metapb"
-	"github.com/pingcap/kvproto/v2/pkg/pdpb"
+	"github.com/pingcap/kvprotov2/pkg/metapb"
+	"github.com/pingcap/kvprotov2/pkg/pdpb"
 	"github.com/pingcap/log"
 	"github.com/tikv/pd/pkg/errs"
 	"github.com/tikv/pd/pkg/mock/mockid"

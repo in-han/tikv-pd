@@ -15,7 +15,7 @@
 package operator
 
 import (
-	"github.com/pingcap/kvproto/pkg/pdpb"
+	"github.com/pingcap/kvprotov2/pkg/pdpb"
 )
 
 // OpStatus represents the status of an Operator.

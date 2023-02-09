@@ -25,7 +25,7 @@ import (
 	"github.com/gorilla/mux"
 	"github.com/pingcap/errcode"
 	"github.com/pingcap/errors"
-	"github.com/pingcap/kvproto/pkg/metapb"
+	"github.com/pingcap/kvprotov2/pkg/metapb"
 	"github.com/tikv/pd/pkg/apiutil"
 	"github.com/tikv/pd/pkg/errs"
 	"github.com/tikv/pd/pkg/typeutil"

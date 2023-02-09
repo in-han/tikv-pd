@@ -17,7 +17,7 @@ package buckets
 import (
 	"context"
 
-	"github.com/pingcap/kvproto/v2/pkg/metapb"
+	"github.com/pingcap/kvprotov2/pkg/metapb"
 )
 
 type flowItemTaskKind uint32

@@ -26,7 +26,7 @@ import (
 	"time"
 
 	"github.com/pingcap/errors"
-	"github.com/pingcap/kvproto/pkg/metapb"
+	"github.com/pingcap/kvprotov2/pkg/metapb"
 	"github.com/tikv/pd/pkg/etcdutil"
 	"github.com/tikv/pd/server/core"
 	"go.etcd.io/etcd/clientv3"
