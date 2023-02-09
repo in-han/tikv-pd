@@ -15,4 +15,4 @@ require (
 	google.golang.org/grpc v1.43.0
 )
 
-replace github.com/pingcap/kvprotov2 => ../../tikv-client-default/submodule/kvproto-6.2
+replace github.com/pingcap/kvprotov2 => /tmp/submodule/kvproto-6.2
