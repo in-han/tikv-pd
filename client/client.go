@@ -30,7 +30,7 @@ import (
 	"github.com/pingcap/kvprotov9/pkg/pdpb"
 	"github.com/pingcap/log"
 	"github.com/tikv/pdv9/client/errs"
-	"github.com/tikv/pdv9lient/grpcutil"
+	"github.com/tikv/pdv9/client/grpcutil"
 	"go.uber.org/zap"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/codes"
