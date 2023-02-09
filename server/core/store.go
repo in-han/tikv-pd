@@ -20,7 +20,7 @@ import (
 	"time"
 
 	"github.com/docker/go-units"
-	"github.com/pingcap/kvproto/pkg/metapb"
+	"github.com/pingcap/kvproto/v2/pkg/metapb"
 	"github.com/pingcap/log"
 	"github.com/tikv/pd/pkg/errs"
 	"github.com/tikv/pd/server/core/storelimit"

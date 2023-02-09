@@ -19,7 +19,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/pingcap/kvproto/pkg/encryptionpb"
+	"github.com/pingcap/kvproto/v2/pkg/encryptionpb"
 	"github.com/stretchr/testify/require"
 )
 

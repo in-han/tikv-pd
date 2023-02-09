@@ -18,7 +18,7 @@ import (
 	"fmt"
 	"strconv"
 
-	"github.com/pingcap/kvproto/pkg/metapb"
+	"github.com/pingcap/kvproto/v2/pkg/metapb"
 	"github.com/tikv/pd/server/config"
 	"github.com/tikv/pd/server/core"
 )

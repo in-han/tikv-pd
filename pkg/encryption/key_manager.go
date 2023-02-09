@@ -15,7 +15,7 @@
 package encryption
 
 import (
-	"github.com/pingcap/kvproto/pkg/encryptionpb"
+	"github.com/pingcap/kvproto/v2/pkg/encryptionpb"
 )
 
 // KeyManager maintains the list to encryption keys. It handles encryption key generation and

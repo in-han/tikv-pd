@@ -20,7 +20,7 @@ import (
 	"time"
 
 	"github.com/pingcap/errors"
-	"github.com/pingcap/kvproto/pkg/pdpb"
+	"github.com/pingcap/kvproto/v2/pkg/pdpb"
 	"github.com/stretchr/testify/require"
 	"github.com/tikv/pd/client/testutil"
 	"go.uber.org/goleak"

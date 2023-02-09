@@ -21,7 +21,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/pingcap/kvproto/pkg/metapb"
+	"github.com/pingcap/kvproto/v2/pkg/metapb"
 	"github.com/stretchr/testify/require"
 )
 

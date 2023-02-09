@@ -20,8 +20,8 @@ import (
 	"testing"
 
 	"github.com/pingcap/errors"
-	"github.com/pingcap/kvproto/pkg/encryptionpb"
-	"github.com/pingcap/kvproto/pkg/metapb"
+	"github.com/pingcap/kvproto/v2/pkg/encryptionpb"
+	"github.com/pingcap/kvproto/v2/pkg/metapb"
 	"github.com/stretchr/testify/require"
 )
 

@@ -18,7 +18,7 @@ import (
 	"errors"
 	"time"
 
-	"github.com/pingcap/kvproto/pkg/pdpb"
+	"github.com/pingcap/kvproto/v2/pkg/pdpb"
 	"github.com/tikv/pd/server/core"
 	"github.com/tikv/pd/server/schedule/hbstream"
 )
