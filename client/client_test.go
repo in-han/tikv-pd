@@ -20,9 +20,9 @@ import (
 	"time"
 
 	"github.com/pingcap/errors"
-	"github.com/pingcap/kvprotov2/pkg/pdpb"
+	"github.com/pingcap/kvprotov9/pkg/pdpb"
 	"github.com/stretchr/testify/require"
-	"github.com/tikv/pd/client/testutil"
+	"github.com/tikv/pdv9/client/testutil"
 	"go.uber.org/goleak"
 	"google.golang.org/grpc"
 )
