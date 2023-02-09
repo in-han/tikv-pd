@@ -19,8 +19,8 @@ import (
 	"strconv"
 
 	"github.com/pingcap/kvprotov2/pkg/metapb"
-	"github.com/tikv/pd/server/config"
-	"github.com/tikv/pd/server/core"
+	"github.com/tikv/pdv2/server/config"
+	"github.com/tikv/pdv2/2/server/core"
 )
 
 const (

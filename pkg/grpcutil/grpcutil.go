@@ -21,7 +21,7 @@ import (
 	"net/url"
 
 	"github.com/pingcap/log"
-	"github.com/tikv/pd/pkg/errs"
+	"github.com/tikv/pdv2/pkg/errs"
 	"go.etcd.io/etcd/pkg/transport"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials"

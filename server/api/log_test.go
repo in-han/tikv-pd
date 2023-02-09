@@ -21,8 +21,8 @@ import (
 
 	"github.com/pingcap/log"
 	"github.com/stretchr/testify/suite"
-	tu "github.com/tikv/pd/pkg/testutil"
-	"github.com/tikv/pd/server"
+	tu "github.com/tikv/pdv2/pkg/testutil"
+	"github.com/tikv/pdv2/2/server"
 )
 
 type logTestSuite struct {

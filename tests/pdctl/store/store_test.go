@@ -22,13 +22,13 @@ import (
 
 	"github.com/pingcap/kvprotov2/pkg/metapb"
 	"github.com/stretchr/testify/require"
-	"github.com/tikv/pd/server/api"
-	"github.com/tikv/pd/server/core"
-	"github.com/tikv/pd/server/core/storelimit"
-	"github.com/tikv/pd/server/statistics"
-	"github.com/tikv/pd/tests"
-	"github.com/tikv/pd/tests/pdctl"
-	cmd "github.com/tikv/pd/tools/pd-ctl/pdctl"
+	"github.com/tikv/pdv2/server/api"
+	"github.com/tikv/pdv2/2/server/core"
+	"github.com/tikv/pdv2/2/server/core/storelimit"
+	"github.com/tikv/pdv2/2/server/statistics"
+	"github.com/tikv/pdv2/2/tests"
+	"github.com/tikv/pdv2/2/tests/pdctl"
+	cmd "github.com/tikv/pdv2/2/tools/pd-ctl/pdctl"
 )
 
 func TestStore(t *testing.T) {
@@ -436,7 +436,7 @@ func TestStore(t *testing.T) {
 	re.Contains(string(output), "rate should less than")
 }
 
-// https://github.com/tikv/pd/issues/5024
+// https://github.com/tikv/pdv2/2/issues/5024
 func TestTombstoneStore(t *testing.T) {
 	re := require.New(t)
 	ctx, cancel := context.WithCancel(context.Background())

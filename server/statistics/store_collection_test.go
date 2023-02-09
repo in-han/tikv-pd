@@ -20,8 +20,8 @@ import (
 
 	"github.com/pingcap/kvprotov2/pkg/metapb"
 	"github.com/stretchr/testify/require"
-	"github.com/tikv/pd/server/config"
-	"github.com/tikv/pd/server/core"
+	"github.com/tikv/pdv2/server/config"
+	"github.com/tikv/pdv2/2/server/core"
 )
 
 func TestStoreStatistics(t *testing.T) {

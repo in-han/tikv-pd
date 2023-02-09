@@ -19,7 +19,7 @@ import (
 	"sync/atomic"
 
 	"github.com/pingcap/failpoint"
-	"github.com/tikv/pd/server/storage/endpoint"
+	"github.com/tikv/pdv2/server/storage/endpoint"
 )
 
 // ServiceMiddlewarePersistOptions wraps all service middleware configurations that need to persist to storage and

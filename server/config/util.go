@@ -22,7 +22,7 @@ import (
 
 	"github.com/pingcap/errors"
 	"github.com/pingcap/kvprotov2/pkg/metapb"
-	"github.com/tikv/pd/pkg/errs"
+	"github.com/tikv/pdv2/pkg/errs"
 )
 
 const (

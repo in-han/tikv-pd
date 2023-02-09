@@ -30,10 +30,10 @@ import (
 	"github.com/pingcap/kvprotov2/pkg/pdpb"
 	"github.com/stretchr/testify/require"
 	"github.com/stretchr/testify/suite"
-	tu "github.com/tikv/pd/pkg/testutil"
-	"github.com/tikv/pd/server"
-	"github.com/tikv/pd/server/config"
-	"github.com/tikv/pd/server/core"
+	tu "github.com/tikv/pdv2/pkg/testutil"
+	"github.com/tikv/pdv2/2/server"
+	"github.com/tikv/pdv2/2/server/config"
+	"github.com/tikv/pdv2/2/server/core"
 )
 
 type storeTestSuite struct {

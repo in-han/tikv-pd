@@ -16,7 +16,7 @@ package movingaverage
 
 import (
 	"github.com/phf/go-queue/queue"
-	"github.com/tikv/pd/pkg/syncutil"
+	"github.com/tikv/pdv2/pkg/syncutil"
 )
 
 // SafeQueue is a concurrency safe queue

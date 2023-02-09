@@ -27,17 +27,17 @@ import (
 	"github.com/pingcap/kvprotov2/pkg/metapb"
 	"github.com/pingcap/kvprotov2/pkg/pdpb"
 	"github.com/pingcap/log"
-	"github.com/tikv/pd/pkg/errs"
-	"github.com/tikv/pd/pkg/grpcutil"
-	"github.com/tikv/pd/pkg/logutil"
-	"github.com/tikv/pd/pkg/tsoutil"
-	"github.com/tikv/pd/server/cluster"
-	"github.com/tikv/pd/server/core"
-	"github.com/tikv/pd/server/schedule/operator"
-	"github.com/tikv/pd/server/storage/endpoint"
-	"github.com/tikv/pd/server/storage/kv"
-	"github.com/tikv/pd/server/tso"
-	"github.com/tikv/pd/server/versioninfo"
+	"github.com/tikv/pdv2/pkg/errs"
+	"github.com/tikv/pdv2/pkg/grpcutil"
+	"github.com/tikv/pdv2/pkg/logutil"
+	"github.com/tikv/pdv2/pkg/tsoutil"
+	"github.com/tikv/pdv2/server/cluster"
+	"github.com/tikv/pdv2/server/core"
+	"github.com/tikv/pdv2/server/schedule/operator"
+	"github.com/tikv/pdv2/server/storage/endpoint"
+	"github.com/tikv/pdv2/server/storage/kv"
+	"github.com/tikv/pdv2/server/tso"
+	"github.com/tikv/pdv2/server/versioninfo"
 	"go.etcd.io/etcd/clientv3"
 	"go.uber.org/zap"
 	"google.golang.org/grpc"
@@ -1662,7 +1662,7 @@ func (s *GrpcServer) GetDCLocationInfo(ctx context.Context, request *pdpb.GetDCL
 	//     t2: xxxxxxxxxxxxxxx | 111
 	// So we will force the newly added Local TSO Allocator to have a Global TSO synchronization
 	// when it becomes the Local TSO Allocator leader.
-	// Please take a look at https://github.com/tikv/pd/issues/3260 for more details.
+	// Please take a look at https://github.com/tikv/pdv2/issues/3260 for more details.
 	if resp.MaxTs, err = am.GetMaxLocalTSO(ctx); err != nil {
 		return nil, status.Errorf(codes.Unknown, err.Error())
 	}

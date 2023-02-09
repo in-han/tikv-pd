@@ -23,9 +23,9 @@ import (
 	"time"
 
 	"github.com/stretchr/testify/require"
-	"github.com/tikv/pd/pkg/mock/mockcluster"
-	"github.com/tikv/pd/server/config"
-	"github.com/tikv/pd/server/core"
+	"github.com/tikv/pdv2/pkg/mock/mockcluster"
+	"github.com/tikv/pdv2/server/config"
+	"github.com/tikv/pdv2/server/core"
 )
 
 func TestGetScaledTiKVGroups(t *testing.T) {

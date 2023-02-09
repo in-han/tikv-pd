@@ -21,9 +21,9 @@ import (
 
 	"github.com/BurntSushi/toml"
 	"github.com/docker/go-units"
-	"github.com/tikv/pd/pkg/tempurl"
-	"github.com/tikv/pd/pkg/typeutil"
-	"github.com/tikv/pd/server/config"
+	"github.com/tikv/pdv2/pkg/tempurl"
+	"github.com/tikv/pdv2/2/pkg/typeutil"
+	"github.com/tikv/pdv2/2/server/config"
 )
 
 const (

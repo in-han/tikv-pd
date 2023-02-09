@@ -17,7 +17,7 @@ package statistics
 import (
 	"context"
 
-	"github.com/tikv/pd/server/core"
+	"github.com/tikv/pdv2/server/core"
 )
 
 type flowItemTaskKind uint32

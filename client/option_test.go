@@ -19,7 +19,7 @@ import (
 	"time"
 
 	"github.com/stretchr/testify/require"
-	"github.com/tikv/pd/client/testutil"
+	"github.com/tikv/pdv2/client/testutil"
 )
 
 func TestDynamicOptionChange(t *testing.T) {

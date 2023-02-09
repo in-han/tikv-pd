@@ -20,11 +20,11 @@ import (
 
 	"github.com/pingcap/kvprotov2/pkg/metapb"
 	"github.com/stretchr/testify/require"
-	"github.com/tikv/pd/pkg/mock/mockcluster"
-	"github.com/tikv/pd/server/config"
-	"github.com/tikv/pd/server/core"
-	"github.com/tikv/pd/server/schedule/operator"
-	"github.com/tikv/pd/server/versioninfo"
+	"github.com/tikv/pdv2/pkg/mock/mockcluster"
+	"github.com/tikv/pdv2/2/server/config"
+	"github.com/tikv/pdv2/2/server/core"
+	"github.com/tikv/pdv2/2/server/schedule/operator"
+	"github.com/tikv/pdv2/2/server/versioninfo"
 )
 
 func TestPromoteLearner(t *testing.T) {

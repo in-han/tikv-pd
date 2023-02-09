@@ -1,4 +1,4 @@
-module github.com/tikv/pd/client
+module github.com/tikv/pdv2/client
 
 go 1.16
 
@@ -15,4 +15,4 @@ require (
 	google.golang.org/grpc v1.43.0
 )
 
-replace github.com/pingcap/kvprotov2 => /tmp/submodule/kvproto-6.2
+replace github.com/pingcap/kvprotov2 => /Users/yin.han/Documents/hanyin/shopee_kv/kvstore_env/kvstore-ap/submodule/kvproto-6.2

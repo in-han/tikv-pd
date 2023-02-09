@@ -1,4 +1,4 @@
-module github.com/tikv/pd/tests/client
+module github.com/tikv/pdv2/tests/client
 
 go 1.16
 
@@ -9,7 +9,7 @@ require (
 	github.com/pingcap/kvproto v0.0.0-20220510035547-0e2f26c0a46a
 	github.com/stretchr/testify v1.7.0
 	github.com/tikv/pd v0.0.0-00010101000000-000000000000
-	github.com/tikv/pd/client v0.0.0-00010101000000-000000000000
+	github.com/tikv/pdv2/client v0.0.0-00010101000000-000000000000
 	go.etcd.io/etcd v0.5.0-alpha.5.0.20191023171146-3cf2f69b5738
 	go.uber.org/goleak v1.1.12
 	google.golang.org/grpc v1.43.0
@@ -17,7 +17,7 @@ require (
 
 replace (
 	github.com/tikv/pd => ../../
-	github.com/tikv/pd/client => ../../client
+	github.com/tikv/pdv2/client => ../../client
 )
 
 // reset grpc and protobuf deps in order to import client and server at the same time

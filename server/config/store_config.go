@@ -23,10 +23,10 @@ import (
 	"sync/atomic"
 
 	"github.com/pingcap/log"
-	"github.com/tikv/pd/pkg/errs"
-	"github.com/tikv/pd/pkg/netutil"
-	"github.com/tikv/pd/pkg/slice"
-	"github.com/tikv/pd/pkg/typeutil"
+	"github.com/tikv/pdv2/pkg/errs"
+	"github.com/tikv/pdv2/2/pkg/netutil"
+	"github.com/tikv/pdv2/2/pkg/slice"
+	"github.com/tikv/pdv2/2/pkg/typeutil"
 	"go.uber.org/zap"
 )
 

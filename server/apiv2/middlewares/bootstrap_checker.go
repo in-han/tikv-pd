@@ -18,8 +18,8 @@ import (
 	"net/http"
 
 	"github.com/gin-gonic/gin"
-	"github.com/tikv/pd/pkg/errs"
-	"github.com/tikv/pd/server"
+	"github.com/tikv/pdv2/pkg/errs"
+	"github.com/tikv/pdv2/2/server"
 )
 
 // BootstrapChecker is a middleware to check if raft cluster is started.

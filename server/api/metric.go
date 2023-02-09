@@ -20,8 +20,8 @@ import (
 	"net/url"
 	"strings"
 
-	"github.com/tikv/pd/pkg/apiutil/serverapi"
-	"github.com/tikv/pd/server"
+	"github.com/tikv/pdv2/pkg/apiutil/serverapi"
+	"github.com/tikv/pdv2/2/server"
 )
 
 type queryMetric struct {

@@ -18,13 +18,13 @@ import (
 	"net/http"
 
 	"github.com/gorilla/mux"
-	"github.com/tikv/pd/pkg/apiutil"
-	"github.com/tikv/pd/pkg/slice"
-	"github.com/tikv/pd/pkg/syncutil"
-	"github.com/tikv/pd/server/core"
-	"github.com/tikv/pd/server/schedule"
-	"github.com/tikv/pd/server/schedule/placement"
-	"github.com/tikv/pd/server/storage/endpoint"
+	"github.com/tikv/pdv2/pkg/apiutil"
+	"github.com/tikv/pdv2/pkg/slice"
+	"github.com/tikv/pdv2/pkg/syncutil"
+	"github.com/tikv/pdv2/server/core"
+	"github.com/tikv/pdv2/server/schedule"
+	"github.com/tikv/pdv2/server/schedule/placement"
+	"github.com/tikv/pdv2/server/storage/endpoint"
 	"github.com/unrolled/render"
 )
 

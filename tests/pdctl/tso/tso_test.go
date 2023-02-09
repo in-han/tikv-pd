@@ -21,8 +21,8 @@ import (
 	"time"
 
 	"github.com/stretchr/testify/require"
-	"github.com/tikv/pd/tests/pdctl"
-	pdctlCmd "github.com/tikv/pd/tools/pd-ctl/pdctl"
+	"github.com/tikv/pdv2/tests/pdctl"
+	pdctlCmd "github.com/tikv/pdv2/2/tools/pd-ctl/pdctl"
 )
 
 func TestTSO(t *testing.T) {

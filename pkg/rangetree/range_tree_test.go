@@ -19,7 +19,7 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/require"
-	"github.com/tikv/pd/pkg/btree"
+	"github.com/tikv/pdv2/pkg/btree"
 )
 
 type simpleBucketItem struct {

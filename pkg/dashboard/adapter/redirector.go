@@ -22,7 +22,7 @@ import (
 
 	"github.com/pingcap/tidb-dashboard/pkg/apiserver"
 	"github.com/pingcap/tidb-dashboard/pkg/utils"
-	"github.com/tikv/pd/pkg/syncutil"
+	"github.com/tikv/pdv2/pkg/syncutil"
 )
 
 const (

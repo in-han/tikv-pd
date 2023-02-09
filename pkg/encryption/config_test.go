@@ -19,7 +19,7 @@ import (
 	"time"
 
 	"github.com/stretchr/testify/require"
-	"github.com/tikv/pd/pkg/typeutil"
+	"github.com/tikv/pdv2/pkg/typeutil"
 )
 
 func TestAdjustDefaultValue(t *testing.T) {

@@ -20,9 +20,9 @@ import (
 
 	"github.com/gin-gonic/gin"
 	"github.com/pingcap/log"
-	"github.com/tikv/pd/pkg/apiutil/serverapi"
-	"github.com/tikv/pd/pkg/errs"
-	"github.com/tikv/pd/server"
+	"github.com/tikv/pdv2/pkg/apiutil/serverapi"
+	"github.com/tikv/pdv2/2/pkg/errs"
+	"github.com/tikv/pdv2/2/server"
 	"go.uber.org/zap"
 )
 

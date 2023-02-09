@@ -22,11 +22,11 @@ import (
 
 	"github.com/pingcap/log"
 	"github.com/stretchr/testify/require"
-	"github.com/tikv/pd/pkg/apiutil"
-	"github.com/tikv/pd/pkg/assertutil"
-	"github.com/tikv/pd/pkg/testutil"
-	"github.com/tikv/pd/server"
-	cmd "github.com/tikv/pd/tools/pd-ctl/pdctl"
+	"github.com/tikv/pdv2/pkg/apiutil"
+	"github.com/tikv/pdv2/2/pkg/assertutil"
+	"github.com/tikv/pdv2/2/pkg/testutil"
+	"github.com/tikv/pdv2/2/server"
+	cmd "github.com/tikv/pdv2/2/tools/pd-ctl/pdctl"
 	"go.uber.org/zap"
 )
 

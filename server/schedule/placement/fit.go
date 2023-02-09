@@ -20,8 +20,8 @@ import (
 	"sort"
 
 	"github.com/pingcap/kvprotov2/pkg/metapb"
-	"github.com/tikv/pd/pkg/syncutil"
-	"github.com/tikv/pd/server/core"
+	"github.com/tikv/pdv2/pkg/syncutil"
+	"github.com/tikv/pdv2/2/server/core"
 )
 
 // RegionFit is the result of fitting a region's peers to rule list.

@@ -22,11 +22,11 @@ import (
 
 	"github.com/stretchr/testify/suite"
 	"github.com/syndtr/goleveldb/leveldb"
-	tu "github.com/tikv/pd/pkg/testutil"
-	"github.com/tikv/pd/server"
-	_ "github.com/tikv/pd/server/schedulers"
-	"github.com/tikv/pd/server/storage"
-	"github.com/tikv/pd/server/storage/kv"
+	tu "github.com/tikv/pdv2/pkg/testutil"
+	"github.com/tikv/pdv2/2/server"
+	_ "github.com/tikv/pdv2/2/server/schedulers"
+	"github.com/tikv/pdv2/2/server/storage"
+	"github.com/tikv/pdv2/2/server/storage/kv"
 )
 
 type hotStatusTestSuite struct {

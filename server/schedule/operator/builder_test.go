@@ -21,9 +21,9 @@ import (
 	"github.com/pingcap/kvprotov2/pkg/metapb"
 	"github.com/pingcap/kvprotov2/pkg/pdpb"
 	"github.com/stretchr/testify/suite"
-	"github.com/tikv/pd/pkg/mock/mockcluster"
-	"github.com/tikv/pd/server/config"
-	"github.com/tikv/pd/server/core"
+	"github.com/tikv/pdv2/pkg/mock/mockcluster"
+	"github.com/tikv/pdv2/2/server/config"
+	"github.com/tikv/pdv2/2/server/core"
 )
 
 type operatorBuilderTestSuite struct {
@@ -502,7 +502,7 @@ func (suite *operatorBuilderTestSuite) TestBuild() {
 			},
 		},
 		{
-			// issue: https://github.com/tikv/pd/issues/4411
+			// issue: https://github.com/tikv/pdv2/2/issues/4411
 			"(enable JointConsensus) remove 1 voter from 2 voter replicas raft group",
 			true,
 			[]*metapb.Peer{{Id: 1, StoreId: 1}, {Id: 2, StoreId: 2}},
@@ -517,7 +517,7 @@ func (suite *operatorBuilderTestSuite) TestBuild() {
 			},
 		},
 		{
-			// issue: https://github.com/tikv/pd/issues/4411
+			// issue: https://github.com/tikv/pdv2/2/issues/4411
 			"(enable JointConsensus) remove 1 voter from 2 voter replicas raft group, with transfer leader",
 			true,
 			[]*metapb.Peer{{Id: 1, StoreId: 1}, {Id: 2, StoreId: 2}},

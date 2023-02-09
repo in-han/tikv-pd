@@ -19,8 +19,8 @@ import (
 	"time"
 
 	"github.com/pingcap/kvprotov2/pkg/pdpb"
-	"github.com/tikv/pd/server/core"
-	"github.com/tikv/pd/server/schedule/hbstream"
+	"github.com/tikv/pdv2/server/core"
+	"github.com/tikv/pdv2/server/schedule/hbstream"
 )
 
 // HeartbeatStream is used to mock HeartbeatStream for test use.

@@ -24,11 +24,11 @@ import (
 	"github.com/pingcap/kvprotov2/pkg/pdpb"
 	pb "github.com/pingcap/kvprotov2/pkg/replication_modepb"
 	"github.com/stretchr/testify/require"
-	"github.com/tikv/pd/pkg/mock/mockcluster"
-	"github.com/tikv/pd/pkg/typeutil"
-	"github.com/tikv/pd/server/config"
-	"github.com/tikv/pd/server/core"
-	"github.com/tikv/pd/server/storage"
+	"github.com/tikv/pdv2/pkg/mock/mockcluster"
+	"github.com/tikv/pdv2/2/pkg/typeutil"
+	"github.com/tikv/pdv2/2/server/config"
+	"github.com/tikv/pdv2/2/server/core"
+	"github.com/tikv/pdv2/2/server/storage"
 )
 
 func TestInitial(t *testing.T) {

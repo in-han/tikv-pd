@@ -19,8 +19,8 @@ import (
 	"os"
 	"strings"
 
-	"github.com/tikv/pd/pkg/tempurl"
-	"github.com/tikv/pd/server/config"
+	"github.com/tikv/pdv2/pkg/tempurl"
+	"github.com/tikv/pdv2/2/server/config"
 )
 
 type serverConfig struct {

@@ -17,8 +17,8 @@ package api
 import (
 	"net/http"
 
-	"github.com/tikv/pd/pkg/typeutil"
-	"github.com/tikv/pd/server"
+	"github.com/tikv/pdv2/pkg/typeutil"
+	"github.com/tikv/pdv2/2/server"
 	"github.com/unrolled/render"
 )
 

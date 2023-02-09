@@ -22,11 +22,11 @@ import (
 
 	"github.com/pingcap/errors"
 	"github.com/pingcap/log"
-	"github.com/tikv/pd/pkg/errs"
-	"github.com/tikv/pd/server/config"
-	"github.com/tikv/pd/server/schedule/operator"
-	"github.com/tikv/pd/server/schedule/plan"
-	"github.com/tikv/pd/server/storage/endpoint"
+	"github.com/tikv/pdv2/pkg/errs"
+	"github.com/tikv/pdv2/2/server/config"
+	"github.com/tikv/pdv2/2/server/schedule/operator"
+	"github.com/tikv/pdv2/2/server/schedule/plan"
+	"github.com/tikv/pdv2/2/server/storage/endpoint"
 	"go.uber.org/zap"
 )
 

@@ -19,9 +19,9 @@ import (
 
 	"github.com/pingcap/kvprotov2/pkg/metapb"
 	"github.com/stretchr/testify/require"
-	"github.com/tikv/pd/server/config"
-	"github.com/tikv/pd/server/core"
-	"github.com/tikv/pd/server/schedule/plan"
+	"github.com/tikv/pdv2/server/config"
+	"github.com/tikv/pdv2/2/server/core"
+	"github.com/tikv/pdv2/2/server/schedule/plan"
 )
 
 // A dummy comparer for testing.

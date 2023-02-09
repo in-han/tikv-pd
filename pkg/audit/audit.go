@@ -19,7 +19,7 @@ import (
 
 	"github.com/pingcap/log"
 	"github.com/prometheus/client_golang/prometheus"
-	"github.com/tikv/pd/pkg/requestutil"
+	"github.com/tikv/pdv2/pkg/requestutil"
 	"go.uber.org/zap"
 )
 

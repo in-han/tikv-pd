@@ -25,12 +25,12 @@ import (
 	"github.com/coreos/go-semver/semver"
 	"github.com/pingcap/kvprotov2/pkg/metapb"
 	"github.com/stretchr/testify/require"
-	"github.com/tikv/pd/pkg/typeutil"
-	"github.com/tikv/pd/server/config"
-	"github.com/tikv/pd/server/schedule/placement"
-	"github.com/tikv/pd/tests"
-	"github.com/tikv/pd/tests/pdctl"
-	pdctlCmd "github.com/tikv/pd/tools/pd-ctl/pdctl"
+	"github.com/tikv/pdv2/pkg/typeutil"
+	"github.com/tikv/pdv2/2/server/config"
+	"github.com/tikv/pdv2/2/server/schedule/placement"
+	"github.com/tikv/pdv2/2/tests"
+	"github.com/tikv/pdv2/2/tests/pdctl"
+	pdctlCmd "github.com/tikv/pdv2/2/tools/pd-ctl/pdctl"
 )
 
 type testCase struct {

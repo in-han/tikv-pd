@@ -17,7 +17,7 @@ package adapter
 import (
 	"github.com/pingcap/tidb-dashboard/pkg/config"
 
-	"github.com/tikv/pd/server"
+	"github.com/tikv/pdv2/server"
 )
 
 // GenDashboardConfig generates a configuration for Dashboard Server.

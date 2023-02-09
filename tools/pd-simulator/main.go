@@ -27,18 +27,18 @@ import (
 	"github.com/pingcap/log"
 	"github.com/prometheus/client_golang/prometheus/promhttp"
 	flag "github.com/spf13/pflag"
-	"github.com/tikv/pd/server"
-	"github.com/tikv/pd/server/api"
-	"github.com/tikv/pd/server/config"
-	"github.com/tikv/pd/server/statistics"
-	"github.com/tikv/pd/tools/pd-analysis/analysis"
-	"github.com/tikv/pd/tools/pd-simulator/simulator"
-	"github.com/tikv/pd/tools/pd-simulator/simulator/cases"
-	"github.com/tikv/pd/tools/pd-simulator/simulator/simutil"
+	"github.com/tikv/pdv2/server"
+	"github.com/tikv/pdv2/2/server/api"
+	"github.com/tikv/pdv2/2/server/config"
+	"github.com/tikv/pdv2/2/server/statistics"
+	"github.com/tikv/pdv2/2/tools/pd-analysis/analysis"
+	"github.com/tikv/pdv2/2/tools/pd-simulator/simulator"
+	"github.com/tikv/pdv2/2/tools/pd-simulator/simulator/cases"
+	"github.com/tikv/pdv2/2/tools/pd-simulator/simulator/simutil"
 	"go.uber.org/zap"
 
 	// Register schedulers.
-	_ "github.com/tikv/pd/server/schedulers"
+	_ "github.com/tikv/pdv2/2/server/schedulers"
 )
 
 var (

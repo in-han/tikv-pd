@@ -18,11 +18,11 @@ import (
 	"path"
 
 	"github.com/pingcap/log"
-	"github.com/tikv/pd/pkg/errs"
-	"github.com/tikv/pd/pkg/etcdutil"
-	"github.com/tikv/pd/pkg/syncutil"
-	"github.com/tikv/pd/pkg/typeutil"
-	"github.com/tikv/pd/server/storage/kv"
+	"github.com/tikv/pdv2/pkg/errs"
+	"github.com/tikv/pdv2/2/pkg/etcdutil"
+	"github.com/tikv/pdv2/2/pkg/syncutil"
+	"github.com/tikv/pdv2/2/pkg/typeutil"
+	"github.com/tikv/pdv2/2/server/storage/kv"
 	"go.etcd.io/etcd/clientv3"
 	"go.uber.org/zap"
 )

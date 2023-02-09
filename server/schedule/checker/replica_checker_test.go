@@ -23,13 +23,13 @@ import (
 	"github.com/pingcap/kvprotov2/pkg/metapb"
 	"github.com/pingcap/kvprotov2/pkg/pdpb"
 	"github.com/stretchr/testify/suite"
-	"github.com/tikv/pd/pkg/cache"
-	"github.com/tikv/pd/pkg/mock/mockcluster"
-	"github.com/tikv/pd/pkg/testutil"
-	"github.com/tikv/pd/server/config"
-	"github.com/tikv/pd/server/core"
-	"github.com/tikv/pd/server/schedule/operator"
-	"github.com/tikv/pd/server/versioninfo"
+	"github.com/tikv/pdv2/pkg/cache"
+	"github.com/tikv/pdv2/2/pkg/mock/mockcluster"
+	"github.com/tikv/pdv2/2/pkg/testutil"
+	"github.com/tikv/pdv2/2/server/config"
+	"github.com/tikv/pdv2/2/server/core"
+	"github.com/tikv/pdv2/2/server/schedule/operator"
+	"github.com/tikv/pdv2/2/server/versioninfo"
 )
 
 type replicaCheckerTestSuite struct {
@@ -522,7 +522,7 @@ func (suite *replicaCheckerTestSuite) TestOpts() {
 	suite.Nil(rc.Check(region))
 }
 
-// See issue: https://github.com/tikv/pd/issues/3705
+// See issue: https://github.com/tikv/pdv2/2/issues/3705
 func (suite *replicaCheckerTestSuite) TestFixDownPeer() {
 	opt := config.NewTestOptions()
 	tc := mockcluster.NewCluster(suite.ctx, opt)
@@ -553,7 +553,7 @@ func (suite *replicaCheckerTestSuite) TestFixDownPeer() {
 	suite.Nil(rc.Check(region))
 }
 
-// See issue: https://github.com/tikv/pd/issues/3705
+// See issue: https://github.com/tikv/pdv2/2/issues/3705
 func (suite *replicaCheckerTestSuite) TestFixOfflinePeer() {
 	opt := config.NewTestOptions()
 	tc := mockcluster.NewCluster(suite.ctx, opt)

@@ -17,7 +17,7 @@ package cache
 import (
 	"container/list"
 
-	"github.com/tikv/pd/pkg/syncutil"
+	"github.com/tikv/pdv2/pkg/syncutil"
 )
 
 // FIFO is 'First-In-First-Out' cache.

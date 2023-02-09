@@ -16,9 +16,9 @@ package checker
 
 import (
 	"github.com/pingcap/log"
-	"github.com/tikv/pd/server/core"
-	"github.com/tikv/pd/server/schedule"
-	"github.com/tikv/pd/server/schedule/filter"
+	"github.com/tikv/pdv2/server/core"
+	"github.com/tikv/pdv2/2/server/schedule"
+	"github.com/tikv/pdv2/2/server/schedule/filter"
 	"go.uber.org/zap"
 )
 

@@ -22,14 +22,14 @@ import (
 	"github.com/pingcap/kvprotov2/pkg/metapb"
 	"github.com/pingcap/kvprotov2/pkg/pdpb"
 	"github.com/stretchr/testify/suite"
-	"github.com/tikv/pd/pkg/cache"
-	"github.com/tikv/pd/pkg/mock/mockcluster"
-	"github.com/tikv/pd/pkg/testutil"
-	"github.com/tikv/pd/server/config"
-	"github.com/tikv/pd/server/core"
-	"github.com/tikv/pd/server/schedule/operator"
-	"github.com/tikv/pd/server/schedule/placement"
-	"github.com/tikv/pd/server/versioninfo"
+	"github.com/tikv/pdv2/pkg/cache"
+	"github.com/tikv/pdv2/2/pkg/mock/mockcluster"
+	"github.com/tikv/pdv2/2/pkg/testutil"
+	"github.com/tikv/pdv2/2/server/config"
+	"github.com/tikv/pdv2/2/server/core"
+	"github.com/tikv/pdv2/2/server/schedule/operator"
+	"github.com/tikv/pdv2/2/server/schedule/placement"
+	"github.com/tikv/pdv2/2/server/versioninfo"
 )
 
 func TestRuleCheckerTestSuite(t *testing.T) {
@@ -352,7 +352,7 @@ func (suite *ruleCheckerTestSuite) TestIssue2419() {
 	suite.Equal(uint64(3), op.Step(2).(operator.RemovePeer).FromStore)
 }
 
-// Ref https://github.com/tikv/pd/issues/3521
+// Ref https://github.com/tikv/pdv2/2/issues/3521
 // The problem is when offline a store, we may add learner multiple times if
 // the operator is timeout.
 func (suite *ruleCheckerTestSuite) TestPriorityFixOrphanPeer() {
@@ -513,7 +513,7 @@ func (suite *ruleCheckerTestSuite) TestIssue3299() {
 	}
 }
 
-// See issue: https://github.com/tikv/pd/issues/3705
+// See issue: https://github.com/tikv/pdv2/2/issues/3705
 func (suite *ruleCheckerTestSuite) TestFixDownPeer() {
 	suite.cluster.AddLabelsStore(1, 1, map[string]string{"zone": "z1"})
 	suite.cluster.AddLabelsStore(2, 1, map[string]string{"zone": "z1"})
@@ -549,7 +549,7 @@ func (suite *ruleCheckerTestSuite) TestFixDownPeer() {
 	suite.Nil(suite.rc.Check(region))
 }
 
-// See issue: https://github.com/tikv/pd/issues/3705
+// See issue: https://github.com/tikv/pdv2/2/issues/3705
 func (suite *ruleCheckerTestSuite) TestFixOfflinePeer() {
 	suite.cluster.AddLabelsStore(1, 1, map[string]string{"zone": "z1"})
 	suite.cluster.AddLabelsStore(2, 1, map[string]string{"zone": "z1"})
@@ -646,18 +646,18 @@ func (suite *ruleCheckerTestSuite) TestRuleCache() {
 	for _, testCase := range testCases {
 		suite.T().Log(testCase.name)
 		if testCase.stillCached {
-			suite.NoError(failpoint.Enable("github.com/tikv/pd/server/schedule/checker/assertShouldCache", "return(true)"))
+			suite.NoError(failpoint.Enable("github.com/tikv/pdv2/2/server/schedule/checker/assertShouldCache", "return(true)"))
 			suite.rc.Check(testCase.region)
-			suite.NoError(failpoint.Disable("github.com/tikv/pd/server/schedule/checker/assertShouldCache"))
+			suite.NoError(failpoint.Disable("github.com/tikv/pdv2/2/server/schedule/checker/assertShouldCache"))
 		} else {
-			suite.NoError(failpoint.Enable("github.com/tikv/pd/server/schedule/checker/assertShouldNotCache", "return(true)"))
+			suite.NoError(failpoint.Enable("github.com/tikv/pdv2/2/server/schedule/checker/assertShouldNotCache", "return(true)"))
 			suite.rc.Check(testCase.region)
-			suite.NoError(failpoint.Disable("github.com/tikv/pd/server/schedule/checker/assertShouldNotCache"))
+			suite.NoError(failpoint.Disable("github.com/tikv/pdv2/2/server/schedule/checker/assertShouldNotCache"))
 		}
 	}
 }
 
-// Ref https://github.com/tikv/pd/issues/4045
+// Ref https://github.com/tikv/pdv2/2/issues/4045
 func (suite *ruleCheckerTestSuite) TestSkipFixOrphanPeerIfSelectedPeerisPendingOrDown() {
 	suite.cluster.AddLabelsStore(1, 1, map[string]string{"host": "host1"})
 	suite.cluster.AddLabelsStore(2, 1, map[string]string{"host": "host1"})
@@ -731,7 +731,7 @@ func (suite *ruleCheckerTestSuite) TestPriorityFitHealthPeers() {
 	suite.Equal("remove-orphan-peer", op.Desc())
 }
 
-// Ref https://github.com/tikv/pd/issues/4140
+// Ref https://github.com/tikv/pdv2/2/issues/4140
 func (suite *ruleCheckerTestSuite) TestDemoteVoter() {
 	suite.cluster.AddLabelsStore(1, 1, map[string]string{"zone": "z1"})
 	suite.cluster.AddLabelsStore(4, 1, map[string]string{"zone": "z4"})

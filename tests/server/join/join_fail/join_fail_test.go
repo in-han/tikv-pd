@@ -20,7 +20,7 @@ import (
 
 	"github.com/pingcap/failpoint"
 	"github.com/stretchr/testify/require"
-	"github.com/tikv/pd/tests"
+	"github.com/tikv/pdv2/tests"
 )
 
 func TestFailedPDJoinInStep1(t *testing.T) {
@@ -36,9 +36,9 @@ func TestFailedPDJoinInStep1(t *testing.T) {
 	cluster.WaitLeader()
 
 	// Join the second PD.
-	re.NoError(failpoint.Enable("github.com/tikv/pd/server/join/add-member-failed", `return`))
+	re.NoError(failpoint.Enable("github.com/tikv/pdv2/2/server/join/add-member-failed", `return`))
 	_, err = cluster.Join(ctx)
 	re.Error(err)
 	re.Contains(err.Error(), "join failed")
-	re.NoError(failpoint.Disable("github.com/tikv/pd/server/join/add-member-failed"))
+	re.NoError(failpoint.Disable("github.com/tikv/pdv2/2/server/join/add-member-failed"))
 }

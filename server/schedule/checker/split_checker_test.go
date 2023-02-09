@@ -20,11 +20,11 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/require"
-	"github.com/tikv/pd/pkg/mock/mockcluster"
-	"github.com/tikv/pd/server/config"
-	"github.com/tikv/pd/server/schedule/labeler"
-	"github.com/tikv/pd/server/schedule/operator"
-	"github.com/tikv/pd/server/schedule/placement"
+	"github.com/tikv/pdv2/pkg/mock/mockcluster"
+	"github.com/tikv/pdv2/2/server/config"
+	"github.com/tikv/pdv2/2/server/schedule/labeler"
+	"github.com/tikv/pdv2/2/server/schedule/operator"
+	"github.com/tikv/pdv2/2/server/schedule/placement"
 )
 
 func TestSplit(t *testing.T) {

@@ -26,13 +26,13 @@ import (
 	"github.com/pingcap/failpoint"
 	"github.com/pingcap/kvprotov2/pkg/metapb"
 	"github.com/stretchr/testify/require"
-	"github.com/tikv/pd/pkg/mock/mockcluster"
-	"github.com/tikv/pd/server/config"
-	"github.com/tikv/pd/server/core"
-	"github.com/tikv/pd/server/schedule/hbstream"
-	"github.com/tikv/pd/server/schedule/operator"
-	"github.com/tikv/pd/server/schedule/placement"
-	"github.com/tikv/pd/server/versioninfo"
+	"github.com/tikv/pdv2/pkg/mock/mockcluster"
+	"github.com/tikv/pdv2/2/server/config"
+	"github.com/tikv/pdv2/2/server/core"
+	"github.com/tikv/pdv2/2/server/schedule/hbstream"
+	"github.com/tikv/pdv2/2/server/schedule/operator"
+	"github.com/tikv/pdv2/2/server/schedule/placement"
+	"github.com/tikv/pdv2/2/server/versioninfo"
 )
 
 type sequencer struct {
@@ -439,7 +439,7 @@ func TestScattersGroup(t *testing.T) {
 		}
 		failures := map[uint64]error{}
 		if testCase.failure {
-			re.NoError(failpoint.Enable("github.com/tikv/pd/server/schedule/scatterFail", `return(true)`))
+			re.NoError(failpoint.Enable("github.com/tikv/pdv2/2/server/schedule/scatterFail", `return(true)`))
 		}
 
 		scatterer.scatterRegions(regions, failures, group, 3)
@@ -463,7 +463,7 @@ func TestScattersGroup(t *testing.T) {
 			re.Len(failures, 1)
 			_, ok := failures[1]
 			re.True(ok)
-			re.NoError(failpoint.Disable("github.com/tikv/pd/server/schedule/scatterFail"))
+			re.NoError(failpoint.Disable("github.com/tikv/pdv2/2/server/schedule/scatterFail"))
 		} else {
 			re.Empty(failures)
 		}
@@ -526,7 +526,7 @@ func TestRegionFromDifferentGroups(t *testing.T) {
 }
 
 // TestSelectedStores tests if the peer count has changed due to the picking strategy.
-// Ref https://github.com/tikv/pd/issues/4565
+// Ref https://github.com/tikv/pdv2/2/issues/4565
 func TestSelectedStores(t *testing.T) {
 	re := require.New(t)
 	ctx, cancel := context.WithCancel(context.Background())

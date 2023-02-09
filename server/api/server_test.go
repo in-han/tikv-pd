@@ -26,11 +26,11 @@ import (
 	"github.com/pingcap/log"
 	"github.com/stretchr/testify/require"
 	"github.com/stretchr/testify/suite"
-	"github.com/tikv/pd/pkg/apiutil"
-	"github.com/tikv/pd/pkg/assertutil"
-	"github.com/tikv/pd/pkg/testutil"
-	"github.com/tikv/pd/server"
-	"github.com/tikv/pd/server/config"
+	"github.com/tikv/pdv2/pkg/apiutil"
+	"github.com/tikv/pdv2/2/pkg/assertutil"
+	"github.com/tikv/pdv2/2/pkg/testutil"
+	"github.com/tikv/pdv2/2/server"
+	"github.com/tikv/pdv2/2/server/config"
 	"go.uber.org/goleak"
 )
 

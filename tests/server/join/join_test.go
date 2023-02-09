@@ -22,10 +22,10 @@ import (
 	"time"
 
 	"github.com/stretchr/testify/require"
-	"github.com/tikv/pd/pkg/etcdutil"
-	"github.com/tikv/pd/server"
-	"github.com/tikv/pd/server/join"
-	"github.com/tikv/pd/tests"
+	"github.com/tikv/pdv2/pkg/etcdutil"
+	"github.com/tikv/pdv2/2/server"
+	"github.com/tikv/pdv2/2/server/join"
+	"github.com/tikv/pdv2/2/tests"
 )
 
 // TODO: enable it when we fix TestFailedAndDeletedPDJoinsPreviousCluster

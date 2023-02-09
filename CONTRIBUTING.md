@@ -4,7 +4,7 @@ Thanks for your interest in contributing to PD! If you need any help or mentorin
 
 ## Finding something to work on
 
-For beginners, we have prepared many suitable tasks for you. Checkout our [Help Wanted issues](https://github.com/tikv/pd/issues?q=is%3Aopen+is%3Aissue+label%3A%22help+wanted%22) list, in which we have also marked the difficulty level.
+For beginners, we have prepared many suitable tasks for you. Checkout our [Help Wanted issues](https://github.com/tikv/pdv2/issues?q=is%3Aopen+is%3Aissue+label%3A%22help+wanted%22) list, in which we have also marked the difficulty level.
 
 If you are planning something big, for example, relates to multiple components or changes current behaviors, make sure to open an issue to discuss with us before going on.
 

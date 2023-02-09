@@ -55,7 +55,7 @@ package btree
 import (
 	"sort"
 
-	"github.com/tikv/pd/pkg/syncutil"
+	"github.com/tikv/pdv2/pkg/syncutil"
 )
 
 // Item represents a single object in the tree.

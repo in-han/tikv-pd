@@ -15,10 +15,10 @@
 package schedule
 
 import (
-	"github.com/tikv/pd/server/core"
-	"github.com/tikv/pd/server/schedule/operator"
-	"github.com/tikv/pd/server/statistics"
-	"github.com/tikv/pd/server/statistics/buckets"
+	"github.com/tikv/pdv2/server/core"
+	"github.com/tikv/pdv2/2/server/schedule/operator"
+	"github.com/tikv/pdv2/2/server/statistics"
+	"github.com/tikv/pdv2/2/server/statistics/buckets"
 )
 
 // Cluster provides an overview of a cluster's regions distribution.

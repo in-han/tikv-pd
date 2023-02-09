@@ -26,10 +26,10 @@ import (
 	"github.com/pingcap/failpoint"
 	"github.com/pingcap/kvprotov2/pkg/pdpb"
 	"github.com/stretchr/testify/require"
-	"github.com/tikv/pd/pkg/grpcutil"
-	"github.com/tikv/pd/pkg/testutil"
-	"github.com/tikv/pd/server/tso"
-	"github.com/tikv/pd/tests"
+	"github.com/tikv/pdv2/pkg/grpcutil"
+	"github.com/tikv/pdv2/2/pkg/testutil"
+	"github.com/tikv/pdv2/2/server/tso"
+	"github.com/tikv/pdv2/2/tests"
 )
 
 // There are three kinds of ways to generate a TSO:
@@ -169,7 +169,7 @@ func TestDelaySyncTimestamp(t *testing.T) {
 		DcLocation: tso.GlobalDCLocation,
 	}
 
-	re.NoError(failpoint.Enable("github.com/tikv/pd/server/tso/delaySyncTimestamp", `return(true)`))
+	re.NoError(failpoint.Enable("github.com/tikv/pdv2/2/server/tso/delaySyncTimestamp", `return(true)`))
 
 	// Make the old leader resign and wait for the new leader to get a lease
 	leaderServer.ResignLeader()
@@ -183,5 +183,5 @@ func TestDelaySyncTimestamp(t *testing.T) {
 	resp, err := tsoClient.Recv()
 	re.NoError(err)
 	re.NotNil(checkAndReturnTimestampResponse(re, req, resp))
-	re.NoError(failpoint.Disable("github.com/tikv/pd/server/tso/delaySyncTimestamp"))
+	re.NoError(failpoint.Disable("github.com/tikv/pdv2/2/server/tso/delaySyncTimestamp"))
 }

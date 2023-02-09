@@ -21,7 +21,7 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/suite"
-	"github.com/tikv/pd/server"
+	"github.com/tikv/pdv2/server"
 )
 
 type profTestSuite struct {

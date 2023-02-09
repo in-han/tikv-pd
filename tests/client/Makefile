@@ -34,7 +34,7 @@ basic-test:
 	# skip
 
 ci-test-job: enable-codegen
-	CGO_ENABLED=1 go test -tags deadlock -race -covermode=atomic -coverprofile=covprofile -coverpkg=../../... github.com/tikv/pd/tests/client
+	CGO_ENABLED=1 go test -tags deadlock -race -covermode=atomic -coverprofile=covprofile -coverpkg=../../... github.com/tikv/pdv2/tests/client
 
 install-tools:
 	cd ../../ && $(MAKE) install-tools

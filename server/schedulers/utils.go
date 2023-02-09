@@ -20,11 +20,11 @@ import (
 	"time"
 
 	"github.com/pingcap/log"
-	"github.com/tikv/pd/pkg/errs"
-	"github.com/tikv/pd/server/core"
-	"github.com/tikv/pd/server/schedule"
-	"github.com/tikv/pd/server/schedule/operator"
-	"github.com/tikv/pd/server/statistics"
+	"github.com/tikv/pdv2/pkg/errs"
+	"github.com/tikv/pdv2/server/core"
+	"github.com/tikv/pdv2/server/schedule"
+	"github.com/tikv/pdv2/server/schedule/operator"
+	"github.com/tikv/pdv2/server/statistics"
 	"go.uber.org/zap"
 )
 

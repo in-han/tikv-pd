@@ -23,8 +23,8 @@ import (
 	"github.com/docker/go-units"
 	"github.com/pingcap/kvprotov2/pkg/metapb"
 	"github.com/stretchr/testify/require"
-	"github.com/tikv/pd/pkg/movingaverage"
-	"github.com/tikv/pd/server/core"
+	"github.com/tikv/pdv2/pkg/movingaverage"
+	"github.com/tikv/pdv2/2/server/core"
 )
 
 func TestStoreTimeUnsync(t *testing.T) {

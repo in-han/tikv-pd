@@ -18,8 +18,8 @@ import (
 	"net/http"
 
 	"github.com/gorilla/mux"
-	"github.com/tikv/pd/server"
-	"github.com/tikv/pd/server/storage/endpoint"
+	"github.com/tikv/pdv2/server"
+	"github.com/tikv/pdv2/2/server/storage/endpoint"
 	"github.com/unrolled/render"
 )
 

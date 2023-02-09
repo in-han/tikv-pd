@@ -25,7 +25,7 @@ basic-test:
 	CGO_ENABLE=1 go test
 
 ci-test-job:
-	CGO_ENABLED=1 go test -race -covermode=atomic -coverprofile=covprofile -coverpkg=../... github.com/tikv/pd/client
+	CGO_ENABLED=1 go test -race -covermode=atomic -coverprofile=covprofile -coverpkg=../... github.com/tikv/pdv2/client
 
 install-tools:
 	cd .. && $(MAKE) install-tools

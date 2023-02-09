@@ -22,10 +22,10 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/suite"
-	"github.com/tikv/pd/pkg/apiutil"
-	tu "github.com/tikv/pd/pkg/testutil"
-	"github.com/tikv/pd/server"
-	"github.com/tikv/pd/server/schedule/labeler"
+	"github.com/tikv/pdv2/pkg/apiutil"
+	tu "github.com/tikv/pdv2/2/pkg/testutil"
+	"github.com/tikv/pdv2/2/server"
+	"github.com/tikv/pdv2/2/server/schedule/labeler"
 )
 
 type regionLabelTestSuite struct {

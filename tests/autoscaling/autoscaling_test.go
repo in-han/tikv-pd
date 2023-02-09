@@ -21,8 +21,8 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/require"
-	"github.com/tikv/pd/pkg/testutil"
-	"github.com/tikv/pd/tests"
+	"github.com/tikv/pdv2/pkg/testutil"
+	"github.com/tikv/pdv2/2/tests"
 	"go.uber.org/goleak"
 )
 

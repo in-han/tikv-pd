@@ -20,13 +20,13 @@ import (
 
 	"github.com/pingcap/errors"
 	"github.com/pingcap/kvprotov2/pkg/metapb"
-	"github.com/tikv/pd/pkg/typeutil"
-	"github.com/tikv/pd/server/config"
-	"github.com/tikv/pd/server/core"
-	"github.com/tikv/pd/server/id"
-	"github.com/tikv/pd/server/schedule/filter"
-	"github.com/tikv/pd/server/schedule/placement"
-	"github.com/tikv/pd/server/versioninfo"
+	"github.com/tikv/pdv2/pkg/typeutil"
+	"github.com/tikv/pdv2/2/server/config"
+	"github.com/tikv/pdv2/2/server/core"
+	"github.com/tikv/pdv2/2/server/id"
+	"github.com/tikv/pdv2/2/server/schedule/filter"
+	"github.com/tikv/pdv2/2/server/schedule/placement"
+	"github.com/tikv/pdv2/2/server/versioninfo"
 )
 
 // ClusterInformer provides the necessary information for building operator.
@@ -455,7 +455,7 @@ func (b *Builder) prepareBuild() (string, error) {
 	if len(b.toAdd)+len(b.toRemove)+len(b.toPromote) <= 1 && len(b.toDemote) == 0 &&
 		!(len(b.toRemove) == 1 && len(b.targetPeers) == 1) {
 		// If only one peer changed and the change type is not demote, joint consensus is not used.
-		// Unless the changed is 2 voters to 1 voter, see https://github.com/tikv/pd/issues/4411 .
+		// Unless the changed is 2 voters to 1 voter, see https://github.com/tikv/pdv2/2/issues/4411 .
 		b.useJointConsensus = false
 	}
 

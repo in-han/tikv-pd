@@ -25,15 +25,15 @@ import (
 	"github.com/stretchr/testify/suite"
 	"go.uber.org/goleak"
 
-	"github.com/tikv/pd/pkg/dashboard"
-	"github.com/tikv/pd/pkg/testutil"
-	"github.com/tikv/pd/server/config"
-	"github.com/tikv/pd/tests"
-	"github.com/tikv/pd/tests/pdctl"
-	pdctlCmd "github.com/tikv/pd/tools/pd-ctl/pdctl"
+	"github.com/tikv/pdv2/pkg/dashboard"
+	"github.com/tikv/pdv2/2/pkg/testutil"
+	"github.com/tikv/pdv2/2/server/config"
+	"github.com/tikv/pdv2/2/tests"
+	"github.com/tikv/pdv2/2/tests/pdctl"
+	pdctlCmd "github.com/tikv/pdv2/2/tools/pd-ctl/pdctl"
 
 	// Register schedulers.
-	_ "github.com/tikv/pd/server/schedulers"
+	_ "github.com/tikv/pdv2/2/server/schedulers"
 )
 
 func TestMain(m *testing.M) {

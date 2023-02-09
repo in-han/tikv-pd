@@ -17,7 +17,7 @@ package statistics
 import (
 	"math"
 
-	"github.com/tikv/pd/server/core"
+	"github.com/tikv/pdv2/server/core"
 )
 
 // StoreLoadDetail records store load information.

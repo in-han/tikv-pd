@@ -27,13 +27,13 @@ import (
 	"github.com/pingcap/kvprotov2/pkg/metapb"
 	"github.com/pingcap/kvprotov2/pkg/pdpb"
 	"github.com/stretchr/testify/suite"
-	"github.com/tikv/pd/pkg/mock/mockcluster"
-	"github.com/tikv/pd/server/config"
-	"github.com/tikv/pd/server/core"
-	"github.com/tikv/pd/server/core/storelimit"
-	"github.com/tikv/pd/server/schedule/hbstream"
-	"github.com/tikv/pd/server/schedule/labeler"
-	"github.com/tikv/pd/server/schedule/operator"
+	"github.com/tikv/pdv2/pkg/mock/mockcluster"
+	"github.com/tikv/pdv2/2/server/config"
+	"github.com/tikv/pdv2/2/server/core"
+	"github.com/tikv/pdv2/2/server/core/storelimit"
+	"github.com/tikv/pdv2/2/server/schedule/hbstream"
+	"github.com/tikv/pdv2/2/server/schedule/labeler"
+	"github.com/tikv/pdv2/2/server/schedule/operator"
 )
 
 type operatorControllerTestSuite struct {
@@ -49,7 +49,7 @@ func TestOperatorControllerTestSuite(t *testing.T) {
 
 func (suite *operatorControllerTestSuite) SetupSuite() {
 	suite.ctx, suite.cancel = context.WithCancel(context.Background())
-	suite.NoError(failpoint.Enable("github.com/tikv/pd/server/schedule/unexpectedOperator", "return(true)"))
+	suite.NoError(failpoint.Enable("github.com/tikv/pdv2/2/server/schedule/unexpectedOperator", "return(true)"))
 }
 
 func (suite *operatorControllerTestSuite) TearDownSuite() {
@@ -187,7 +187,7 @@ func (suite *operatorControllerTestSuite) TestFastFailWithUnhealthyStore() {
 }
 
 func (suite *operatorControllerTestSuite) TestCheckAddUnexpectedStatus() {
-	suite.NoError(failpoint.Disable("github.com/tikv/pd/server/schedule/unexpectedOperator"))
+	suite.NoError(failpoint.Disable("github.com/tikv/pdv2/2/server/schedule/unexpectedOperator"))
 
 	opt := config.NewTestOptions()
 	tc := mockcluster.NewCluster(suite.ctx, opt)
@@ -274,7 +274,7 @@ func (suite *operatorControllerTestSuite) TestConcurrentRemoveOperator() {
 	suite.True(op1.Start())
 	oc.SetOperator(op1)
 
-	suite.NoError(failpoint.Enable("github.com/tikv/pd/server/schedule/concurrentRemoveOperator", "return(true)"))
+	suite.NoError(failpoint.Enable("github.com/tikv/pdv2/2/server/schedule/concurrentRemoveOperator", "return(true)"))
 
 	var wg sync.WaitGroup
 	wg.Add(2)

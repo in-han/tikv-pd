@@ -18,7 +18,7 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/require"
-	"github.com/tikv/pd/pkg/slice"
+	"github.com/tikv/pdv2/pkg/slice"
 )
 
 func TestSlice(t *testing.T) {

@@ -24,21 +24,21 @@ import (
 	grpcprometheus "github.com/grpc-ecosystem/go-grpc-prometheus"
 	"github.com/pingcap/errors"
 	"github.com/pingcap/log"
-	"github.com/tikv/pd/pkg/autoscaling"
-	"github.com/tikv/pd/pkg/dashboard"
-	"github.com/tikv/pd/pkg/errs"
-	"github.com/tikv/pd/pkg/logutil"
-	"github.com/tikv/pd/pkg/metricutil"
-	"github.com/tikv/pd/pkg/swaggerserver"
-	"github.com/tikv/pd/server"
-	"github.com/tikv/pd/server/api"
-	"github.com/tikv/pd/server/apiv2"
-	"github.com/tikv/pd/server/config"
-	"github.com/tikv/pd/server/join"
+	"github.com/tikv/pdv2/pkg/autoscaling"
+	"github.com/tikv/pdv2/2/pkg/dashboard"
+	"github.com/tikv/pdv2/2/pkg/errs"
+	"github.com/tikv/pdv2/2/pkg/logutil"
+	"github.com/tikv/pdv2/2/pkg/metricutil"
+	"github.com/tikv/pdv2/2/pkg/swaggerserver"
+	"github.com/tikv/pdv2/2/server"
+	"github.com/tikv/pdv2/2/server/api"
+	"github.com/tikv/pdv2/2/server/apiv2"
+	"github.com/tikv/pdv2/2/server/config"
+	"github.com/tikv/pdv2/2/server/join"
 	"go.uber.org/zap"
 
 	// Register schedulers.
-	_ "github.com/tikv/pd/server/schedulers"
+	_ "github.com/tikv/pdv2/2/server/schedulers"
 )
 
 func main() {

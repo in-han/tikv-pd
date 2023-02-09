@@ -20,10 +20,10 @@ import (
 
 	"github.com/pingcap/kvprotov2/pkg/metapb"
 	"github.com/stretchr/testify/require"
-	"github.com/tikv/pd/pkg/codec"
-	"github.com/tikv/pd/server/core"
-	"github.com/tikv/pd/server/storage"
-	"github.com/tikv/pd/server/storage/endpoint"
+	"github.com/tikv/pdv2/pkg/codec"
+	"github.com/tikv/pdv2/2/server/core"
+	"github.com/tikv/pdv2/2/server/storage"
+	"github.com/tikv/pdv2/2/server/storage/endpoint"
 )
 
 func newTestManager(t *testing.T) (endpoint.RuleStorage, *RuleManager) {

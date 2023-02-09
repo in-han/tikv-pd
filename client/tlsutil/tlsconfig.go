@@ -40,7 +40,7 @@ import (
 	"fmt"
 
 	"github.com/pingcap/errors"
-	"github.com/tikv/pd/client/errs"
+	"github.com/tikv/pdv2/client/errs"
 )
 
 // TLSInfo stores tls configuration to connect to etcd.

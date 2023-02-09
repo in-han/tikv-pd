@@ -33,17 +33,17 @@ import (
 	"github.com/pingcap/kvprotov2/pkg/pdpb"
 	"github.com/stretchr/testify/require"
 	"github.com/stretchr/testify/suite"
-	pd "github.com/tikv/pd/client"
-	"github.com/tikv/pd/pkg/assertutil"
-	"github.com/tikv/pd/pkg/mock/mockid"
-	"github.com/tikv/pd/pkg/testutil"
-	"github.com/tikv/pd/pkg/tsoutil"
-	"github.com/tikv/pd/server"
-	"github.com/tikv/pd/server/config"
-	"github.com/tikv/pd/server/core"
-	"github.com/tikv/pd/server/storage/endpoint"
-	"github.com/tikv/pd/server/tso"
-	"github.com/tikv/pd/tests"
+	pd "github.com/tikv/pdv2/client"
+	"github.com/tikv/pdv2/2/pkg/assertutil"
+	"github.com/tikv/pdv2/2/pkg/mock/mockid"
+	"github.com/tikv/pdv2/2/pkg/testutil"
+	"github.com/tikv/pdv2/2/pkg/tsoutil"
+	"github.com/tikv/pdv2/2/server"
+	"github.com/tikv/pdv2/2/server/config"
+	"github.com/tikv/pdv2/2/server/core"
+	"github.com/tikv/pdv2/2/server/storage/endpoint"
+	"github.com/tikv/pdv2/2/server/tso"
+	"github.com/tikv/pdv2/2/tests"
 	"go.uber.org/goleak"
 )
 
@@ -85,15 +85,15 @@ func TestClientClusterIDCheck(t *testing.T) {
 	re.Error(err)
 	re.Contains(err.Error(), "unmatched cluster id")
 	// updateMember should fail due to unmatched cluster ID found.
-	re.NoError(failpoint.Enable("github.com/tikv/pd/client/skipClusterIDCheck", `return(true)`))
-	re.NoError(failpoint.Enable("github.com/tikv/pd/client/skipFirstUpdateMember", `return(true)`))
+	re.NoError(failpoint.Enable("github.com/tikv/pdv2/2/client/skipClusterIDCheck", `return(true)`))
+	re.NoError(failpoint.Enable("github.com/tikv/pdv2/2/client/skipFirstUpdateMember", `return(true)`))
 	_, err = pd.NewClientWithContext(ctx, []string{endpoints1[0], endpoints2[0]},
 		pd.SecurityOption{}, pd.WithMaxErrorRetry(1),
 	)
 	re.Error(err)
 	re.Contains(err.Error(), "ErrClientGetLeader")
-	re.NoError(failpoint.Disable("github.com/tikv/pd/client/skipFirstUpdateMember"))
-	re.NoError(failpoint.Disable("github.com/tikv/pd/client/skipClusterIDCheck"))
+	re.NoError(failpoint.Disable("github.com/tikv/pdv2/2/client/skipFirstUpdateMember"))
+	re.NoError(failpoint.Disable("github.com/tikv/pdv2/2/client/skipClusterIDCheck"))
 }
 
 func TestClientLeaderChange(t *testing.T) {
@@ -208,7 +208,7 @@ func TestLeaderTransfer(t *testing.T) {
 	wg.Wait()
 }
 
-// More details can be found in this issue: https://github.com/tikv/pd/issues/4884
+// More details can be found in this issue: https://github.com/tikv/pdv2/2/issues/4884
 func TestUpdateAfterResetTSO(t *testing.T) {
 	re := require.New(t)
 	ctx, cancel := context.WithCancel(context.Background())
@@ -225,11 +225,11 @@ func TestUpdateAfterResetTSO(t *testing.T) {
 		return err == nil
 	})
 	// Transfer leader to trigger the TSO resetting.
-	re.NoError(failpoint.Enable("github.com/tikv/pd/server/updateAfterResetTSO", "return(true)"))
+	re.NoError(failpoint.Enable("github.com/tikv/pdv2/2/server/updateAfterResetTSO", "return(true)"))
 	oldLeaderName := cluster.WaitLeader()
 	err = cluster.GetServer(oldLeaderName).ResignLeader()
 	re.NoError(err)
-	re.NoError(failpoint.Disable("github.com/tikv/pd/server/updateAfterResetTSO"))
+	re.NoError(failpoint.Disable("github.com/tikv/pdv2/2/server/updateAfterResetTSO"))
 	newLeaderName := cluster.WaitLeader()
 	re.NotEqual(oldLeaderName, newLeaderName)
 	// Request a new TSO.
@@ -238,7 +238,7 @@ func TestUpdateAfterResetTSO(t *testing.T) {
 		return err == nil
 	})
 	// Transfer leader back.
-	re.NoError(failpoint.Enable("github.com/tikv/pd/server/tso/delaySyncTimestamp", `return(true)`))
+	re.NoError(failpoint.Enable("github.com/tikv/pdv2/2/server/tso/delaySyncTimestamp", `return(true)`))
 	err = cluster.GetServer(newLeaderName).ResignLeader()
 	re.NoError(err)
 	// Should NOT panic here.
@@ -246,7 +246,7 @@ func TestUpdateAfterResetTSO(t *testing.T) {
 		_, _, err := cli.GetTS(context.TODO())
 		return err == nil
 	})
-	re.NoError(failpoint.Disable("github.com/tikv/pd/server/tso/delaySyncTimestamp"))
+	re.NoError(failpoint.Disable("github.com/tikv/pdv2/2/server/tso/delaySyncTimestamp"))
 }
 
 func TestTSOAllocatorLeader(t *testing.T) {
@@ -393,7 +393,7 @@ func TestGlobalAndLocalTSO(t *testing.T) {
 	requestGlobalAndLocalTSO(re, wg, dcLocationConfig, cli)
 
 	// assert global tso after resign leader
-	re.NoError(failpoint.Enable("github.com/tikv/pd/client/skipUpdateMember", `return(true)`))
+	re.NoError(failpoint.Enable("github.com/tikv/pdv2/2/client/skipUpdateMember", `return(true)`))
 	err = cluster.ResignLeader()
 	re.NoError(err)
 	cluster.WaitLeader()
@@ -402,7 +402,7 @@ func TestGlobalAndLocalTSO(t *testing.T) {
 	re.True(pd.IsLeaderChange(err))
 	_, _, err = cli.GetTS(ctx)
 	re.NoError(err)
-	re.NoError(failpoint.Disable("github.com/tikv/pd/client/skipUpdateMember"))
+	re.NoError(failpoint.Disable("github.com/tikv/pdv2/2/client/skipUpdateMember"))
 
 	// Test the TSO follower proxy while enabling the Local TSO.
 	cli.UpdateOption(pd.EnableTSOFollowerProxy, true)
@@ -460,9 +460,9 @@ func TestCustomTimeout(t *testing.T) {
 	cli := setupCli(re, ctx, endpoints, pd.WithCustomTimeoutOption(time.Second))
 
 	start := time.Now()
-	re.NoError(failpoint.Enable("github.com/tikv/pd/server/customTimeout", "return(true)"))
+	re.NoError(failpoint.Enable("github.com/tikv/pdv2/2/server/customTimeout", "return(true)"))
 	_, err = cli.GetAllStores(context.TODO())
-	re.NoError(failpoint.Disable("github.com/tikv/pd/server/customTimeout"))
+	re.NoError(failpoint.Disable("github.com/tikv/pdv2/2/server/customTimeout"))
 	re.Error(err)
 	re.GreaterOrEqual(time.Since(start), time.Second)
 	re.Less(time.Since(start), 2*time.Second)
@@ -480,13 +480,13 @@ func TestGetRegionFromFollowerClient(t *testing.T) {
 	endpoints := runServer(re, cluster)
 	cli := setupCli(re, ctx, endpoints, pd.WithForwardingOption(true))
 
-	re.NoError(failpoint.Enable("github.com/tikv/pd/client/unreachableNetwork1", "return(true)"))
+	re.NoError(failpoint.Enable("github.com/tikv/pdv2/2/client/unreachableNetwork1", "return(true)"))
 	time.Sleep(200 * time.Millisecond)
 	r, err := cli.GetRegion(context.Background(), []byte("a"))
 	re.NoError(err)
 	re.NotNil(r)
 
-	re.NoError(failpoint.Disable("github.com/tikv/pd/client/unreachableNetwork1"))
+	re.NoError(failpoint.Disable("github.com/tikv/pdv2/2/client/unreachableNetwork1"))
 	time.Sleep(200 * time.Millisecond)
 	r, err = cli.GetRegion(context.Background(), []byte("a"))
 	re.NoError(err)
@@ -506,7 +506,7 @@ func TestGetTsoFromFollowerClient1(t *testing.T) {
 	endpoints := runServer(re, cluster)
 	cli := setupCli(re, ctx, endpoints, pd.WithForwardingOption(true))
 
-	re.NoError(failpoint.Enable("github.com/tikv/pd/client/unreachableNetwork", "return(true)"))
+	re.NoError(failpoint.Enable("github.com/tikv/pdv2/2/client/unreachableNetwork", "return(true)"))
 	var lastTS uint64
 	testutil.Eventually(re, func() bool {
 		physical, logical, err := cli.GetTS(context.TODO())
@@ -519,7 +519,7 @@ func TestGetTsoFromFollowerClient1(t *testing.T) {
 	})
 
 	lastTS = checkTS(re, cli, lastTS)
-	re.NoError(failpoint.Disable("github.com/tikv/pd/client/unreachableNetwork"))
+	re.NoError(failpoint.Disable("github.com/tikv/pdv2/2/client/unreachableNetwork"))
 	time.Sleep(2 * time.Second)
 	checkTS(re, cli, lastTS)
 }
@@ -537,7 +537,7 @@ func TestGetTsoFromFollowerClient2(t *testing.T) {
 	endpoints := runServer(re, cluster)
 	cli := setupCli(re, ctx, endpoints, pd.WithForwardingOption(true))
 
-	re.NoError(failpoint.Enable("github.com/tikv/pd/client/unreachableNetwork", "return(true)"))
+	re.NoError(failpoint.Enable("github.com/tikv/pdv2/2/client/unreachableNetwork", "return(true)"))
 	var lastTS uint64
 	testutil.Eventually(re, func() bool {
 		physical, logical, err := cli.GetTS(context.TODO())
@@ -554,7 +554,7 @@ func TestGetTsoFromFollowerClient2(t *testing.T) {
 	cluster.WaitLeader()
 	lastTS = checkTS(re, cli, lastTS)
 
-	re.NoError(failpoint.Disable("github.com/tikv/pd/client/unreachableNetwork"))
+	re.NoError(failpoint.Disable("github.com/tikv/pdv2/2/client/unreachableNetwork"))
 	time.Sleep(5 * time.Second)
 	checkTS(re, cli, lastTS)
 }

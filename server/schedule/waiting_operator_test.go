@@ -19,8 +19,8 @@ import (
 
 	"github.com/pingcap/kvprotov2/pkg/metapb"
 	"github.com/stretchr/testify/require"
-	"github.com/tikv/pd/server/core"
-	"github.com/tikv/pd/server/schedule/operator"
+	"github.com/tikv/pdv2/server/core"
+	"github.com/tikv/pdv2/2/server/schedule/operator"
 )
 
 func TestRandBuckets(t *testing.T) {

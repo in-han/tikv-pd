@@ -25,11 +25,11 @@ import (
 	"github.com/pingcap/kvprotov2/pkg/pdpb"
 	"github.com/spf13/cobra"
 	"github.com/stretchr/testify/require"
-	"github.com/tikv/pd/server"
-	"github.com/tikv/pd/server/api"
-	"github.com/tikv/pd/server/core"
-	"github.com/tikv/pd/server/versioninfo"
-	"github.com/tikv/pd/tests"
+	"github.com/tikv/pdv2/server"
+	"github.com/tikv/pdv2/2/server/api"
+	"github.com/tikv/pdv2/2/server/core"
+	"github.com/tikv/pdv2/2/server/versioninfo"
+	"github.com/tikv/pdv2/2/tests"
 )
 
 // ExecuteCommand is used for test purpose.

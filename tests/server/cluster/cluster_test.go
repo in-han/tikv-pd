@@ -30,20 +30,20 @@ import (
 	"github.com/pingcap/kvprotov2/pkg/pdpb"
 	"github.com/pingcap/kvprotov2/pkg/replication_modepb"
 	"github.com/stretchr/testify/require"
-	"github.com/tikv/pd/pkg/dashboard"
-	"github.com/tikv/pd/pkg/mock/mockid"
-	"github.com/tikv/pd/pkg/testutil"
-	"github.com/tikv/pd/pkg/typeutil"
-	"github.com/tikv/pd/server"
-	"github.com/tikv/pd/server/cluster"
-	"github.com/tikv/pd/server/config"
-	"github.com/tikv/pd/server/core"
-	"github.com/tikv/pd/server/core/storelimit"
-	"github.com/tikv/pd/server/id"
-	syncer "github.com/tikv/pd/server/region_syncer"
-	"github.com/tikv/pd/server/schedule/operator"
-	"github.com/tikv/pd/server/storage"
-	"github.com/tikv/pd/tests"
+	"github.com/tikv/pdv2/pkg/dashboard"
+	"github.com/tikv/pdv2/2/pkg/mock/mockid"
+	"github.com/tikv/pdv2/2/pkg/testutil"
+	"github.com/tikv/pdv2/2/pkg/typeutil"
+	"github.com/tikv/pdv2/2/server"
+	"github.com/tikv/pdv2/2/server/cluster"
+	"github.com/tikv/pdv2/2/server/config"
+	"github.com/tikv/pdv2/2/server/core"
+	"github.com/tikv/pdv2/2/server/core/storelimit"
+	"github.com/tikv/pdv2/2/server/id"
+	syncer "github.com/tikv/pdv2/2/server/region_syncer"
+	"github.com/tikv/pdv2/2/server/schedule/operator"
+	"github.com/tikv/pdv2/2/server/storage"
+	"github.com/tikv/pdv2/2/tests"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 )
@@ -452,7 +452,7 @@ func TestRaftClusterMultipleRestart(t *testing.T) {
 	re.NotNil(tc)
 
 	// let the job run at small interval
-	re.NoError(failpoint.Enable("github.com/tikv/pd/server/cluster/highFrequencyClusterJobs", `return(true)`))
+	re.NoError(failpoint.Enable("github.com/tikv/pdv2/2/server/cluster/highFrequencyClusterJobs", `return(true)`))
 	for i := 0; i < 100; i++ {
 		err = rc.Start(leaderServer.GetServer())
 		re.NoError(err)
@@ -461,7 +461,7 @@ func TestRaftClusterMultipleRestart(t *testing.T) {
 		re.NotNil(rc)
 		rc.Stop()
 	}
-	re.NoError(failpoint.Disable("github.com/tikv/pd/server/cluster/highFrequencyClusterJobs"))
+	re.NoError(failpoint.Disable("github.com/tikv/pdv2/2/server/cluster/highFrequencyClusterJobs"))
 }
 
 func newMetaStore(storeID uint64, addr, version string, state metapb.StoreState, deployPath string) *metapb.Store {
@@ -533,7 +533,7 @@ func TestStoreVersionChange(t *testing.T) {
 	re.NoError(err)
 	store := newMetaStore(storeID, "127.0.0.1:4", "2.1.0", metapb.StoreState_Up, getTestDeployPath(storeID))
 	var wg sync.WaitGroup
-	re.NoError(failpoint.Enable("github.com/tikv/pd/server/versionChangeConcurrency", `return(true)`))
+	re.NoError(failpoint.Enable("github.com/tikv/pdv2/2/server/versionChangeConcurrency", `return(true)`))
 	wg.Add(1)
 	go func() {
 		defer wg.Done()
@@ -546,7 +546,7 @@ func TestStoreVersionChange(t *testing.T) {
 	v, err := semver.NewVersion("1.0.0")
 	re.NoError(err)
 	re.Equal(*v, svr.GetClusterVersion())
-	re.NoError(failpoint.Disable("github.com/tikv/pd/server/versionChangeConcurrency"))
+	re.NoError(failpoint.Disable("github.com/tikv/pdv2/2/server/versionChangeConcurrency"))
 }
 
 func TestConcurrentHandleRegion(t *testing.T) {
@@ -712,7 +712,7 @@ func TestSetScheduleOpt(t *testing.T) {
 	re.Empty(persistOptions.GetLabelPropertyConfig()[typ])
 
 	// PUT GET failed
-	re.NoError(failpoint.Enable("github.com/tikv/pd/server/storage/kv/etcdSaveFailed", `return(true)`))
+	re.NoError(failpoint.Enable("github.com/tikv/pdv2/2/server/storage/kv/etcdSaveFailed", `return(true)`))
 	replicationCfg.MaxReplicas = 7
 	scheduleCfg.MaxSnapshotCount = 20
 	pdServerCfg.UseRegionStorage = false
@@ -726,13 +726,13 @@ func TestSetScheduleOpt(t *testing.T) {
 	re.Empty(persistOptions.GetLabelPropertyConfig()[typ])
 
 	// DELETE failed
-	re.NoError(failpoint.Disable("github.com/tikv/pd/server/storage/kv/etcdSaveFailed"))
+	re.NoError(failpoint.Disable("github.com/tikv/pdv2/2/server/storage/kv/etcdSaveFailed"))
 	re.NoError(svr.SetReplicationConfig(*replicationCfg))
-	re.NoError(failpoint.Enable("github.com/tikv/pd/server/storage/kv/etcdSaveFailed", `return(true)`))
+	re.NoError(failpoint.Enable("github.com/tikv/pdv2/2/server/storage/kv/etcdSaveFailed", `return(true)`))
 	re.Error(svr.DeleteLabelProperty(typ, labelKey, labelValue))
 	re.Equal("testKey", persistOptions.GetLabelPropertyConfig()[typ][0].Key)
 	re.Equal("testValue", persistOptions.GetLabelPropertyConfig()[typ][0].Value)
-	re.NoError(failpoint.Disable("github.com/tikv/pd/server/storage/kv/etcdSaveFailed"))
+	re.NoError(failpoint.Disable("github.com/tikv/pdv2/2/server/storage/kv/etcdSaveFailed"))
 }
 
 func TestLoadClusterInfo(t *testing.T) {
@@ -1354,7 +1354,7 @@ func TestMinResolvedTS(t *testing.T) {
 	re.Equal(store5TS, ts)
 }
 
-// See https://github.com/tikv/pd/issues/4941
+// See https://github.com/tikv/pdv2/2/issues/4941
 func TestTransferLeaderBack(t *testing.T) {
 	re := require.New(t)
 	ctx, cancel := context.WithCancel(context.Background())

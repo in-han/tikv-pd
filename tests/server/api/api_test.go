@@ -33,15 +33,15 @@ import (
 	"github.com/pingcap/log"
 	"github.com/stretchr/testify/require"
 	"github.com/stretchr/testify/suite"
-	"github.com/tikv/pd/pkg/apiutil/serverapi"
-	"github.com/tikv/pd/pkg/testutil"
-	"github.com/tikv/pd/pkg/typeutil"
-	"github.com/tikv/pd/server"
-	"github.com/tikv/pd/server/api"
-	"github.com/tikv/pd/server/config"
-	"github.com/tikv/pd/server/core"
-	"github.com/tikv/pd/tests"
-	"github.com/tikv/pd/tests/pdctl"
+	"github.com/tikv/pdv2/pkg/apiutil/serverapi"
+	"github.com/tikv/pdv2/2/pkg/testutil"
+	"github.com/tikv/pdv2/2/pkg/typeutil"
+	"github.com/tikv/pdv2/2/server"
+	"github.com/tikv/pdv2/2/server/api"
+	"github.com/tikv/pdv2/2/server/config"
+	"github.com/tikv/pdv2/2/server/core"
+	"github.com/tikv/pdv2/2/tests"
+	"github.com/tikv/pdv2/2/tests/pdctl"
 	"go.uber.org/goleak"
 )
 
@@ -126,7 +126,7 @@ func TestMiddlewareTestSuite(t *testing.T) {
 }
 
 func (suite *middlewareTestSuite) SetupSuite() {
-	suite.NoError(failpoint.Enable("github.com/tikv/pd/server/api/enableFailpointAPI", "return(true)"))
+	suite.NoError(failpoint.Enable("github.com/tikv/pdv2/2/server/api/enableFailpointAPI", "return(true)"))
 	ctx, cancel := context.WithCancel(context.Background())
 	suite.cleanup = cancel
 	cluster, err := tests.NewTestCluster(ctx, 3)
@@ -137,13 +137,13 @@ func (suite *middlewareTestSuite) SetupSuite() {
 }
 
 func (suite *middlewareTestSuite) TearDownSuite() {
-	suite.NoError(failpoint.Disable("github.com/tikv/pd/server/api/enableFailpointAPI"))
+	suite.NoError(failpoint.Disable("github.com/tikv/pdv2/2/server/api/enableFailpointAPI"))
 	suite.cleanup()
 	suite.cluster.Destroy()
 }
 
 func (suite *middlewareTestSuite) TestRequestInfoMiddleware() {
-	suite.NoError(failpoint.Enable("github.com/tikv/pd/server/api/addRequestInfoMiddleware", "return(true)"))
+	suite.NoError(failpoint.Enable("github.com/tikv/pdv2/2/server/api/addRequestInfoMiddleware", "return(true)"))
 	leader := suite.cluster.GetServer(suite.cluster.GetLeader())
 
 	input := map[string]interface{}{
@@ -188,7 +188,7 @@ func (suite *middlewareTestSuite) TestRequestInfoMiddleware() {
 	header := mustRequestSuccess(suite.Require(), leader.GetServer())
 	suite.Equal("", header.Get("service-label"))
 
-	suite.NoError(failpoint.Disable("github.com/tikv/pd/server/api/addRequestInfoMiddleware"))
+	suite.NoError(failpoint.Disable("github.com/tikv/pdv2/2/server/api/addRequestInfoMiddleware"))
 }
 
 func BenchmarkDoRequestWithServiceMiddleware(b *testing.B) {
@@ -661,7 +661,7 @@ func mustRequestSuccess(re *require.Assertions, s *server.Server) http.Header {
 
 func TestRemovingProgress(t *testing.T) {
 	re := require.New(t)
-	re.NoError(failpoint.Enable("github.com/tikv/pd/server/cluster/highFrequencyClusterJobs", `return(true)`))
+	re.NoError(failpoint.Enable("github.com/tikv/pdv2/2/server/cluster/highFrequencyClusterJobs", `return(true)`))
 	ctx, cancel := context.WithCancel(context.Background())
 	defer cancel()
 	cluster, err := tests.NewTestCluster(ctx, 1, func(conf *config.Config, serverName string) {
@@ -773,12 +773,12 @@ func TestRemovingProgress(t *testing.T) {
 	// store 2: (10+40)/2 = 25s
 	re.Equal(25.0, p.LeftSeconds)
 
-	re.NoError(failpoint.Disable("github.com/tikv/pd/server/cluster/highFrequencyClusterJobs"))
+	re.NoError(failpoint.Disable("github.com/tikv/pdv2/2/server/cluster/highFrequencyClusterJobs"))
 }
 
 func TestPreparingProgress(t *testing.T) {
 	re := require.New(t)
-	re.NoError(failpoint.Enable("github.com/tikv/pd/server/cluster/highFrequencyClusterJobs", `return(true)`))
+	re.NoError(failpoint.Enable("github.com/tikv/pdv2/2/server/cluster/highFrequencyClusterJobs", `return(true)`))
 	ctx, cancel := context.WithCancel(context.Background())
 	defer cancel()
 	cluster, err := tests.NewTestCluster(ctx, 1, func(conf *config.Config, serverName string) {
@@ -895,7 +895,7 @@ func TestPreparingProgress(t *testing.T) {
 	re.Equal("0.05", fmt.Sprintf("%.2f", p.Progress))
 	re.Equal(1.0, p.CurrentSpeed)
 	re.Equal(179.0, p.LeftSeconds)
-	re.NoError(failpoint.Disable("github.com/tikv/pd/server/cluster/highFrequencyClusterJobs"))
+	re.NoError(failpoint.Disable("github.com/tikv/pdv2/2/server/cluster/highFrequencyClusterJobs"))
 }
 
 func sendRequest(re *require.Assertions, url string, method string, statusCode int) []byte {

@@ -21,8 +21,8 @@ import (
 	"github.com/docker/go-units"
 	"github.com/pingcap/kvprotov2/pkg/metapb"
 	"github.com/pingcap/log"
-	"github.com/tikv/pd/pkg/slice"
-	"github.com/tikv/pd/server/core"
+	"github.com/tikv/pdv2/pkg/slice"
+	"github.com/tikv/pdv2/2/server/core"
 )
 
 const (

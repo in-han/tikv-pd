@@ -19,7 +19,7 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/require"
-	tu "github.com/tikv/pd/pkg/testutil"
+	tu "github.com/tikv/pdv2/pkg/testutil"
 )
 
 func TestGRPCGateway(t *testing.T) {

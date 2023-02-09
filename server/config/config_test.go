@@ -25,7 +25,7 @@ import (
 
 	"github.com/BurntSushi/toml"
 	"github.com/stretchr/testify/require"
-	"github.com/tikv/pd/server/storage"
+	"github.com/tikv/pdv2/server/storage"
 )
 
 func TestSecurity(t *testing.T) {

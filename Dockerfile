@@ -28,9 +28,9 @@ RUN make
 
 FROM alpine:3.5
 
-COPY --from=builder /go/src/github.com/tikv/pd/bin/pd-server /pd-server
-COPY --from=builder /go/src/github.com/tikv/pd/bin/pd-ctl /pd-ctl
-COPY --from=builder /go/src/github.com/tikv/pd/bin/pd-recover /pd-recover
+COPY --from=builder /go/src/github.com/tikv/pdv2/bin/pd-server /pd-server
+COPY --from=builder /go/src/github.com/tikv/pdv2/bin/pd-ctl /pd-ctl
+COPY --from=builder /go/src/github.com/tikv/pdv2/bin/pd-recover /pd-recover
 COPY --from=builder /jq /usr/local/bin/jq
 
 EXPOSE 2379 2380

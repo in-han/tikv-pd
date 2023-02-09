@@ -1,5 +1,5 @@
 <!--
-Thank you for working on PD! Please read PD's [CONTRIBUTING](https://github.com/tikv/pd/blob/master/CONTRIBUTING.md) document **BEFORE** filing this PR.
+Thank you for working on PD! Please read PD's [CONTRIBUTING](https://github.com/tikv/pdv2/blob/master/CONTRIBUTING.md) document **BEFORE** filing this PR.
 PR Title Format:
 1. pkg [, pkg2, pkg3]: what's changed
 2. *: what's changed
@@ -12,7 +12,7 @@ PR Title Format:
 Please create an issue first to describe the problem.
 There MUST be one line starting with "Issue Number:  " and 
 linking the relevant issues via the "close" or "ref".
-For more info, check https://github.com/tikv/pd/blob/master/CONTRIBUTING.md#linking-issues.
+For more info, check https://github.com/tikv/pdv2/blob/master/CONTRIBUTING.md#linking-issues.
 
 -->
 Issue Number: Close #xxx
@@ -22,7 +22,7 @@ Issue Number: Close #xxx
 <!--
 
 You could use the "commit message" code block to add more description to the final commit message.
-For more info, check https://github.com/tikv/pd/blob/master/CONTRIBUTING.md#format-of-the-commit-message.
+For more info, check https://github.com/tikv/pdv2/blob/master/CONTRIBUTING.md#format-of-the-commit-message.
 
 -->
 
@@ -45,7 +45,7 @@ Tests
 Code changes
 
 - Has configuration change
-- Has HTTP API interfaces changed (Don't forget to [add the declarative for the new API](https://github.com/tikv/pd/blob/master/docs/development.md#updating-api-documentation))
+- Has HTTP API interfaces changed (Don't forget to [add the declarative for the new API](https://github.com/tikv/pdv2/blob/master/docs/development.md#updating-api-documentation))
 - Has persistent data change
 
 Side effects

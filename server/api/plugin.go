@@ -19,9 +19,9 @@ import (
 	"net/http"
 	"os"
 
-	"github.com/tikv/pd/pkg/apiutil"
-	"github.com/tikv/pd/server"
-	"github.com/tikv/pd/server/cluster"
+	"github.com/tikv/pdv2/pkg/apiutil"
+	"github.com/tikv/pdv2/2/server"
+	"github.com/tikv/pdv2/2/server/cluster"
 	"github.com/unrolled/render"
 )
 
